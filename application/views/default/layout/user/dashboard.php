@@ -436,13 +436,16 @@ function send_wall_invitation(response) {
                                                                             </script>
                                                                         	<div class="summery-detail-tab">
                                                                             	<ul>
-                                                                                    <?php if($check_is_worker->worker_status==1) { ?>
+
+                                                                                    <?php if (isset($worker_status))
+                                                                                { if($check_is_worker->worker_status==1) { ?>
                                                                                 	<li  id="task_running_click">Task Running</li>
-                                                                                    <?php } ?>
+                                                                                    <?php } } ?>
                                                                                     <li class="selected" id="task_posted_click">Tasks Posted</li>
                                                                                 </ul>
                                                                             </div>
-                                                                            <?php if($check_is_worker->worker_status==1) { ?>
+                                                                            <?php if (isset($worker_status))
+                                                                                { if($check_is_worker->worker_status==1) { ?>
                                                                             <div class="summery-detail-detail" id="task_running" style="display:none;">
                                                                             	<div class="bid-on-detail">
                                                                                 	<div class="bid-on-detail-bar">
@@ -481,7 +484,7 @@ function send_wall_invitation(response) {
                                                                                 	<div style="padding-top:22px;"><?php echo $total_close_task ?> <br /> Completed</div>
                                                                                 </div>
                                                                             </div>
-                                                                            <?php } ?>
+                                                                            <?php } } ?>
                                                                             <div class="summery-detail-detail" id="task_posted"  >
                                                                             	<div class="bid-on-detail">
                                                                                    
@@ -717,12 +720,16 @@ function send_wall_invitation(response) {
                                                                     </li>
                                                                     <li>
                                                                         <?php 
+                                                                               if (isset($worker_status))
+                                                                                {
                                                                                if($check_is_worker->worker_status==1) { 
                                                                                 $link=base_url().'worker/edit';
                                                                                } 
+                                                                           }
                                                                                else {
                                                                                 $link=base_url().'who-are-the-taskers';
                                                                                }
+                                                                           
                                                                         ?>
                                                                         <a href="<?php echo $link; ?>">
                                                                             <img src="<?php echo base_url().getThemeName(); ?>/images/skill_img.png" alt="" />

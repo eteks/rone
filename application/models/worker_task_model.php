@@ -252,20 +252,19 @@ class Worker_task_model extends CI_Model
 		{
 		
 			$worker_detail=$get_worker_detail->row();
+						
+			$this->db->select('*');
+			$this->db->from('worker_comment');
+			$this->db->join('user','worker_comment.comment_post_user_id=user.user_id');
+			$this->db->join('task','worker_comment.task_id=task.task_id');
+			$this->db->join('worker','user.user_id=worker.user_id');	
+			$this->db->where('user.user_id',get_authenticateUserID());
+			$this->db->where('task.task_status',1);
+			$this->db->where('task.task_activity_status >',0);
+			$this->db->where('task.task_worker_id !=',$worker_detail->worker_id);
+			$this->db->where('worker_comment.offer_amount >',0.00);
 			
-			
-		$this->db->select('*');
-		$this->db->from('worker_comment');
-		$this->db->join('user','worker_comment.comment_post_user_id=user.user_id');
-		$this->db->join('task','worker_comment.task_id=task.task_id');
-		$this->db->join('worker','user.user_id=worker.user_id');	
-		$this->db->where('user.user_id',get_authenticateUserID());
-		$this->db->where('task.task_status',1);
-		$this->db->where('task.task_activity_status >',0);
-		$this->db->where('task.task_worker_id !=',$worker_detail->worker_id);
-		$this->db->where('worker_comment.offer_amount >',0.00);
-		
-		$query = $this->db->get(); 
+			$query = $this->db->get(); 
 
 		if($query->num_rows > 0) {
 		
@@ -470,20 +469,19 @@ class Worker_task_model extends CI_Model
 		
 		
 			$get_worker_detail=$this->db->get_where('worker',array('user_id'=>get_authenticateUserID()));
-		
+		if (isset($wid))
+		{
 		if($get_worker_detail)
 		{
 		
 		$worker_detail=$get_worker_detail->row();
-		
-		
 		$this->db->select('*');
 		$this->db->from('worker_comment');
 		$this->db->join('user','worker_comment.comment_post_user_id=user.user_id');
 		$this->db->join('task','worker_comment.task_id=task.task_id');
 		$this->db->join('worker','user.user_id=worker.user_id');	
 			$this->db->where('task.task_worker_id',$worker_detail->worker_id);
-		$this->db->where('task.task_status',1);
+		$this->db->where('task.task_status',1); 
 		$this->db->where('worker_comment.offer_amount >',0.00);
 		$this->db->where_in('task.task_activity_status',$id);
 			$this->db->order_by('task.task_assigned_date','desc');
@@ -497,6 +495,7 @@ class Worker_task_model extends CI_Model
 		return 0;
 	
 	}
+}
 	
 	
 	
@@ -542,25 +541,26 @@ class Worker_task_model extends CI_Model
 	*/
 	function get_total_closed_task()
 	{
-
 		$get_worker_detail=$this->db->get_where('worker',array('user_id'=>get_authenticateUserID()));
 		
 		if($get_worker_detail)
 		{
 		$worker_detail=$get_worker_detail->row();
-
+		
 		$this->db->select('*');
 		$this->db->from('task');
 		$this->db->join('worker','task.task_worker_id=worker.worker_id');
 		$this->db->join('user','worker.user_id=user.user_id');
 		//$this->db->where('user.user_id',get_authenticateUserID());
-		$this->db->where('task.task_worker_id',$worker_detail->worker_id);
-		$this->db->where('task.task_status',1);
-		$this->db->where('task.task_activity_status',3);
-		$this->db->order_by('task.task_activity_status asc');
-		$query = $this->db->get();
+		//if (isset($worker_detail)) // changed here 123456
+				//$this->db->where('task.task_worker_id',$worker_detail->worker_id);
+				$this->db->where('task.task_status',1);
+				$this->db->where('task.task_activity_status',3);
+				$this->db->order_by('task.task_activity_status asc');
+				$query = $this->db->get();
 		
-		return $query->num_rows();
+				return $query->num_rows();
+	
 		}
 	
 	}

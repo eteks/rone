@@ -207,7 +207,7 @@ echo $html; exit;
 		// $task_detail = $this->task_model->get_tasks_details($task_name);
 		
 		
-		
+		if (isset($task_detail)) {
 		$data['task_detail']=$task_detail;
 		
 		$data['task_ajax_link'] = base_url().'task/task_ajax_data/'; // set ajax url for search
@@ -230,7 +230,7 @@ echo $html; exit;
 		$user_id = $task_detail->user_id;
 		$task_user_detail = $this->user_model->get_user_info($user_id);
 		$data['task_user_detail']=$task_user_detail;
-		
+		}
 		//$comments=$this->task_model->get_comments($task_id);
 		//$data['comments']=$comments;	
 		
