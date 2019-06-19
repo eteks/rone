@@ -443,6 +443,7 @@ function get_city(city_id)
                     <div class="">
                         <div class="implcr wid550" style="float:left;width: 100%;">
                             <?php 
+                            if(isset($task_user_location)){
                                $task_user_location=array();
                                 if($task_location) 
                                 {  
@@ -469,7 +470,7 @@ function get_city(city_id)
                                 
                              <?php } ?>
                              </ul>
-                            <?php  } ?>
+                            <?php  } } ?>
                             <div class="clear"></div>
                             <script type="text/javascript">
                                 function LTrim( value ) {
@@ -616,7 +617,7 @@ function get_city(city_id)
                                                 <td valign="top" width="25%" style="padding-bottom: 5px"><label class="main-title">Address :</label></td>
                                               </tr>
                                               <tr>
-                                                <td><input name="address1" class="form-control add-text" style="float:left;" id="address1" type="text" value="<?php echo $address1; ?>" size="18"  placeholder="Enter a location" /></td>
+                                                <td><input name="address1" class="form-control add-text" style="float:left;" id="address1" type="text" value="<?php isset($address1) ? $address1 : "" ; ?>" size="18"  placeholder="Enter a location" /></td>
                                                  <input name="zipcode" id="zipcode" class="form-control add-text" style="float:left;" type="hidden" value="1111"  />
                                                  <input type="hidden" name="location_state" id="location_state" value=""/>
                                                     <input type="hidden" name="location_city" id="location_city" value=""/>

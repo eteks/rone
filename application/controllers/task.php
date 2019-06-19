@@ -181,6 +181,7 @@ echo $html; exit;
 		$theme = getThemeName();
 		$this->template->set_master_template($theme .'/template.php');
 		
+
 		
 		
 		$data['theme']=$theme;
@@ -205,7 +206,6 @@ echo $html; exit;
 				
 		
 		// $task_detail = $this->task_model->get_tasks_details($task_name);
-		
 		
 		if (isset($task_detail)) {
 		$data['task_detail']=$task_detail;
@@ -689,7 +689,7 @@ echo $html; exit;
 				
 				
 				
-					$notification = notification_setting($task_detail->user_id);
+				$notification = notification_setting($task_detail->user_id);
 				$worker_notification = notification_setting(get_authenticateUserID());
 				
 				$offer_user_link ='<a href="'.base_url().'user/'.$offer_user_detail->profile_name.'">'.ucfirst($offer_user_detail->full_name).'</a>';
@@ -1726,9 +1726,15 @@ echo $html; exit;
 				$data['address1']=$this->input->post('address1');
 				$data['done_online']=$task_detail->done_online;
 				$data['task_urgent'] = $task_detail->task_urgent;
+				
+				if(isset($data['task_imgname']))
+				{
+					if(isset($data['work_doc']))
+					{
 				$data['work_doc'] =$task_detail->work_doc;
 				$data['task_imgname'] =$task_detail->task_imgname;
-			
+					}
+			    }
 			}	
 			
 			
@@ -1736,7 +1742,7 @@ echo $html; exit;
 		} else {
 		
 		
-			$apply=$this->task_model->save_step_one();
+			$apply=$this->task_model->save_step_one($data);
 
 			if($_FILES['sheet_attachment']['name']!="")
 			{
@@ -1750,7 +1756,7 @@ echo $html; exit;
 			$file_name=get_authenticateUserID().$rand.$_FILES['userfile']['name'];	
 
 			$config =  array(
-			                  'upload_path'     => '/home/saivisiontech/public_html/newsite/upload/task_doc',
+			                  'upload_path'     => '/upload/task_doc',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE
@@ -1766,7 +1772,7 @@ echo $html; exit;
 			{
 				echo $this->upload->display_errors();
 				echo "file upload failed".'&nbsp;&nbsp;&nbsp;';
-				echo "<a href='http://saivisiontech.com/newsite/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+				echo "<a href='http://localhost/snm/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
 				
 
 				exit;
@@ -1792,14 +1798,14 @@ echo $html; exit;
 					$file_name1=get_authenticateUserID().$rand.$_FILES['task_img']['name'];	
 
 					$config =  array(
-									  'upload_path'     => '/home/saivisiontech/public_html/newsite/upload/task_image',
+									  'upload_path'     => '/upload/task_image',
 									  'file_name'		=>$file_name1,
 									  'allowed_types'   => "*",
 									  'overwrite'       => TRUE
 					 );
 					$this->load->library('upload', $config);
 					$this->upload->initialize($config); //Make this line must be here.
-					$uploads_dir='/home/saivisiontech/public_html/newsite/upload/task_image';
+					$uploads_dir='/upload/task_image';
 									
 					$allowed =  array('gif','png' ,'jpg');
 					$filename = $_FILES['taskfile']['name'];
@@ -1813,7 +1819,7 @@ echo $html; exit;
 						{
 							
 							echo "file upload failed".'&nbsp;&nbsp;&nbsp;';
-							echo "<a href='http://saivisiontech.com/newsite/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+							echo "<a href='http://localhost/snm/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
 							
 
 							exit;
@@ -1822,7 +1828,7 @@ echo $html; exit;
 					}
 					else{
 						echo "Upload file type not allowed".'&nbsp;&nbsp;&nbsp;';
-						echo "<a href='http://saivisiontech.com/newsite/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+						echo "<a href='http://localhost/snm/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
 					}
 
 					$data['task_imgname'] =$file_name1;
@@ -2533,9 +2539,10 @@ echo $html; exit;
 			
 			$worker_detail = $this->worker_model->get_worker_info($task_detail->tsk_invit_worker_id);
 			$task_link ='<a href="'.base_url().'tasks/'.$task_detail->task_url_name.'">'.$task_detail->task_name.'</a>';
+			if(isset($worker_detail->user_id)){
 			$worker_notification = notification_setting($worker_detail->user_id);
 			
-			
+			}
 				if(isset($worker_notification->on_post_task)) {  
 	
 					if($worker_notification->on_post_task==1) {  
@@ -3091,7 +3098,7 @@ echo $html; exit;
 			$file_name=get_authenticateUserID().$rand.$_FILES['userfile']['name'];	
 
 			$config =  array(
-			                  'upload_path'     => '/home/saivisiontech/public_html/newsite/upload/task_doc',
+			                  'upload_path'     => '/upload/task_doc',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE
@@ -3193,9 +3200,11 @@ echo $html; exit;
 		$metaDescription=$meta_setting->meta_description;
 		$metaKeyword=$meta_setting->meta_keyword;
 		$data['state_list'] =$this->task_model->get_state_list();
+		if(isset($task_id)) {
 		$data['task_location']=$this->task_model->get_task_location($task_id);
+	}
+
 		$data['user_location']=$this->user_model->get_user_location(get_authenticateUserID());
-		
 		
 		
 		$this->template->write('pageTitle',$pageTitle,TRUE);
@@ -3205,6 +3214,7 @@ echo $html; exit;
 		$this->template->write_view('content_center',$theme .'/layout/task/newhome_task',$data,TRUE);
 		$this->template->write_view('footer',$theme .'/layout/common/footer',$data,TRUE);
 		$this->template->render();
+	
 	}
 
 	function task_city(){
@@ -3224,7 +3234,7 @@ echo $html; exit;
 		//echo $file_name = $filename;
 		//$this->load->helper('download');
         $file = html_entity_decode(urldecode($filename));
-        $filePath="/home/saivisiontech/public_html/newsite/upload/task_doc/";
+        $filePath="/home/upload/task_doc/";
 
         $file_extension = end(explode(".", $file));
 

@@ -469,12 +469,12 @@ class Worker_task_model extends CI_Model
 		
 		
 			$get_worker_detail=$this->db->get_where('worker',array('user_id'=>get_authenticateUserID()));
-		if (isset($wid))
-		{
 		if($get_worker_detail)
 		{
 		
 		$worker_detail=$get_worker_detail->row();
+		if (isset($worker_detail->worker_id))
+		{
 		$this->db->select('*');
 		$this->db->from('worker_comment');
 		$this->db->join('user','worker_comment.comment_post_user_id=user.user_id');

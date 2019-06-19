@@ -248,7 +248,8 @@ if(isset($current_city_name)) {  $city_name=$current_city_name; }
 				                <li>
 								<?php 
 								
-
+								if(isset($site_setting->subscription_need))
+								{
 								if($site_setting->subscription_need==0) 
 								{
 									if(!check_user_authentication()) { ?>
@@ -281,10 +282,11 @@ if(isset($current_city_name)) {  $city_name=$current_city_name; }
 
 									}
 								}
+							}
 								?>
 								</li>
 				                <li><a href="<?php echo base_url(); ?>index.php/login">Find a Job</a></li>
-				                <li><a href="<?php echo base_url(); ?>index.php/#forhowitworks">How it works</a></li>
+				                <li><a href="<?php echo base_url(); ?>index.php/how_it_works">How it works</a></li>
                                 <li><a href="<?php echo base_url(); ?>index.php/login">Hire a pilot</a></li>
                                 
                             <script type="text/javascript">

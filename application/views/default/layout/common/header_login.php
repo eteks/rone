@@ -249,7 +249,8 @@ if(isset($current_city_name)) {  $city_name=$current_city_name; }
 								
 
 								//echo $site_setting->transection_need;
-
+                                if(isset($site_setting->subscription_need))
+                                {
 								if($site_setting->subscription_need==0) 
 								{
 									if(!check_user_authentication()) { ?>
@@ -278,7 +279,7 @@ if(isset($current_city_name)) {  $city_name=$current_city_name; }
 								<?php
 
 									}
-
+}
 									}
 								}
 								?>

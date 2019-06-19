@@ -67,7 +67,9 @@ $data['site_setting']=$site_setting;
                                 	<div class="search-field-ptd">Task Status</div>
                                     <div class="button-bar">
 										<div class="fl" style="margin-right:10px;"><input type="radio" name="task_status" value="" checked> All</div>
-  										<div class="fl"><input type="radio" name="task_status" value="1" <? if($task_status=='1') echo 'checked'; ?>  />Open</div>
+  										<div class="fl">
+                                            <input type="radio" name="task_status" value="1" <?php if(isset($task_status)=='1') echo "checked"; ?> />Open
+                                        </div>
                                     	<!--<a class="half selected">All</a>
                                     	<a class="half">Open</a>-->
                                     </div>
@@ -78,7 +80,7 @@ $data['site_setting']=$site_setting;
                                     <div class="button-bar">
 										<div class="fl" style="margin-right:10px;"><input type="radio" name="task_type" value="All" checked> All</div>
   									<!--<input type="radio" name="task_type" value="task_loc" <? if($task_type=='task_loc') echo 'checked'; ?>> Tasks with Location-->
-										<div class="fl"><input type="radio" name="task_type" value="online_task" <? if($task_type=='online_task') echo 'checked'; ?>> Online Tasks</div>
+										<div class="fl"><input type="radio" name="task_type" value="online_task" <?php if(isset($task_type)=='online_task') echo 'checked'; ?>> Online Tasks</div>
                                     	<!--<a class="half selected">All</a>
                                     	<a class="half">Tasks with Location</a>
                                         <a class="half">Online Tasks</a>-->
@@ -91,9 +93,9 @@ $data['site_setting']=$site_setting;
                                     	<select name="sort_by" id="sort_by">
                                         	<option value="task_id desc" selected="">Most Recent</option>
                                             <!--<option value="distance">Distance</option>-->
-                                            <option value="task_status" <? if($sort_by=='task_status') echo 'selected'; ?>>Task Status</option>
-                                            <option value="task_to_price asc" <? if($sort_by=='task_to_price asc') echo 'selected'; ?>>Price Ascending</option>
-                                            <option value="task_to_price desc" <? if($sort_by=='task_to_price desc') echo 'selected'; ?>>Price Descending</option>
+                                            <option value="task_status" <?php if(isset($sort_by)=='task_status') echo 'selected'; ?>>Task Status</option>
+                                            <option value="task_to_price asc" <?php if(isset($sort_by)=='task_to_price asc') echo 'selected'; ?>>Price Ascending</option>
+                                            <option value="task_to_price desc" <?php if(isset($sort_by)=='task_to_price desc') echo 'selected'; ?>>Price Descending</option>
                                         </select>
                                     </div>
                                 </div>
@@ -102,18 +104,20 @@ $data['site_setting']=$site_setting;
                                     <div class="custom-select-ptd">
                                         <? 
                                            $task_category_list =get_category();
-                                           //echo "<pre>";print_r($task_category_list);
+                                           echo "helo";
+
                                         ?>
-                                        <select name="cat_name" id="cat_name">
+                                         <select name="cat_name" id="cat_name">
                                             <option value="" selected="">Select Category</option>
-                                           <? 
-                                           //$task_category_list =get_category();
-                                           //echo "<pre>";print_r($task_category_list);
-                                           foreach($task_category_list as $category_info){ ?>
-                                           <option value="<?=$category_info->task_category_id;?>" <? if($cat_name==$category_info->task_category_id) echo 'selected'; ?>><?=$category_info->category_name?></option>
+                                           <?php 
+                                          // $task_category_list =get_category();
+                                          // echo "<pre>"; print_r($task_category_list);
+                                        
+                                           foreach($task_category_list as $category_info){  ?>
+                                           <option value="<?php $category_info->task_category_id; ?>"<?php  if($cat_name==$category_info->task_category_id)  echo 'selected'; ?>><?php $category_info->task_category_id; ?></option>
                                            
-                                           <? } ?>
-                                        </select>
+                                           <?php } ?>
+                                        </select> 
                                         <!--<input name="location_name" id="location_name" value="<? echo $location_name ?>" type="text" placeholder="Enter a location">-->
                                         <!--<div class="at-icon-remove-ptd"><img src="<?php echo base_url().getThemeName(); ?>/images/remove_icon_ptd.png" alt="" /></div>-->
                                     </div>
@@ -124,10 +128,10 @@ $data['site_setting']=$site_setting;
                                     <div class="custom-select-ptd">
 										<select name="location_name" id="location_name">
                                         	<option value="" selected="">Select City</option>
-                                           <? foreach($task_city_list as $city_idd=>$city_namee){ ?>
-										   <option value="<?=$city_idd?>" <? if($location_name==$city_idd) echo 'selected'; ?>><?=$city_namee?></option>
+                                           <?php foreach($task_city_list as $city_idd=>$city_namee){ ?>
+										   <option value="<?=$city_idd?>" <?php if($location_name==$city_idd) echo 'selected'; ?>><?php $city_namee?></option>
 										   
-										   <? } ?>
+										   <?php } ?>
                                         </select>
                                     	<!--<input name="location_name" id="location_name" value="<? echo $location_name ?>" type="text" placeholder="Enter a location">-->
                                         <!--<div class="at-icon-remove-ptd"><img src="<?php echo base_url().getThemeName(); ?>/images/remove_icon_ptd.png" alt="" /></div>-->
@@ -181,7 +185,9 @@ $data['site_setting']=$site_setting;
                     <div class="post-task-list-ptd">
                     	<ul>
                             <?php
-                             
+
+                             if($tasks_info>0)
+                             {
                             foreach ($tasks_info as $key => $taskinfo) {
                              $city        =get_cityDetail($taskinfo->task_city_id);
                              $user_detail=$this->user_model->get_user_profile_by_id($taskinfo->user_id);
@@ -192,7 +198,7 @@ $data['site_setting']=$site_setting;
                                 if(file_exists(base_path().'upload/user/'.$user_detail->profile_image)) {
                             
                                     $user_image_new='/upload/user/'.$user_detail->profile_image;
-                                    
+    
                                 }
                                 else
                                 {
@@ -220,7 +226,7 @@ $data['site_setting']=$site_setting;
                                     </div>
                                 </a>
                             </li>
-                            <?php } ?>
+                            <?php } } ?>
                             
                         </ul>
                     </div>
@@ -403,8 +409,6 @@ $data['site_setting']=$site_setting;
         </div>
         <div class="clear"></div>
 
-
-
     </div>
 </div>
 
@@ -429,4 +433,3 @@ function getajaxdata(){
 	$("#setting_task_ptd").slideToggle();
 }
 </script>
-

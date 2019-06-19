@@ -969,14 +969,15 @@ class Task_model extends CI_Model
 	{
 	
 		$query=$this->db->get_where('task_location',array('task_id'=>$task_id));
-		
 		if($query->num_rows()>0)
 		{
 			return $query->result();
+
 		}
 		
 		return 0;
-	
+		
+		
 	}
 	
 
@@ -1295,15 +1296,16 @@ class Task_model extends CI_Model
 		{
 			$addsql .=" AND FIND_IN_SET('1',trc_worker.worker_transportation)";
 		}
-		
+		if(isset($addsql)){
 		$query ="SELECT distinct(trc_worker.worker_id),`trc_worker`.`user_id` FROM (`trc_worker`) JOIN `trc_user` ON `trc_worker`.`user_id`=`trc_user`.`user_id` JOIN `trc_user_profile` ON `trc_worker`.`user_id`=`trc_user_profile`.`user_id` JOIN `trc_worker_cities` ON `trc_worker`.`user_id`=`trc_worker_cities`.`user_id` WHERE `trc_worker`.`worker_app_approved` = 1 AND `trc_worker`.`worker_status` = 1  AND FIND_IN_SET('".$row['task_category_id']."',trc_worker.worker_task_type) AND `trc_worker_cities`.`city_id`='".$row['task_city_id']."' $addsql ORDER BY `trc_worker`.`worker_level` desc";
+
 		$res=$this->db->query($query);
 		foreach ($res->result() as $row)
 		{
 			$sqlins="INSERT INTO worker_invitetion SET workerid='".$row->worker_id."',userid='".$row->user_id."',taskid='".$id."',is_show='1'";
 			$this->db->query($sqlins);
 		}
-
+					}
 		//exit;
 	}
 	
@@ -1404,8 +1406,10 @@ class Task_model extends CI_Model
 				'task_is_private'=>$this->input->post('task_is_private'),
 				'task_urgent'=>$this->input->post('task_urgent'),
 				'task_large_vehicals'=>$this->input->post('task_large_vehicals'),
-				'task_work_doc'=>$data['work_doc'],
-				'task_imgname'=>$data['task_imgname'],
+				/*'task_work_doc'=>$data['work_doc'],
+				'task_imgname'=>$data['task_imgname'],*/
+				'work_doc'=>$this->input->post('work_doc'),
+				'task_imgname'=>$this->input->post('task_imgname'),
 				'done_online'=>$this->input->post('done_online'),
 				'task_online'=>$this->input->post('task_online')
 			);
@@ -1576,8 +1580,8 @@ class Task_model extends CI_Model
 		$task_url_name=clean_url(str_replace($swword,$engword,$this->input->post('task_name')));
 		
 		
-		
-		
+				
+
 		$chk_url_exists=$this->db->query("select MAX(task_url_name) as task_url_name from ".$this->db->dbprefix('task')." where task_id!='".$task_id."' and   task_url_name like '".$task_url_name."%'");
 		
 		if($chk_url_exists->num_rows()>0)
@@ -2011,6 +2015,8 @@ class Task_model extends CI_Model
 	}
 			
 	function getCityall(){
+		if(isset($addsql))
+		{
 		$sql="SELECT * FROM `trc_city` WHERE 1 $addsql ";
 		$recordSet=$this->db->query($sql);
         if($recordSet->num_rows()>0){
@@ -2019,6 +2025,7 @@ class Task_model extends CI_Model
 			}
 		} 
 		return $city;
+	    }
 	}
 
 	function bid_count_reduse($userid)

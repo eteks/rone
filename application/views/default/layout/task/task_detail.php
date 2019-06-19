@@ -830,7 +830,7 @@ $data['site_setting']=$site_setting;
                         </p><br><br>
                         <!-- <b>Can be done:</b> Online or by phone-->
 						<div>
-							<?php if($task_detail->task_imgname) { ?>
+							<?php if(isset($task_detail->task_imgname)) { ?>
 							  <a data-popup-open="popup-1" href="#" /><img src="<?php echo base_url(); ?>/upload/task_image/<?php echo $task_detail->task_imgname ?>" height="150px" width="200px"></a>
 							  <div class="popup" data-popup="popup-1">
 								<div class="popup-inner">

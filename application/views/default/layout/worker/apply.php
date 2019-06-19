@@ -1406,7 +1406,7 @@ $(document).ready(function(){
                                 
                                 <?php $dcnt=1;
                                 
-                                     if($worker_document) { 
+                                     if(isset($worker_document)) { 
                                 
                                         foreach($worker_document as $doc) { 
                                         

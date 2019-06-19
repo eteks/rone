@@ -1,69 +1,5 @@
-<!--<link rel="stylesheet" href="<?php echo base_url().getThemeName(); ?>/js/lib/themes/base/jquery.ui.all.css">-->
-<link type="text/css" rel="stylesheet" href="<?php echo base_url().getThemeName(); ?>/css/easy-responsivenew-tabsnew.css" />
-<script src="<?php echo base_url().getThemeName(); ?>/js/easyResponsiveTabs.js" type="text/javascript"></script>  
-<style type="text/css">
-.rmm {max-width:1083px !important}
-.z-section > h3 i {
-font-size: 14px;
-display: inline;
-width: auto;
-height: auto;
-line-height: normal;
-}
-.z-section > h3 span.z-icon {
-width: 22px;
-display: inline-block;
-margin-left: 5px;
-}
-.z-accordion.transition.vertical > section.no-padding > .z-content > .z-auto-g
-{padding:0}
 
-.z-demo-accordion .z-content ul, .z-demo-accordion .z-content ol {
-margin: 0 0 5px 0px;
-}
-
-    .z-demo-accordion.z-accordion.vertical > section > h3,   
-    .z-demo-accordion.z-accordion.horizontal > section > h3 > .z-title
-    {       
-        letter-spacing: 0;
-        font-family:  sans-serif;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-    }
-    .z-demo-accordion.z-accordion.horizontal > section > h3 > .z-title
-    {               
-        text-transform: uppercase;
-    }
-	 .demo {
-            width: 980px;
-            margin: 0px auto;
-        }
-        .demo h1 {
-                margin:33px 0 25px;
-            }
-        .demo h3 {
-                margin: 10px 0;
-            }
-        pre {
-            background: #fff;
-        }
-        @media only screen and (max-width: 780px) {
-        .demo {
-                margin: 5%;
-                width: 90%;
-         }
-        .how-use {
-                float: left;
-                width: 300px;
-                display: none;
-            }
-        }
-        #tabInfo {
-            display: none;
-        }
-		.seemore_sel{ float:right;}
-		.profile_edit_link1 { font-weight:bold;}
-</style>
+<link rel="stylesheet" href="<?php echo base_url().getThemeName(); ?>/js/lib/themes/base/jquery.ui.all.css">
 <script type="text/javascript">
 
 
@@ -218,1658 +154,1716 @@ $data['site_setting']=$site_setting;
 $data['reviews']=$reviews;
 $data['user_profile']=$user_profile;
 ?>
-<!--banner start-->
-<div id="acc-banners-ph" class="banner-contain"></div>
-<!--banner ends-->
-<div class="profile_back">
-    <div class="task-layout">
-        <div class="container">
-            <div class="profile-main">
-                <div class="profile-main-inner">    
-                    <div class="profile-top">
-                        <div class="user-image">
-                            <?php
-                        if($user_profile->profile_image!='') {  
-                            if(file_exists(base_path().'upload/user/'.$user_profile->profile_image)) { ?>
-                            	<div class="round_img cover_img_1">
-                                	<img src="<?php echo base_url(); ?>upload/user/<?php echo $user_profile->profile_image;?>" class=""  />
-                                </div>
-                                <?php } else { ?>
-                                <img src="<?php echo base_url(); ?>upload/no_image.png" class="round_img"  />
-                                <?php } } else { ?>
-                                <img src="<?php echo base_url(); ?>upload/no_image.png" class="round_img"  />
-                                <?php } ?>
-                                <?php $check_worker_detail=$this->worker_model->check_user_worker_detail($user_profile->user_id);
-                                //print_r($check_worker_detail);
-                               
-                                if($check_worker_detail) { 
-                                ?>
-                                
-                    <?php } ?>  
-                        </div>
-                        <div class="details-title-info details-title-info-all">
-                            <div class="tasksimilar">
-                                <a href="#" class="abtmove"><?php echo $user_profile->first_name.' '.substr($user_profile->last_name,0,1); ?> </a>
-                            </div>
-                            <div class="clear"></div>
-                            
-                            <div class="starmenu marB10 fl" >
-                                <?php
 
-                                $total_rate=get_user_total_rate($user_profile->user_id);
-
-                                $total_review=get_user_total_review($user_profile->user_id);
-
-                                ?>
-                                	<div class="strmn strmn-2"><div class="str_sel str_sel-2 fl" style="width:<?php if($total_rate>5) { ?>100<?php } else { echo round($total_rate*2);?>0<?php } ?>%; "></div></div>
-                                    <div class="rate rate-info fl" style="clear: both; margin:5px auto 0; overflow: hidden; text-align:center;"><p class="normal-text"><?php echo $total_rate; ?>/5  ( <span><?php echo anchor('user/'.$user_profile->profile_name.'/reviews',$total_review.' reviews');  ?> </span> )</p></div>
-                                    <div class="clear"></div>
-                                </div> 
-                            <!--<div class="roboimg icon-profile">
-                                <?php 
-                                $check_is_worker=check_is_worker($user_profile->user_id);
-                                if($check_is_worker) { ?>
-                                <a href="#" class="link1 tooltip">
-                                    <img alt="" src="<?php echo base_url().getThemeName(); ?>/images/user_icon1.png">
-                                    <span>Tasker</span>
-                                </a>
-                                <?php 
-                                }
-                                if($check_worker_detail->worker_background_approved==1) { ?>
-                                <a href="#" class="link2 tooltip">
-                                    <img alt="" src="<?php echo base_url().getThemeName(); ?>/images/shild_icon1.png">
-                                    <span>Background Check</span>
-                                </a>
-                                <?php } if($user_profile->mobile_no!='' || $user_profile->phone_no!='') { ?>
-                                <a href="#" class="link3 tooltip">
-                                    <img alt="" src="<?php echo base_url().getThemeName(); ?>/images/phone_icon1.png">
-                                    <span>Contact Verified</span>
-                                </a>
-                                <?php } ?>
-                                <div class="clear"></div>
-                            </div>-->
-                            <div class="clear"></div>
-                            <div class="city-name">
-                            <?php if($check_worker_detail) { 
-                                      
-                                            $worker_cities=$this->worker_model->get_worker_cities($check_worker_detail->worker_id);
-                                            
-                                       ?>
-                           
-                                <b>Areas :</b>
-
-                                    <?php 
-                                    if($worker_cities) {
-                                    $city_list='';
-                                      
-                                       foreach($worker_cities as $wc) {   
-                                       
-                                       $city_list .=ucfirst($wc->city_name).',';
-                                       
-                                       }  
-                                       
-                                       echo substr($city_list,0,-1); 
-                                       
-                                       ?>
-                                       
-                                       <?php } else { ?>
-                                       
-                                        <?php  if($user_profile->current_city>0) { echo getCityName($user_profile->current_city); } ?>
-                                        
+<div>
+<div class="red-subtitle" style="margin:172px 0 0 0">Profile</div>
+    <div id="two-columnar-section">
+<div class="task-layout">
+<div class="db-rightinfo" style="width:100%; margin:25px 0 0 0">
+<div class="details-title-ph">
+<div class="user-image">
+<?php
+					
+					if($user_profile->profile_image!='') {  
+					
+						if(file_exists(base_path().'upload/user/'.$user_profile->profile_image)) { ?>
+                        
+                        <img src="<?php echo base_url(); ?>upload/user/<?php echo $user_profile->profile_image;?>" width="72" height="72" alt="" class="fl"  />
+                        
+                        <?php } else { ?>
+                        
+                  <img src="<?php echo base_url(); ?>upload/no_image.png" width="72" height="72" alt="" class="fl"  />
                     
                     <?php } } else { ?>
-                                        <?php  if($user_profile->current_city>0) { echo getCityName($user_profile->current_city); } ?>
-                                        
-                                        
-                                     <?php } ?>
-                            </div>
-                            <div class="city-name">
-                                <b>I do Tasks :</b> <?php
+                    
+                    <img src="<?php echo base_url(); ?>upload/no_image.png" width="72" height="72" alt="" class="fl"  />
+                    
+                    <?php } ?>
+                    
+                 
+                  
+                     <?php $check_worker_detail=$this->worker_model->check_user_worker_detail($user_profile->user_id);
+					
+					if($check_worker_detail) { 
+                    ?>
+                      
+                        <a rel="tooltip" id="twoone1br" title="Level <?php echo $check_worker_detail->worker_level;?> Worker bee"><?php echo $check_worker_detail->worker_level;?></a>
 
-                                 if($check_worker_detail) { 
-                                 
-                                  $worker_transportation_detail='';
-                                  
-                                 $types=$check_worker_detail->worker_transportation;
-                                 
-                                 if($types!='') { 
-                                 
-                                
-                                 
-                                 $ex_type=explode(',',$types);
-                                 
-                                 foreach($ex_type as $type) 
-                                 {
-                                    
-                                     $get_transportation=get_transportation_detail($type);
-                                     
-                                     if($get_transportation)
-                                     {
-                                         if(isset($get_transportation->name)) { 
-                                          $worker_transportation_detail .=$get_transportation->name.',';
-                                          }
-                                    }
-                                     
-                                    
-                                }
-                                ?>
-                                
-                                <?php if($worker_transportation_detail!='') { echo substr($worker_transportation_detail,0,-1); } ?>
-                                
-                                
-                            <?php   }
-                                
-                                
-                                
-                                } ?>
+                    <?php } ?>  
+</div>
+<div class="details-title">
+<div class="areanm" style="width:294px;">
+                <div><a href="#" class="abtmove"><?php echo $user_profile->first_name.' '.substr($user_profile->last_name,0,1); ?></a></div>
+                   
+                  <?php if($check_worker_detail) { 
+				  
+				  		$worker_cities=$this->worker_model->get_worker_cities($check_worker_detail->worker_id);
+						
+				  if($worker_cities) { ?>
+                  <div>
+                  <?php $city_list='';
+				  
+				   foreach($worker_cities as $wc) {   
+                   
+				   $city_list .=ucfirst($wc->city_name).',';
+				   
+                   }  
+				   
+				   echo substr($city_list,0,-1); 
+				   
+				   ?>
+                   </div>
+                   <?php } else { ?>
+                   
+                    <span class="req"><?php  if($user_profile->current_city>0) { echo getCityName($user_profile->current_city); } ?></span>
+                    
+
+<?php } } else { ?>
+                    <span class="req"><?php  if($user_profile->current_city>0) { echo getCityName($user_profile->current_city); } ?></span>
+                    
+                    
+                 <?php } 
+				 
+				 
+			 if($check_worker_detail) { 
+			 
+			  $worker_transportation_detail='';
+			  
+			 $types=$check_worker_detail->worker_transportation;
+			 
+			 if($types!='') { 
+			 
+			
+			 
+			 $ex_type=explode(',',$types);
+			 
+			 foreach($ex_type as $type) 
+			 {
+				
+				 $get_transportation=get_transportation_detail($type);
+				 
+				 if($get_transportation)
+				 {
+					 if(isset($get_transportation->name)) { 
+					  $worker_transportation_detail .=$get_transportation->name.',';
+					  }
+				}
+				 
+				
+			}
+			?>
+            
+            <div class="marT5"><?php if($worker_transportation_detail!='') { echo "I do Tasks: ". substr($worker_transportation_detail,0,-1); } ?></div>
+			
+			
+		<?php 	}
+			
+			
+			
+			} ?>
+
+                    
+                    
+                </div>
+</div>
+<div class="areaface">
+                       
+					   <?php if(get_authenticateUserID()=='') { ?>
+                           <div id="favorite" style="float:right">
+                            <input name="" type="submit" class="favbtnbg" onClick="make_favorite(<?php echo $user_profile->user_id;?>)" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add as Favourite" />
                             </div>
-                        </div>
-                    </div>
-                    <div class="bottom-tabs">
-                        <!-- tab start-->
-                        <div id="horizontalTab" class="detail-tab">
-                            <ul class="resp-tabs-list">
-                                 <li>
-                                 		<img src="<?php echo base_url().getThemeName(); ?>/images/user_img_pro.png" alt="" /> 
-                                        <br />
-                                        <span>About</span>
-                                 </li>
-                                 <li>
-                                 		<img src="<?php echo base_url().getThemeName(); ?>/images/portfolio_img.png" alt="" /> 
-                                        <br />
-                                    	<span>Portfolio</span>
-                                 </li>
-                                 <li>
-                                 		<img src="<?php echo base_url().getThemeName(); ?>/images/recent_img.png" alt="" /> 
-                                        <br />
-                                    	<span>Recent Activity</span>
-                                 </li>
-                                 <li>
-                                 		<img src="<?php echo base_url().getThemeName(); ?>/images/review_img.png" alt="" /> 
-                                        <br />
-                                    	<span>Reviews</span>
-                                 </li>    
-                            </ul>
-                            <div class="resp-tabs-container">
-                                <div class="abtsty">
-                                    <p class="about-detail"> <?php    $content=$user_profile->about_user;
-                                $content=str_replace('KSYDOU','"',$content);
-                                $content=str_replace('KSYSING',"'",$content); 
-                                
-                                echo $content; ?> </p>
-                                </div>
-                                <div class="abttb2 abttb2-2" style="padding-left:10px;">
-                                	<script type="text/javascript">
-                                        jQuery(document).ready(function() {
-                                            $("a[rel=example_group]").fancybox({
-                                                'transitionIn' : 'none',
-                                                'transitionOut' : 'none',
-                                                'titlePosition' : 'over',
-                                                'titleFormat' : function(title, currentArray, currentIndex, currentOpts) {
-                                                return '&lt;span id="fancybox-title-over"&gt;Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &amp;nbsp; ' + title : '') + '&lt;/span&gt;';
-                                                }
-                                                });
-                                            });
-                                    </script>
-                                    <div class="clear"></div>
-                                    <div class="marTB10">
-                                        <table width="100%" cellspacing="1" cellpadding="0" border="0">
-                                             <?php if($portfolio_photo) { ?>
-                                            <tr>
-                                                <td valign="top" width="19%" align="left">
-                                                   <?php
-        
-                                                        $i=0;
-                                                        foreach( $portfolio_photo as $p_photo)
-                                                        {
-                                                        $i++;
-                                                        if($p_photo->portfolio_image!=''){
-                                                        if(file_exists(base_path().'upload/user/'.$p_photo->portfolio_image)) { ?>
-                                                        
-                                                        
-                                                        
-                                                        <a href="<?php echo base_url().'upload/user_orig/'.$p_photo->portfolio_image; ?>" rel="example_group"><img src="<?php echo base_url().'upload/user/'.$p_photo->portfolio_image; ?>" width="280" style="margin:0 2px 0 2px;" height="" class="round-corner" alt="" /></a>
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        <?php } }
-                                                        }?>
-                                                </td>
-                                            </tr>
-                                             <?php  } ?>
-                                             <?php
-                            if($portfolio_video) { ?>
-                                             <tr>
-                                                <td valign="top" width="19%" align="left">
-                                                   <?php
-        
-        $i=0;
-        foreach($portfolio_video as $p_video)
-        {
-        $i++;
-        if($p_video->portfolio_video!=''){
-        
-        if(substr_count($p_video->portfolio_video,'object')>0)
-        {
-        echo html_entity_decode($p_video->portfolio_video);
-        }
-        
-        elseif(substr_count($p_video->portfolio_video,'iframe')>0)
-        {
-        if(substr_count($p_video->portfolio_video,'youtube')>0)
-        {
-        $p_video->portfolio_video;
-        $patterns[] = '/src="(.*?)"/';
-        $replacements[] = 'src="${1}?wmode=transparent"';
-        
-        //echo html_entity_decode(preg_replace($patterns,$replacements,$p_video->portfolio_video));
-        echo html_entity_decode($p_video->portfolio_video);
-        }
-        elseif(substr_count($p_video->portfolio_video,'vimeo')>0)
-        {
-        $patterns[] = '/src="(.*?)"/';
-        preg_match('/src="(.*?)"/',$p_video->portfolio_video,$matches);
-        echo '<iframe src="'.$matches[1].'" frameborder="0" allowfullscreen></iframe>';
-        }
-        else
-        {
-        echo $p_video->portfolio_video;
-        }
-        }
-        else
-        {
-        if(substr_count($p_video->portfolio_video,'youtu.be')>0)
-        {
-        
-        $p_video->portfolio_video=str_replace('youtu.be','www.youtube.com/v',$p_video->portfolio_video);
-        
-        $p_video->portfolio_video = str_replace(array("v=", "v/", "vi/"), "v=",$p_video->portfolio_video);
-        
-        
-        preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#",$p_video->portfolio_video,$matches);
-        
-        echo '<iframe src="http://www.youtube.com/embed/'.$matches[0].'?wmode=transparent" frameborder="0" allowfullscreen></iframe>';
-        
-        }
-        
-        elseif(substr_count($p_video->portfolio_video,'youtube')>0)
-        {
-        $p_video->portfolio_video = str_replace(array("v=", "v/", "vi/"), "v=",$p_video->portfolio_video);
-        
-        preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#",$p_video->portfolio_video,$matches);
-        
-        echo '<iframe src="http://www.youtube.com/embed/'.$matches[0].'?wmode=transparent" frameborder="0" allowfullscreen></iframe>';
-        
-        }
-        elseif(substr_count($p_video->portfolio_video,'vimeo')>0)
-        {
-        
-        $vid_code = explode("/",$p_video->portfolio_video);
-        $vid = $vid_code[count($vid_code)-1];
-        echo '<iframe src="http://player.vimeo.com/video/'.$vid.'?title=0&byline=0&portrait=0" frameborder="0"></iframe>';
-        }
-        
-        else
-        {
-        echo $p_video->portfolio_video;
-        }
-        
-        }
-        ?>
-        
-        
-        
-        
-        <?php }
-        echo "<br /><br />";
-        }?>
-                                                </td>
-                                            </tr>
-                                            <?php }?>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="abttb3 abttb3-2 abttb3-2-new">
-                                    <ul class="top-in">
-                                        <?php if($activities) {  
+                            
+                            <?php } elseif(get_authenticateUserID()==$user_profile->user_id) { 
+							
+							echo anchor('account','Edit Name &amp; Account','class="profile_edit_link1"') ;
+							
+							} /*else { 
+							
+							
+							
+							 if($check_worker_detail) { 
+							 
+							 
+							$chk_login_user_favorite=check_user_favorite($user_profile->user_id);
+							
+							if($chk_login_user_favorite) {
+							?>
+                            <div id="favorite">
+                              <input name="" type="submit" class="myfavbtnbg" onClick="un_favorite(<?php echo $user_profile->user_id;?>)" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My Favourite" />
+                              </div>
+                            
+                            <?php } else { ?>
+                            
+                            <div id="favorite">
+                              <input name="" type="submit" class="favbtnbg" onClick="make_favorite(<?php echo $user_profile->user_id;?>)" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add as Favourite" />
+                            </div>
+                            
+                            <?php }  } 	}*/ ?> 
+                       
+                        <div style="float:right;margin:10px;">
+                        <style type="text/css">
+						.fr { float:left; padding-left:5px; }
+						.areaface { width:246px; } 
+						</style>
+                        
+                        
+                        <?php if($user_profile->own_site_link!='') { ?>
+                        
+                        <a href="<?php echo $user_profile->own_site_link; ?>" target="_blank"><img src="<?php echo base_url().getThemeName(); ?>/images/home.png" alt="" width="30" height="30" class="fr" /></a>
+                        <?php } if($user_profile->facebook_link!='') { ?>
+                        <a href="<?php echo $user_profile->facebook_link; ?>" target="_blank"><img src="<?php echo base_url().getThemeName(); ?>/images/fb_p.png" alt="" width="30" height="30" class="fr" /></a> 		
+						<?php } if($user_profile->twitter_link!='') { ?>
+                         <a href="<?php echo $user_profile->twitter_link; ?>" target="_blank"><img src="<?php echo base_url().getThemeName(); ?>/images/twitter_p.png" alt="" width="30" height="30" class="fr" /></a>
+                         <?php } if($user_profile->linkedin_link!='') { ?>
+                         
+                         <a href="<?php echo $user_profile->linkedin_link; ?>" target="_blank"><img src="<?php echo base_url().getThemeName(); ?>/images/linkedin.png" alt="" width="30" height="30" class="fr" /></a>
+                         <?php }if($user_profile->youtube_link!='') { ?>
+                         
+                         <a href="<?php echo $user_profile->youtube_link; ?>" target="_blank"><img src="<?php echo base_url().getThemeName(); ?>/images/youtube.png" alt="" width="30" height="30" class="fr" /></a>
+                         <?php } if($user_profile->yelp_link!='') { ?>
+                         
+                        
+                            <a href="<?php echo $user_profile->yelp_link; ?>" target="_blank"><img src="<?php echo base_url().getThemeName(); ?>/images/yelp.png" alt="" width="30" height="30" class="fr" /></a>  
+                         <?php } if($user_profile->blog_link!='') { ?>
+                         
+                         <a href="<?php echo $user_profile->blog_link; ?>" target="_blank"><img src="<?php echo base_url().getThemeName(); ?>/images/rss.png" alt="" width="30" height="30" class="fr" /></a>	
+                         <?php } ?>
+                         
+                         </div>
+                         
+                         
+                            
+                              
+                </div>
+</div>
+<div class="clear"></div>	
+    
+
+<div class="home-signpost-content">
+           
+            
+            
+		<div class="dbleft">
+                        
+  <?php if($msg!=''){   ?>
+				<div id="success">
+					<ul>
+					<?php if($msg=='update') { ?><p>Profile changed!.</p> <?php } ?>
+					</ul>
+				</div>
+			<?php }   ?>
+            
+            
+
+				
                
-                    foreach($activities as $res)
-                    {
+                
+             
+
+<!-- tab s-->
+<div  id="tabs">
+			<ul>
+				<li><a href="#tabs-1"><img src="<?php echo base_url().getThemeName(); ?>/images/abt_person.png" alt="" /> About</a></li>
+				<li><a href="#tabs-2"><img src="<?php echo base_url().getThemeName(); ?>/images/recent_act.png" alt="" /> Recent Activity</a></li>
+				<li><a href="#tabs-3"><img src="<?php echo base_url().getThemeName(); ?>/images/review-star.png" alt="" /> Reviews</a></li>	
+			</ul>
+			<!--<div class="clear"></div>
+            <div class="bgline"></div>-->
+            
+            
+			<div id="tabs-1">
+            	<div class="abtsty">
                     
-                        
-                        $act=$res->act;
-                        
-                        
-                        $activity_name = $res->activity_name;
-                        $activity_url_name = $res->activity_url_name;
-                        $activity_date  = getDuration($res->activity_date);
-                        $key_id =$res->key_id;
-                        $profile_user_url_name = $res->profile_user_url_name;
-                        
-                        
-                        if(substr_count($res->profile_user_name,' ')>=1)
-                        {
-                            $ex_name=explode(' ',$res->profile_user_name);
-                        
-                            $user_name=ucfirst($ex_name[0]).' ';
-                            
-                            if(isset($ex_name[1])) 
-                            {               
-                                $user_name .= substr(ucfirst($ex_name[1]),0,1).'.';             
-                            }
-                        
-                        }
-                        else
-                        {
-                            $user_name=$res->profile_user_name;
-                        }
-                        
-                        
-                        $profile_user_name = $user_name;
-                        $profile_user_image = $res->profile_user_image;
-                        $custom_msg =  $res->custom_msg;
-                        $custom_msg2 = $res->custom_msg2;
+                    <p>
+                         <?php    $content=$user_profile->about_user;
+						$content=str_replace('KSYDOU','"',$content);
+						$content=str_replace('KSYSING',"'",$content); 
+						
+						echo $content; ?>
+                    </p>
+                    
+                  
+                  
+                  <script type="text/javascript">
+					jQuery(document).ready(function() {
+					
+						$("a[rel=example_group]").fancybox({
+						'transitionIn' : 'none',
+						'transitionOut' : 'none',
+						'titlePosition' : 'over',
+						'titleFormat' : function(title, currentArray, currentIndex, currentOpts) {
+						return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+						}
+						});
+					
+					});
+
+</script>
+                  
+
+            
+              <div class="marTB10">
+
+      
+                    <table width="100%" border="0" cellspacing="1" cellpadding="0">
                     
                     
-                        
-                        switch ($act)
-                        {
-                                case 'signup':
-                                  
-                                  ?>
-                                    <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                           <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($custom_msg)) { if($custom_msg!='') { ?>
-                                    
-                                     <br><a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $custom_msg; ?><span>Level <?php echo $custom_msg;?> Tasker</span></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="abmarks abmarks-2 unl"'); ?>
-                                        <div class="colmark colmark-2">Welcome!</div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                   
-                                    <div class="clear"></div>
-                                </li>
-                                  
-                                  
-                                <?php  
-                                  
-                                  break;
-                                  case 'workersignup':
-                                  
-                                  ?>
-                                    <li class="posrel">
-                                   <div class="taskphoto taskphoto-2">
-                                           <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($custom_msg)) { if($custom_msg!='') { ?>
-                                    
-                                      <br><a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $custom_msg; ?><span>Level <?php echo $custom_msg;?> Tasker</span></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="abmarks abmarks-2 unl"'); ?>
-                                        <div class="colmark colmark-2">has signed up to be a Tasker Time to get moving.</div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                   
-                                    <div class="clear"></div>
-                                </li>
-                                  
-                                  
-                                <?php  
-                                  
-                                  break;
-                                  
-                                case 'posttask':
-                                 
-                                 ?>
-                                 
-                                 <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                            <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($key_id)) { if($key_id!='') {
-                                                            
-                                     ?>
-                                    
-                                      <br><a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $key_id; ?><span>Level <?php echo $key_id;?> Tasker</span></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks abmarks-2 unl"'); ?>
-                                        <div class="colmark colmark-2">posted by <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="colgreen"'); 
-                                        
-                                      
-                                        
-                                        
-                                        
-                                    if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $worker_level=0;
-                                    $worker_name='';
-                                    $worker_profile_url='';
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_worker=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_worker[0])) 
-                                            {
-                                                $worker_profile_url=$ex_worker[0];
-                                            }
-                                            
-                                            
-                                                $worker_name=ucfirst($ex_worker[1]).' ';
-                                                
-                                                if(isset($ex_worker[2])) 
-                                                {               
-                                                    $worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';             
-                                                }
-                                                                                                                
-                                            
-                                        }
-                                        
-                                        if($worker_name!='' && $worker_profile_url!='') 
-                                        { 
-                                        
-                                            echo 'for '.anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
-                                        
-                                        }
-                                        
-                                        
-                                }   }
-                                ?>
-                                        
-                                        <!-- expires in--> <?php 
-                                        
-                                        
-                                        $task_start_day=0;
-                                        $task_start_time=0;
-                                        
-                                        
-                                        if(isset($custom_msg2)) { 
-                                        
-                                            
-                                            if(substr_count($custom_msg2,',')>=1)
-                                            {
-                                                $ex_date=explode(',',$custom_msg2);
-                                            
-                                                $task_start_day=$ex_date[0];
-                                                
-                                                if(isset($ex_date[1])) 
-                                                {               
-                                                    $task_start_time = $ex_date[1];             
-                                                }
-                                            
-                                            }
-                                            
-                        
-                                        }
-                                        
-                                       // echo getDuration(date('Y-m-d',strtotime(date("Y-m-d", strtotime($res->activity_date)) . " +".$task_start_day."days")).'-'.date('H',mktime(0,$task_start_time,0,0,0,0)));    ?></div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                  <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                                     
-                                    <div class="clear"></div>
-                                </li>
-                                 
-                                 
-                                 <?php
-                                 
-                                  break;
-                                  
-                                  case 'workerposttask':
-                                 ?>
-                                 
-                                 
-                                 <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                            <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($key_id)) { if($key_id!='') {
-                                                            
-                                     ?>
-                                    
-                                      <br><a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $key_id; ?><span>Level <?php echo $key_id;?> Tasker</span></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks abmarks-2 unl"'); ?>
-                                        <div class="colmark colmark-2">posted by <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="colgreen"'); 
-                                        
-                                      
-                                        
-                                        
-                                        
-                                    if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $worker_level=0;
-                                    $worker_name='';
-                                    $worker_profile_url='';
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_worker=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_worker[0])) 
-                                            {
-                                                $worker_profile_url=$ex_worker[0];
-                                            }
-                                            
-                                            
-                                                $worker_name=ucfirst($ex_worker[1]).' ';
-                                                
-                                                if(isset($ex_worker[2])) 
-                                                {               
-                                                    $worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';             
-                                                }
-                                                                                                                
-                                            
-                                        }
-                                        
-                                        if($worker_name!='' && $worker_profile_url!='') 
-                                        { 
-                                        
-                                            echo 'for '.anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
-                                        
-                                        }
-                                        
-                                        
-                                }   }
-                                ?>
-                                        
-                                         and needs to be assigned by <?php 
-                                        
-                                        
-                                        $task_start_day=0;
-                                        $task_start_time=0;
-                                        
-                                        
-                                        if(isset($custom_msg2)) { 
-                                        
-                                            
-                                            if(substr_count($custom_msg2,',')>=1)
-                                            {
-                                                $ex_date=explode(',',$custom_msg2);
-                                            
-                                                $task_start_day=$ex_date[0];
-                                                
-                                                if(isset($ex_date[1])) 
-                                                {               
-                                                    $task_start_time = $ex_date[1];             
-                                                }
-                                            
-                                            }
-                                            
-                        
-                                        }
-                                        
-                                        echo getDuration(date('Y-m-d',strtotime(date("Y-m-d", strtotime($res->activity_date)) . " +".$task_start_day."days")).'-'.date('H',mktime(0,$task_start_time,0,0,0,0)));    ?></div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                  <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                                     
-                                    <div class="clear"></div>
-                                </li>
-                                 
-                                 <?php
-                                  break;
-                                  
-                                case 'assigntask':
-                                
-                                ?>
-                                
-                                <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                            <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($key_id)) { if($key_id!='') {
-                                                            
-                                     ?>
-                                    
-                                     <br> <a id="twoonebr1" rel="tooltip" title="Level <?php echo $key_id;?> Tasker">Level <?php echo $key_id; ?></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,' class="abmarks abmarks-2 unl"'); ?>
-                                        <div class="colmark colmark-2">accepted the offer from <?php 
-                                      
-                                        
-                                        
-                                        
-                                    if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $worker_level=0;
-                                    $worker_name='';
-                                    $worker_profile_url='';
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_worker=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_worker[0])) 
-                                            {
-                                                $worker_profile_url=$ex_worker[0];
-                                            }
-                                            
-                                            
-                                                $worker_name=ucfirst($ex_worker[1]).' ';
-                                                
-                                                if(isset($ex_worker[2])) 
-                                                {               
-                                                    $worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';             
-                                                }
-                                                                                                                
-                                            
-                                        }
-                                        
-                                        if($worker_name!='' && $worker_profile_url!='') 
-                                        { 
-                                        
-                                            echo anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
-                                        
-                                        }
-                                        
-                                        
-                                }   }
-                                ?>
-                                        
-                                         for  <?php
-                                         
-                                         echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),'class="colgreen"');  
-                                        
-                                            ?></div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                  <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                                     
-                                    <div class="clear"></div>
-                                </li>
-                                
-                                
-                                
-                                <?php
-                                  break;
-                                  
-                                case 'workerassigntask':
-                                ?>
-                                
-                                
-                                <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                            <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($key_id)) { if($key_id!='') {
-                                                            
-                                     ?>
-                                    
-                                      <br><a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $key_id; ?><span>Level <?php echo $key_id;?> Tasker</span></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,' class="abmarks abmarks-2 unl"'); ?>
-                                        <div class="colmark colmark-2">accepted the offer from <?php 
-                                      
-                                        
-                                        
-                                        
-                                    if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $worker_level=0;
-                                    $worker_name='';
-                                    $worker_profile_url='';
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_worker=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_worker[0])) 
-                                            {
-                                                $worker_profile_url=$ex_worker[0];
-                                            }
-                                            
-                                            
-                                                $worker_name=ucfirst($ex_worker[1]).' ';
-                                                
-                                                if(isset($ex_worker[2])) 
-                                                {               
-                                                    $worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';             
-                                                }
-                                                                                                                
-                                            
-                                        }
-                                        
-                                        if($worker_name!='' && $worker_profile_url!='') 
-                                        { 
-                                        
-                                            echo anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
-                                        
-                                        }
-                                        
-                                        
-                                }   }
-                                ?>
-                                        
-                                         for  <?php
-                                         
-                                         echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),'class="colgreen"');  
-                                        
-                                            ?></div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                  <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                                     
-                                    <div class="clear"></div>
-                                </li>
-                                
-                                <?php
-                                  break;
-                                  
-                                case 'completetask':
-                                ?>
-                                
-                                
-                                <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                            <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $worker_level=0;
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_worker=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_worker[4])) 
-                                            {
-                                                $worker_level=$ex_worker[4];
-                                            }                               
-                                        }
-                                                            
-                                     ?>
-                                    
-                                      <br><a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $worker_level; ?><span>Level <?php echo $worker_level;?> Tasker</span></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks unl"'); ?>
-                                        <div class="colmark colmark-2">has been marked completed by <?php 
-                                      
-                                        
-                                    echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="colgreen"');
-                                    
-                                ?>
-                                        
-                                       </div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                  <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                                     
-                                    <div class="clear"></div>
-                                </li>
-                                
-                                <?php
-                                  break;
-                                  
-                                case 'workercompletetask':
-                                ?>
-                                
-                                <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                            <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $worker_level=0;
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_worker=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_worker[4])) 
-                                            {
-                                                $worker_level=$ex_worker[4];
-                                            }                               
-                                        }
-                                                            
-                                     ?>
-                                    
-                                     <br> <a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $worker_level; ?><span>Level <?php echo $worker_level;?> Tasker</span></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks abmarks-2 unl"'); ?>
-                                        <div class="colmark colmark-2">has been marked completed by <?php 
-                                      
-                                        
-                                    echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="colgreen"');
-                                    
-                                ?>
-                                        
-                                       </div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                  <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                                     
-                                    <div class="clear"></div>
-                                </li>
-                                
-                                <?php
-                                  break;
-                                  
-                                
-                                case 'finishtask':
+                    <?php if($portfolio_photo) { ?>
+                    <tr>
+                    <td  align="left" valign="top">
+<?php
+
+$i=0;
+foreach( $portfolio_photo as $p_photo)
+{
+$i++;
+if($p_photo->portfolio_image!=''){
+if(file_exists(base_path().'upload/user/'.$p_photo->portfolio_image)) { ?>
+
+
+
+<a href="<?php echo base_url().'upload/user_orig/'.$p_photo->portfolio_image; ?>" rel="example_group"><img src="<?php echo base_url().'upload/user/'.$p_photo->portfolio_image; ?>" width="100" height="100" alt="" /></a>
+
+
+
+
+<?php } }
+}?>
+
+</td>
+					</tr>
+                    <?php  } ?>
+
+
+                    <?php
+					if($portfolio_video) { ?>
+                    <tr><td height="15">&nbsp;</td></tr>
+<tr>
+<td  valign="top" align="center">
+<!-- -->
+
+
+<?php
+
+$i=0;
+foreach($portfolio_video as $p_video)
+{
+$i++;
+if($p_video->portfolio_video!=''){
+
+if(substr_count($p_video->portfolio_video,'object')>0)
+{
+echo html_entity_decode($p_video->portfolio_video);
+}
+
+elseif(substr_count($p_video->portfolio_video,'iframe')>0)
+{
+if(substr_count($p_video->portfolio_video,'youtube')>0)
+{
+$p_video->portfolio_video;
+$patterns[] = '/src="(.*?)"/';
+$replacements[] = 'src="${1}?wmode=transparent"';
+
+//echo html_entity_decode(preg_replace($patterns,$replacements,$p_video->portfolio_video));
+echo html_entity_decode($p_video->portfolio_video);
+}
+elseif(substr_count($p_video->portfolio_video,'vimeo')>0)
+{
+$patterns[] = '/src="(.*?)"/';
+preg_match('/src="(.*?)"/',$p_video->portfolio_video,$matches);
+echo '<iframe src="'.$matches[1].'" frameborder="0" allowfullscreen></iframe>';
+}
+else
+{
+echo $p_video->portfolio_video;
+}
+}
+else
+{
+if(substr_count($p_video->portfolio_video,'youtu.be')>0)
+{
+
+$p_video->portfolio_video=str_replace('youtu.be','www.youtube.com/v',$p_video->portfolio_video);
+
+$p_video->portfolio_video = str_replace(array("v=", "v/", "vi/"), "v=",$p_video->portfolio_video);
+
+
+preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#",$p_video->portfolio_video,$matches);
+
+echo '<iframe src="http://www.youtube.com/embed/'.$matches[0].'?wmode=transparent" frameborder="0" allowfullscreen></iframe>';
+
+}
+
+elseif(substr_count($p_video->portfolio_video,'youtube')>0)
+{
+$p_video->portfolio_video = str_replace(array("v=", "v/", "vi/"), "v=",$p_video->portfolio_video);
+
+preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#",$p_video->portfolio_video,$matches);
+
+echo '<iframe src="http://www.youtube.com/embed/'.$matches[0].'?wmode=transparent" frameborder="0" allowfullscreen></iframe>';
+
+}
+elseif(substr_count($p_video->portfolio_video,'vimeo')>0)
+{
+
+$vid_code = explode("/",$p_video->portfolio_video);
+$vid = $vid_code[count($vid_code)-1];
+echo '<iframe src="http://player.vimeo.com/video/'.$vid.'?title=0&byline=0&portrait=0" frameborder="0"></iframe>';
+}
+
+else
+{
+echo $p_video->portfolio_video;
+}
+
+}
+?>
+
+
+
+
+<?php }
+echo "<br /><br />";
+}?>
+<!-- -->
+
+</td>
+</tr>
+
+<?php }?>
+
+
+
+</table>
+
+
+</div>
+
+                </div>
+
+				
+			</div>
+			
+			<div id="tabs-2">
+				<div class="abttb2" style="padding-left:10px;">
+                	<ul>
+                    
+                    
+	   <?php //echo "<pre>"; print_r($activities);
+       
+       
+       
+       
+       if($activities) {  
+       
+            foreach($activities as $res)
+            {
+            
+				
+				$act=$res->act;
+				
+				
+				$activity_name = $res->activity_name;
+				$activity_url_name = $res->activity_url_name;
+				$activity_date  = getDuration($res->activity_date);
+				$key_id =$res->key_id;
+				$profile_user_url_name = $res->profile_user_url_name;
+				
+				
+				if(substr_count($res->profile_user_name,' ')>=1)
+				{
+					$ex_name=explode(' ',$res->profile_user_name);
+				
+					$user_name=ucfirst($ex_name[0]).' ';
+					
+					if(isset($ex_name[1])) 
+					{				
+						$user_name .= substr(ucfirst($ex_name[1]),0,1).'.';				
+					}
+				
+				}
+				else
+				{
+					$user_name=$res->profile_user_name;
+				}
+				
+				
+				$profile_user_name = $user_name;
+				$profile_user_image = $res->profile_user_image;
+				$custom_msg =  $res->custom_msg;
+				$custom_msg2 = $res->custom_msg2;
+			
+			
+				
+				switch ($act)
+				{
+						case 'signup':
+						  
+						  ?>
+						  	<li class="posrel">
+                            <div class="abc">
+                                   <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($custom_msg)) { if($custom_msg!='') { ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $custom_msg;?> Worker bee"><?php echo $custom_msg; ?></a>
+                             
+                             <?php } } ?>
+                                    
+                            </div>
+                            <div class="abtb2info">
+                            	<?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">Welcome!</div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
+                            </div>
                             
-                            ?>
-                            
-                            
-                            <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                            <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                        if(isset($key_id)) { if($key_id!='') {
-                                                            
-                                     ?>
-                                    
-                                      <br><a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $key_id; ?><span>Level <?php echo $key_id;?> Tasker</span></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks abmarks-2 unl"'); ?>
-                                        <div class="colmark colmark-2">has been finished by <?php 
-                                        if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $worker_level=0;
-                                    $worker_name='';
-                                    $worker_profile_url='';
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_worker=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_worker[0])) 
-                                            {
-                                                $worker_profile_url=$ex_worker[0];
-                                            }
-                                            
-                                            
-                                                $worker_name=ucfirst($ex_worker[1]).' ';
-                                                
-                                                if(isset($ex_worker[2])) 
-                                                {               
-                                                    $worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';             
-                                                }
-                                                                                                                
-                                            
-                                        }
-                                        
-                                        if($worker_name!='' && $worker_profile_url!='') 
-                                        { 
-                                        
-                                            echo anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
-                                        
-                                        }
-                                        
-                                        
-                                }   }
-                                    
-                                ?>
-                                        
-                                       </div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                  <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                                     
-                                    <div class="clear"></div>
-                                </li>
-                            
-                            
-                            <?php
-                            
-                                  break;
-                                  
-                                case 'workerfinishtask':
-                                ?>
-                                
-                                <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                            <?php 
-                                           
-                                           
-                                    $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                        if(isset($key_id)) { if($key_id!='') {
-                                                            
-                                     ?>
-                                    
-                                      <br><a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $key_id; ?><span>Level <?php echo $key_id;?> Tasker</span></a>
-                                     
-                                     <?php } } ?>
-                                            
-                                    </div>
-                                    <div class="taskdetails">
-                                        <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks abmarks-2 unl"'); ?>
-                                        <div class="colmark colmark-2">has been finished by <?php 
-                                        if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $worker_level=0;
-                                    $worker_name='';
-                                    $worker_profile_url='';
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_worker=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_worker[0])) 
-                                            {
-                                                $worker_profile_url=$ex_worker[0];
-                                            }
-                                            
-                                            
-                                                $worker_name=ucfirst($ex_worker[1]).' ';
-                                                
-                                                if(isset($ex_worker[2])) 
-                                                {               
-                                                    $worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';             
-                                                }
-                                                                                                                
-                                            
-                                        }
-                                        
-                                        if($worker_name!='' && $worker_profile_url!='') 
-                                        { 
-                                        
-                                            echo anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
-                                        
-                                        }
-                                        
-                                        
-                                }   }
-                                    
-                                ?>
-                                        
-                                       </div>
-                                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                                    </div>
-                                    
-                                  <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                                     
-                                    <div class="clear"></div>
-                                </li>
-                                
-                                <?php
-                                  break;
-                                  
-                                case 'newcomment':
-                                ?>
-                                
-                                <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                      
-                      
-                      
-                      
-                           <?php 
-                                           
-                                if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $comment_level='';
-                                    $comment_name='';
-                                    $comment_profile_url='';
-                                    $comment_user_image= base_url().'upload/no_image.png';
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_comment=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_comment[0])) 
-                                            {
-                                                $comment_profile_url=$ex_comment[0];
-                                            }
-                                            
-                                            
-                                                $comment_name=ucfirst($ex_comment[1]).' ';
-                                                
-                                                if(isset($ex_comment[2])) 
-                                                {               
-                                                    $comment_name .= substr(ucfirst($ex_comment[2]),0,1).'.';               
-                                                }
-                                                
-                                                
-                                                
-                                                if(isset($ex_comment[3])) 
-                                                {               
-                                                     if($ex_comment[3]!='') {  
-                                
-                                                        if(file_exists(base_path().'upload/user/'.$ex_comment[3])) {
-                                                    
-                                                            $comment_user_image=base_url().'upload/user/'.$ex_comment[3];
-                                                            
-                                                        }
-                                                        
-                                                    }           
-                                                }
-                                                
-                                                
-                                                
-                                                if(isset($ex_comment[4])) 
-                                                {
-                                                    $comment_level=$ex_comment[4];
-                                                }
-                                                
-                                                
-                                                                                                                
-                                            
-                                        }
-                                        
-                                        
-                                                   
-                                    
-         
-                                    
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$comment_profile_url,'<img src="'.$comment_user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($comment_level)) { if($comment_level!='') {
-                                                            
-                                     ?>
-                                    
-                                      <br><a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $comment_level; ?><span>Level <?php echo $comment_level;?> Tasker</span></a>
-                                     
-                                     <?php }  }   
-                                     
-                                     
-                                     
-                                     }} ?>
-                                            
-                      
-                      
-                      
-                      
-                        </div>
-                        
-                        <div class="taskdetails">
-                        
-                        <div><span class="newrep">New comment on</span> <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="unl abmarks abmarks-2"');?></div>
-                        
-                        <div class="posrel marTB10 abttb2-2-2">
-                        <div class="taskphoto taskphoto-2">
-                       
-                       <?php
-                       
-                       $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                 
-                                 
-                                    if(isset($key_id)) { if($key_id!='') {
-                                                            
-                                     ?>
-                                    
-                                     <a id="twooneanj" class="tooltip tooltip-2">Level <?php echo $key_id; ?><span>Level <?php echo $key_id;?> Worker bee</span></a>  
-                                     <?php }  } ?>
-                        
-                        
-                        
-                        
-                        </div>
-                        <div class="wid350 marL5" style="padding-left:50px;" >
-                        <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="abmarks abmarks-2 unl"');?><br/>
-                        <p class="colmark colmark-2"><?php echo $custom_msg2; ?></p>
-                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                        </div>
-                        <div class="clear"></div>
-                        </div>
-                        
-                        </div>
-                       <!-- <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                        <div class="clear"></div>
+                           
+                            <div class="clear"></div>
                         </li>
-                                
-                                
-                                <?php
-                                  break;
-                                  
-                                case 'newreply':
-                            ?>
+						  
+						  
+						<?php  
+						  
+						  break;
+						  
+						  
+						  
+						  case 'workersignup':
+						  
+						  ?>
+						  	<li class="posrel">
+                            <div class="abc">
+                                   <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($custom_msg)) { if($custom_msg!='') { ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $custom_msg;?> Worker bee"><?php echo $custom_msg; ?></a>
+                             
+                             <?php } } ?>
+                                    
+                            </div>
+                            <div class="abtb2info">
+                            	<?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">has signed up to be a Worker bee! Time to get moving.</div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
+                            </div>
                             
-                            <li class="posrel">
-                        <div class="taskphoto taskphoto-2">
-                      
-                      
-                      
-                      
-                           <?php 
+                           
+                            <div class="clear"></div>
+                        </li>
+						  
+						  
+						<?php  
+						  
+						  break;
+						  
+						case 'posttask':
+						 
+						 ?>
+						 
+						 <li class="posrel">
+                            <div class="abc">
+                                    <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($key_id)) { if($key_id!='') {
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $key_id;?> Worker bee"><?php echo $key_id; ?></a>
+                             
+                             <?php } } ?>
+                                    
+                            </div>
+                            <div class="abtb2info">
+                            	<?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">posted by <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="colgreen"'); 
                                 
-                        
-                                if(isset($custom_msg)) { if($custom_msg!='') {
-                                    
-                                    $comment_level='';
-                                    $comment_name='';
-                                    $comment_profile_url='';
-                                    $comment_user_image= base_url().'upload/no_image.png';
-                                    
-                                    
-                                        if(substr_count($custom_msg,',')>=1)
-                                        {
-                                            $ex_comment=explode(',',$custom_msg);
-                                            
-                                            
-                                            if(isset($ex_comment[0])) 
-                                            {
-                                                $comment_profile_url=$ex_comment[0];
-                                            }
-                                            
-                                            
-                                                $comment_name=ucfirst($ex_comment[1]).' ';
-                                                
-                                                if(isset($ex_comment[2])) 
-                                                {               
-                                                    $comment_name .= substr(ucfirst($ex_comment[2]),0,1).'.';               
-                                                }
-                                                
-                                                
-                                                
-                                                if(isset($ex_comment[3])) 
-                                                {               
-                                                     if($ex_comment[3]!='') {  
+                              
                                 
-                                                        if(file_exists(base_path().'upload/user/'.$ex_comment[3])) {
-                                                    
-                                                            $comment_user_image=base_url().'upload/user/'.$ex_comment[3];
-                                                            
-                                                        }
-                                                        
-                                                    }           
-                                                }
-                                                
-                                                
-                                                
-                                                if(isset($ex_comment[4])) 
-                                                {
-                                                    $comment_level=$ex_comment[4];
-                                                }
-                                                
-                                                
-                                                                                                                
-                                            
-                                        }
-                                        
-                                        
-                                                   
-                                    
-         
-                                    
-                                    
-                                    
-                                    
-                                    echo anchor('user/'.$comment_profile_url,'<img src="'.$comment_user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                    
-                                    
-                                    if(isset($comment_level)) { if($comment_level!='') {
-                                                            
-                                     ?>
-                                    
-                                     <br> <a id="twoonebr1" class="tooltip tooltip-2">Level <?php echo $comment_level; ?><span>Level <?php echo $comment_level;?> Tasker</span></a>
-                                     
-                                     <?php }  }   
-                                     
-                                     
-                                     
-                                     }} ?>
-                                            
-                      
-                      
-                      
-                      
-                        </div>
-                        
-                        <div class="taskdetails">
-                        
-                        <?php    if($activities) {  ?>
-                        
-                        <div><span class="newrep">New reply on</span> <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="unl abmarks abmarks-2"');?></div>
-                        <?php } ?>
-                        
-                        <div class="posrel marTB10 abttb2-2-2">
-                        <div class="taskphoto taskphoto-2">
-                       
-                       <?php
-                       
-                       $user_image= base_url().'upload/no_image.png';
-         
-                                     if($profile_user_image!='') {  
                                 
-                                        if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+                                
+							if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$worker_level=0;
+							$worker_name='';
+							$worker_profile_url='';
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_worker=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_worker[0])) 
+									{
+										$worker_profile_url=$ex_worker[0];
+									}
+									
+									
+										$worker_name=ucfirst($ex_worker[1]).' ';
+										
+										if(isset($ex_worker[2])) 
+										{				
+											$worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';				
+										}
+																										
+									
+								}
+								
+								if($worker_name!='' && $worker_profile_url!='') 
+								{ 
+								
+									echo 'for '.anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
+								
+								}
+								
+								
+						}   }
+						?>
+                                
+                                 expires in <?php 
+								
+								
+								$task_start_day=0;
+								$task_start_time=0;
+								
+								
+								if(isset($custom_msg2)) { 
+								
+									
+									if(substr_count($custom_msg2,',')>=1)
+									{
+										$ex_date=explode(',',$custom_msg2);
+									
+										$task_start_day=$ex_date[0];
+										
+										if(isset($ex_date[1])) 
+										{				
+											$task_start_time = $ex_date[1];				
+										}
+									
+									}
+									
+				
+								}
+								
+								echo getDuration(date('Y-m-d',strtotime(date("Y-m-d", strtotime($res->activity_date)) . " +".$task_start_day."days")).'-'.date('H',mktime(0,$task_start_time,0,0,0,0)));	?></div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
+                            </div>
+                            
+                          <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+	                         
+                            <div class="clear"></div>
+                        </li>
+						 
+						 
+						 <?php
+						 
+						  break;
+						  
+						  case 'workerposttask':
+						 ?>
+                         
+                         
+                         <li class="posrel">
+                            <div class="abc">
+                                    <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($key_id)) { if($key_id!='') {
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $key_id;?> Worker bee"><?php echo $key_id; ?></a>
+                             
+                             <?php } } ?>
                                     
-                                            $user_image=base_url().'upload/user/'.$profile_user_image;
-                                            
-                                        }
-                                        
-                                    }
+                            </div>
+                            <div class="abtb2info">
+                            	<?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">posted by <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="colgreen"'); 
+                                
+                              
+                                
+                                
+                                
+							if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$worker_level=0;
+							$worker_name='';
+							$worker_profile_url='';
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_worker=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_worker[0])) 
+									{
+										$worker_profile_url=$ex_worker[0];
+									}
+									
+									
+										$worker_name=ucfirst($ex_worker[1]).' ';
+										
+										if(isset($ex_worker[2])) 
+										{				
+											$worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';				
+										}
+																										
+									
+								}
+								
+								if($worker_name!='' && $worker_profile_url!='') 
+								{ 
+								
+									echo 'for '.anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
+								
+								}
+								
+								
+						}   }
+						?>
+                                
+                                 and needs to be assigned by <?php 
+								
+								
+								$task_start_day=0;
+								$task_start_time=0;
+								
+								
+								if(isset($custom_msg2)) { 
+								
+									
+									if(substr_count($custom_msg2,',')>=1)
+									{
+										$ex_date=explode(',',$custom_msg2);
+									
+										$task_start_day=$ex_date[0];
+										
+										if(isset($ex_date[1])) 
+										{				
+											$task_start_time = $ex_date[1];				
+										}
+									
+									}
+									
+				
+								}
+								
+								echo getDuration(date('Y-m-d',strtotime(date("Y-m-d", strtotime($res->activity_date)) . " +".$task_start_day."days")).'-'.date('H',mktime(0,$task_start_time,0,0,0,0)));	?></div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
+                            </div>
+                            
+                          <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+	                         
+                            <div class="clear"></div>
+                        </li>
+                         
+                         <?php
+						  break;
+						  
+						case 'assigntask':
+						
+						?>
+                        
+						<li class="posrel">
+                            <div class="abc">
+                                    <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($key_id)) { if($key_id!='') {
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $key_id;?> Worker bee"><?php echo $key_id; ?></a>
+                             
+                             <?php } } ?>
                                     
-                                    
-                                    
-                                    echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); 
-                                 
-                                 
-                                    if(isset($key_id)) { if($key_id!='') {
-                                                            
-                                     ?>
-                                    
-                                     <br> <a id="twooneanj" class="tooltip tooltip-2">Level <?php echo $key_id; ?><span>Level <?php echo $key_id;?> Tasker</span></a>  
-                                     <?php }  } ?>
+                            </div>
+                            <div class="abtb2info">
+                            	<?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,' class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">accepted the offer from <?php 
+                              
+                                
+                                
+                                
+							if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$worker_level=0;
+							$worker_name='';
+							$worker_profile_url='';
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_worker=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_worker[0])) 
+									{
+										$worker_profile_url=$ex_worker[0];
+									}
+									
+									
+										$worker_name=ucfirst($ex_worker[1]).' ';
+										
+										if(isset($ex_worker[2])) 
+										{				
+											$worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';				
+										}
+																										
+									
+								}
+								
+								if($worker_name!='' && $worker_profile_url!='') 
+								{ 
+								
+									echo anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
+								
+								}
+								
+								
+						}   }
+						?>
+                                
+                                 for  <?php
+								 
+								 echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),'class="colgreen"');  
+								
+									?></div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
+                            </div>
+                            
+                          <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+	                         
+                            <div class="clear"></div>
+                        </li>
+						
+						
+						
+						<?php
+						  break;
+						  
+						case 'workerassigntask':
+						?>
                         
                         
-                        
-                        
-                        </div>
-                        <div class="wid350 marL5" style="padding-left:50px;" >
-                        <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="abmarks abmarks-2 unl"');?><br/>
-                        <p class="colmark colmark-2"><?php echo $custom_msg2; ?></p>
-                        <div class="geo geo-2"><?php echo $activity_date; ?></div>
-                        </div>
-                        <div class="clear"></div>
-                        </div>
-                        
-                        </div>
-                       <!-- <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
-                        <div class="clear"></div>
+                        <li class="posrel">
+                            <div class="abc">
+                                    <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($key_id)) { if($key_id!='') {
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $key_id;?> Worker bee"><?php echo $key_id; ?></a>
+                             
+                             <?php } } ?>
+                                    
+                            </div>
+                            <div class="abtb2info">
+                            	<?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,' class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">accepted the offer from <?php 
+                              
+                                
+                                
+                                
+							if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$worker_level=0;
+							$worker_name='';
+							$worker_profile_url='';
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_worker=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_worker[0])) 
+									{
+										$worker_profile_url=$ex_worker[0];
+									}
+									
+									
+										$worker_name=ucfirst($ex_worker[1]).' ';
+										
+										if(isset($ex_worker[2])) 
+										{				
+											$worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';				
+										}
+																										
+									
+								}
+								
+								if($worker_name!='' && $worker_profile_url!='') 
+								{ 
+								
+									echo anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
+								
+								}
+								
+								
+						}   }
+						?>
+                                
+                                 for  <?php
+								 
+								 echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),'class="colgreen"');  
+								
+									?></div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
+                            </div>
+                            
+                          <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+	                         
+                            <div class="clear"></div>
                         </li>
                         
                         <?php
-                                  break;
-                                  
-                                
-                                default:
-                                 // echo "No number between 1 and 3";
-                        }
+						  break;
+						  
+						case 'completetask':
+						?>
                         
                         
-                   
-               ?>
-            
-            
-            
-            
-            
-            <?php }
-            
-            } ?>
-                                    </ul>
-                                    <!--<div style="text-align:center;">
-                                                <?php echo anchor('user/'.$user_profile->profile_name.'/activities/','See more',' class="btn btn-default btn-seemore"');?>
-                                    </div>-->
-                                </div>
-                                <div class="abttb4 abttb3-2">
-                                    <ul>
-                                        <?php if($reviews) { 
-                            
-                            
-                                    foreach($reviews as $review) { 
-                                    
-                                    
-                                    
-                                     $user_image= base_url().'upload/no_image.png';
-                                     
-                                     if($review->profile_image!='') {  
-                                
-                                        if(file_exists(base_path().'upload/user/'.$review->profile_image)) {
-                                    
-                                            $user_image=base_url().'upload/user/'.$review->profile_image;
-                                            
-                                        }
-                                        
-                                    }
-                                
-                                
-                                
-                                
-                                ?>
-                                    
-                                <li class="posrel">
-                                    <div class="taskphoto taskphoto-2">
-                                    
-                                    
-                                    <?php echo anchor('user/'.$review->profile_name,'<img src="'.$user_image.'" alt="" class="round-corner" width="60" height="60" />'); ?>
-                                    
-                                    
-                                    </div>
-                                    <div class="taskdetails">
-                                        <div class="abmarks-2">Review for <?php echo anchor('tasks/'.$review->task_url_name,ucfirst($review->task_name),' class="unl"'); ?></div>
-                                      
-                                        <div class="strmn strmn-2 fl"><div class="str_sel str_sel-2 fl" style="width:<?php if($review->comment_rate>5) { ?>100<?php } else { echo $review->comment_rate*2;?>0<?php } ?>%;"></div></div>
-                                            <div class="strig">
-                                                <div id="very" class="colmark-2"><?php echo $review->task_comment; ?></div>
-                                               
-                                            </div>
-                                             
-                                             <div class="geo geo-2">about <?php echo getDuration($review->comment_date); ?></div>
-                                        </div>    
-                                            
-                                    
-                                    <div class="clear"></div>
-                                </li>
-                                
-                                
-                                <?php }
-                                
-                             } else {?>
+                        <li class="posrel">
+                            <div class="abc">
+                                    <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$worker_level=0;
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_worker=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_worker[4])) 
+									{
+										$worker_level=$ex_worker[4];
+									}								
+								}
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $worker_level;?> Worker bee"><?php echo $worker_level; ?></a>
                              
-                             <li>You have no Reviews since you have not run or post any Tasks that have been marked as completed</li>
-                             
-                             <?php } ?>
-                                    </ul>
-                                    <div style="text-align:center;"><?php echo anchor('user/'.$user_profile->profile_name.'/reviews/','See more',' class="btn btn-default btn-seemore"');?></div>
-                                    <div class="clear"></div>
-                                </div>
+                             <?php } } ?>
+                                    
                             </div>
-                        </div>
-                        <script type="text/javascript">
-                            $(document).ready(function () {
-                                $('#horizontalTab').easyResponsiveTabs({
-                                    type: 'default', //Types: default, vertical, accordion           
-                                    width: 'auto', //auto or any width like 600px
-                                    fit: true,   // 100% fit in a container
-                                    closed: 'accordion', // Start closed if in accordion view
-                                    activate: function(event) { // Callback function if tab is switched
-                                        var $tab = $(this);
-                                        var $info = $('#tabInfo');
-                                        var $name = $('span', $info);
-                        
-                                        $name.text($tab.text());
-                        
-                                        $info.show();
-                                    }
-                                });
-                        
-                                $('#verticalTab').easyResponsiveTabs({
-                                    type: 'vertical',
-                                    width: 'auto',
-                                    fit: true
-                                });
-                            });
-                        </script>
-                        <!-- tab end -->
-                        <div class="clear"></div>
-                        <?php if($check_worker_detail) { ?>
-                        <div class="top-skill">
-                            
-                        	<div class="top-skill-title">My Skill</div>
-                            <div class="skill-btn">
-                            <?php
-                              $workerskill1=$check_worker_detail->worker_task_type;
+                            <div class="abtb2info">
+                            	<?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">has been marked completed by <?php 
                               
-                              $workerskill=explode(',',$workerskill1);
-                                 
-                              foreach($workerskill as $skills) 
-                              {
-                                    
-                                     $get_skilname=$this->worker_model->get_skilname($skills);
-                                     if($get_skilname!=0){
-                               ?> 
-                               <div class="skills">     
-                                 <?php echo anchor('task/all_task/'.$get_skilname->task_category_id,$get_skilname->category_name); ?>
-                                </div>     
-                               <?php  
-                               }   
-                              }
-                            ?>
+                                
+                            echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="colgreen"');
+							
+						?>
+                                
+                               </div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
                             </div>
+                            
+                          <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+	                         
                             <div class="clear"></div>
-                            <?php if($user_profile->user_id==get_authenticateUserID()) {?>
-                            <div style="text-align:center; margin:15px 0px;">
-                            	<?php echo anchor('worker/edit/','Edit Skill',' class="btn btn-default btn-seemore"');?>
+                        </li>
+                        
+                        <?php
+						  break;
+						  
+						case 'workercompletetask':
+						?>
+                        
+                        <li class="posrel">
+                            <div class="abc">
+                                    <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$worker_level=0;
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_worker=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_worker[4])) 
+									{
+										$worker_level=$ex_worker[4];
+									}								
+								}
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $worker_level;?> Tasker"><?php echo $worker_level; ?></a>
+                             
+                             <?php } } ?>
+                                    
                             </div>
-                            <?php } ?>
-                        </div>
-                        <?php } ?>
-                        <div class="clear"></div>
-                    </div>
+                            <div class="abtb2info">
+                            	<?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">has been marked completed by <?php 
+                              
+                                
+                            echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="colgreen"');
+							
+						?>
+                                
+                               </div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
+                            </div>
+                            
+                          <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+	                         
+                            <div class="clear"></div>
+                        </li>
+                        
+                        <?php
+						  break;
+						  
+						
+						case 'finishtask':
+					
+					?>
+					
+					
+					<li class="posrel">
+                            <div class="abc">
+                                    <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+								if(isset($key_id)) { if($key_id!='') {
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $key_id;?> Worker bee"><?php echo $key_id; ?></a>
+                             
+                             <?php } } ?>
+                                    
+                            </div>
+                            <div class="abtb2info">
+                            	<?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">has been finished by <?php 
+                              	if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$worker_level=0;
+							$worker_name='';
+							$worker_profile_url='';
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_worker=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_worker[0])) 
+									{
+										$worker_profile_url=$ex_worker[0];
+									}
+									
+									
+										$worker_name=ucfirst($ex_worker[1]).' ';
+										
+										if(isset($ex_worker[2])) 
+										{				
+											$worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';				
+										}
+																										
+									
+								}
+								
+								if($worker_name!='' && $worker_profile_url!='') 
+								{ 
+								
+									echo anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
+								
+								}
+								
+								
+						}   }
+							
+						?>
+                                
+                               </div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
+                            </div>
+                            
+                          <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+	                         
+                            <div class="clear"></div>
+                        </li>
+					
+					
+                    <?php
+					
+						  break;
+						  
+						case 'workerfinishtask':
+						?>
+                        
+                        <li class="posrel">
+                            <div class="abc">
+                                    <?php 
+								   
+								   
+							$user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+								if(isset($key_id)) { if($key_id!='') {
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $key_id;?> Worker bee"><?php echo $key_id; ?></a>
+                             
+                             <?php } } ?>
+                                    
+                            </div>
+                            <div class="abtb2info">
+                            	<?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="abmarks unl"'); ?>
+                                <div class="colmark padTB3">has been finished by <?php 
+                              	if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$worker_level=0;
+							$worker_name='';
+							$worker_profile_url='';
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_worker=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_worker[0])) 
+									{
+										$worker_profile_url=$ex_worker[0];
+									}
+									
+									
+										$worker_name=ucfirst($ex_worker[1]).' ';
+										
+										if(isset($ex_worker[2])) 
+										{				
+											$worker_name .= substr(ucfirst($ex_worker[2]),0,1).'.';				
+										}
+																										
+									
+								}
+								
+								if($worker_name!='' && $worker_profile_url!='') 
+								{ 
+								
+									echo anchor('user/'.$worker_profile_url,$worker_name,'class="colgreen"');
+								
+								}
+								
+								
+						}   }
+							
+						?>
+                                
+                               </div>
+                              	<div class="geo"><?php echo $activity_date; ?></div>
+                            </div>
+                            
+                          <!--  <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+	                         
+                            <div class="clear"></div>
+                        </li>
+                        
+                        <?php
+						  break;
+						  
+						case 'newcomment':
+						?>
+                        
+                        <li class="posrel">
+                <div class="abc">
+              
+              
+              
+              
+                   <?php 
+								   
+						if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$comment_level='';
+							$comment_name='';
+							$comment_profile_url='';
+							$comment_user_image= base_url().'upload/no_image.png';
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_comment=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_comment[0])) 
+									{
+										$comment_profile_url=$ex_comment[0];
+									}
+									
+									
+										$comment_name=ucfirst($ex_comment[1]).' ';
+										
+										if(isset($ex_comment[2])) 
+										{				
+											$comment_name .= substr(ucfirst($ex_comment[2]),0,1).'.';				
+										}
+										
+										
+										
+										if(isset($ex_comment[3])) 
+										{				
+											 if($ex_comment[3]!='') {  
+						
+												if(file_exists(base_path().'upload/user/'.$ex_comment[3])) {
+											
+													$comment_user_image=base_url().'upload/user/'.$ex_comment[3];
+													
+												}
+												
+											}			
+										}
+										
+										
+										
+										if(isset($ex_comment[4])) 
+										{
+											$comment_level=$ex_comment[4];
+										}
+										
+										
+																										
+									
+								}
+								
+								
+										   
+							
+ 
+							
+							
+							
+							
+							echo anchor('user/'.$comment_profile_url,'<img src="'.$comment_user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($comment_level)) { if($comment_level!='') {
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $comment_level;?> Worker bee"><?php echo $comment_level; ?></a>
+                             
+                             <?php }  }   
+							 
+							 
+							 
+							 }} ?>
+                                    
+              
+              
+              
+              
                 </div>
-                <div class="dbright-task dbright-task-10 dbright-task-10-new">
-                    <?php  echo $this->load->view($theme.'/layout/user/profile_sidebar',$data); ?>
-                    </div>
+                
+                <div class="abtb2info">
+                
+                <div><span class="newrep">New comment on</span> <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="unl abmarks"');?></div>
+                
+                <div class="posrel marTB10">
+                <div class="fl wid30">
+               
+               <?php
+               
+               $user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="30" height="30" />'); 
+                         
+						 
+						  	if(isset($key_id)) { if($key_id!='') {
+													
+							 ?>
+							
+							 <a id="twooneanj" rel="tooltip" title="Level <?php echo $key_id;?> Worker bee"><?php echo $key_id; ?></a>  
+                             <?php }  } ?>
+                
+                
+                
+                
+                </div>
+                <div class="fr wid350 marL5" >
+                <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="fpass"');?><br/>
+                <p><?php echo $custom_msg2; ?></p>
+                </div>
+                <div class="clear"></div>
+                </div>
+                <div class="geo"><?php echo $activity_date; ?></div>
+                </div>
+               <!-- <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+                <div class="clear"></div>
+                </li>
+                        
+                        
+                        <?php
+						  break;
+						  
+						case 'newreply':
+					?>
+                    
+                    <li class="posrel">
+                <div class="abc">
+              
+              
+              
+              
+                   <?php 
+						
+				
+						if(isset($custom_msg)) { if($custom_msg!='') {
+							
+							$comment_level='';
+							$comment_name='';
+							$comment_profile_url='';
+							$comment_user_image= base_url().'upload/no_image.png';
+							
+							
+								if(substr_count($custom_msg,',')>=1)
+								{
+									$ex_comment=explode(',',$custom_msg);
+									
+									
+									if(isset($ex_comment[0])) 
+									{
+										$comment_profile_url=$ex_comment[0];
+									}
+									
+									
+										$comment_name=ucfirst($ex_comment[1]).' ';
+										
+										if(isset($ex_comment[2])) 
+										{				
+											$comment_name .= substr(ucfirst($ex_comment[2]),0,1).'.';				
+										}
+										
+										
+										
+										if(isset($ex_comment[3])) 
+										{				
+											 if($ex_comment[3]!='') {  
+						
+												if(file_exists(base_path().'upload/user/'.$ex_comment[3])) {
+											
+													$comment_user_image=base_url().'upload/user/'.$ex_comment[3];
+													
+												}
+												
+											}			
+										}
+										
+										
+										
+										if(isset($ex_comment[4])) 
+										{
+											$comment_level=$ex_comment[4];
+										}
+										
+										
+																										
+									
+								}
+								
+								
+										   
+							
+ 
+							
+							
+							
+							
+							echo anchor('user/'.$comment_profile_url,'<img src="'.$comment_user_image.'" alt="" width="50" height="50" />'); 
+							
+							
+							if(isset($comment_level)) { if($comment_level!='') {
+													
+							 ?>
+							
+							 <a id="twoonebr1" rel="tooltip" title="Level <?php echo $comment_level;?> Worker bee"><?php echo $comment_level; ?></a>
+                             
+                             <?php }  }   
+							 
+							 
+							 
+							 }} ?>
+                                    
+              
+              
+              
+              
+                </div>
+                
+                <div class="abtb2info">
+                
+                <?php    if($activities) {  ?>
+                
+                <div><span class="newrep">New reply on</span> <?php echo anchor('tasks/'.$activity_url_name,ucfirst($activity_name),' class="unl abmarks"');?></div>
+                <?php } ?>
+                
+                <div class="posrel marTB10">
+                <div class="fl wid30">
+               
+               <?php
+               
+               $user_image= base_url().'upload/no_image.png';
+ 
+							 if($profile_user_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$profile_user_image)) {
+							
+									$user_image=base_url().'upload/user/'.$profile_user_image;
+									
+								}
+								
+							}
+							
+							
+							
+							echo anchor('user/'.$profile_user_url_name,'<img src="'.$user_image.'" alt="" width="30" height="30" />'); 
+                         
+						 
+						  	if(isset($key_id)) { if($key_id!='') {
+													
+							 ?>
+							
+							 <a id="twooneanj" rel="tooltip" title="Level <?php echo $key_id;?> Worker bee"><?php echo $key_id; ?></a>  
+                             <?php }  } ?>
+                
+                
+                
+                
+                </div>
+                <div class="fr wid350 marL5" >
+                <?php echo anchor('user/'.$profile_user_url_name,$profile_user_name,'class="fpass"');?><br/>
+                <p><?php echo $custom_msg2; ?></p>
+                </div>
+                <div class="clear"></div>
+                </div>
+                <div class="geo"><?php echo $activity_date; ?></div>
+                </div>
+               <!-- <a href="javascript:void();" class="cm chbg"><b>Use Template</b></a>-->
+                <div class="clear"></div>
+                </li>
+                
+                <?php
+						  break;
+						  
+						
+						default:
+						 // echo "No number between 1 and 3";
+				}
+				
+				
+		   
+       ?>
+    
+    
+    
+    
+    
+    <?php }
+    
+    } ?>
+    
+                  
+
+  	
+                        
+                    	
+                    	
+
+                    	
+            		</ul>
+                    <div><?php echo anchor('user/'.$user_profile->profile_name.'/activities/','See more',' class="seemore_sel"');?></div>
                     <div class="clear"></div>
-                </div>
-            </div>
+                </div>		
+			</div>
+			
+			<div id="tabs-3">
+				<div class="abttb3">
+                	<ul>
+                    
+                    <?php if($reviews) { 
+					
+					
+							foreach($reviews as $review) { 
+							
+							
+							
+							 $user_image= base_url().'upload/no_image.png';
+							 
+							 if($review->profile_image!='') {  
+						
+								if(file_exists(base_path().'upload/user/'.$review->profile_image)) {
+							
+									$user_image=base_url().'upload/user/'.$review->profile_image;
+									
+								}
+								
+							}
+						
+						
+						
+						
+						?>
+                            
+                    	<li>
+                            <div class="abc">
+                            
+                            
+                            <?php echo anchor('user/'.$review->profile_name,'<img src="'.$user_image.'" alt="" width="50" height="50" />'); ?>
+                            
+                            
+                            </div>
+                            <div class="abct3rig">
+                            	<div class="revfor">Review for <?php echo anchor('tasks/'.$review->task_url_name,ucfirst($review->task_name),' class="unl"'); ?></div>
+                              
+                                <div class="strmn"><div class="str_sel" style="width:<?php if($review->comment_rate>5) { ?>100<?php } else { echo $review->comment_rate*2;?>0<?php } ?>%;"></div></div>
+                                	<div class="strig">
+                                        <div id="very"><b><?php echo $review->task_comment; ?></b></div>
+                                       
+                                	</div>
+                                     <div class="clear"></div>
+                                     <div class="geo">about <?php echo getDuration($review->comment_date); ?></div>
+                                </div>    
+                                    
+                            
+                            <div class="clear"></div>
+                        </li>
+                        
+                    	
+                        <?php }
+						
+					 } ?>
+                     
+            		</ul>
+
+
+				 <?php if($reviews) { ?>
+
+					<div><?php echo anchor('user/'.$user_profile->profile_name.'/reviews/','See more',' class="seemore_sel"');?></div>
+                    
+                   <?php } ?>
+                    
+                    
+                    <div class="clear"></div>
+                    
+ 	                </div>	
+                   
+                  
+                    
+			</div>
+			
+
+		</div>
+        
+        
+        
+        
+
+        <div class="clear"></div>
+<!-- tab end -->
+
+                
+		</div>
+        
+        <div class="dbright-task">
+         <?php  echo $this->load->view($theme.'/layout/user/profile_sidebar',$data); ?>
+
+		</div>
+        </div>
         </div>
         <div class="clear"></div>
     </div>
-</div>  
+</div>
