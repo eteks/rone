@@ -254,26 +254,26 @@ if(isset($current_city_name)) {  $city_name=$current_city_name; }
 								if($site_setting->subscription_need==0) 
 								{
 									if(!check_user_authentication()) { ?>
-									<a href="<?php echo base_url(); ?>index.php/login">Post a task</a>
+									<a href="<?php echo base_url(); ?>index.php/login">Post a Job</a>
 									<?php } else { ?>
-									<a href="<?php echo base_url(); ?>index.php/task/newhome_task">Post a task</a>
+									<a href="<?php echo base_url(); ?>index.php/task/newhome_task">Post a Job</a>
 								<?php } 
 								}
 								elseif($site_setting->subscription_need==1) { 
 								
 									if(!check_user_authentication()) { ?>
-									<a href="<?php echo base_url(); ?>index.php/login">Post a task</a>
+									<a href="<?php echo base_url(); ?>index.php/login">Post a Job</a>
 									<?php } else { 
 										$user_setting=user_profilestatus(get_authenticateUserID());
 										if($user_setting->profile_active==1)
 										{
 									?>
-											<a href="<?php echo base_url(); ?>index.php/task/newhome_task">Post a task</a>
+											<a href="<?php echo base_url(); ?>index.php/task/newhome_task">Post a Job</a>
 								
 								<?php 	} else {
 
 								?>
-											<a href="javascript:void(0)" class="pupload13" >Post a task</a>
+											<a href="javascript:void(0)" class="pupload13" >Post a Job</a>
                                             								
 								
 								<?php
@@ -284,9 +284,9 @@ if(isset($current_city_name)) {  $city_name=$current_city_name; }
 								}
 								?>
 								</li>
-				                <li><a href="<?php echo base_url(); ?>task/all_task">Find a task</a></li>
+				                <li><a href="<?php echo base_url(); ?>task/all_task">Find a Job</a></li>
 				                <li><a href="<?php echo base_url(); ?>index.php/how_it_works">How it works</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/who-are-the-taskers">Become a tasker</a></li>
+                                <li><a href="<?php echo base_url(); ?>index.php/who-are-the-taskers">Hire a Dronepilot</a></li>
                             <script type="text/javascript">
                                 window.fbAsyncInit = function() {
                                     FB.init({appId: '1682994578600469', status: true, cookie: true, xfbml: true});

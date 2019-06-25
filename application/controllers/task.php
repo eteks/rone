@@ -1756,7 +1756,7 @@ echo $html; exit;
 			$file_name=get_authenticateUserID().$rand.$_FILES['userfile']['name'];	
 
 			$config =  array(
-			                  'upload_path'     => '/upload/task_doc',
+			                  'upload_path'     => '/xampp/htdocs/snm/upload/task_doc',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE
@@ -1798,14 +1798,14 @@ echo $html; exit;
 					$file_name1=get_authenticateUserID().$rand.$_FILES['task_img']['name'];	
 
 					$config =  array(
-									  'upload_path'     => '/upload/task_image',
+									  'upload_path'     => '/xampp/htdocs/snm/upload/task_image',
 									  'file_name'		=>$file_name1,
 									  'allowed_types'   => "*",
 									  'overwrite'       => TRUE
 					 );
 					$this->load->library('upload', $config);
 					$this->upload->initialize($config); //Make this line must be here.
-					$uploads_dir='/upload/task_image';
+					$uploads_dir='/xampp/htdocs/snm/upload/task_image';
 									
 					$allowed =  array('gif','png' ,'jpg');
 					$filename = $_FILES['taskfile']['name'];
@@ -3098,7 +3098,7 @@ echo $html; exit;
 			$file_name=get_authenticateUserID().$rand.$_FILES['userfile']['name'];	
 
 			$config =  array(
-			                  'upload_path'     => '/upload/task_doc',
+			                  'upload_path'     => '/xampp/htdocs/snm/upload/task_doc',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE

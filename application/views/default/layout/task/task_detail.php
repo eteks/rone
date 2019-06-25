@@ -124,7 +124,7 @@ $data['site_setting']=$site_setting;
                                 	<div class="search-field-ptd">Task Status</div>
                                     <div class="button-bar">
 										<div class="fl" style="margin-right:10px;"><input type="radio" name="task_status" value="" checked> All</div>
-  										<div class="fl"><input type="radio" name="task_status" value="1" <? if($task_status=='1') echo 'checked'; ?>  />Open</div>
+  										<div class="fl"><input type="radio" name="task_status" value="1" <?php if(isset($task_status)=='1') echo 'checked'; ?>  />Open</div>
                                     	<!--<a class="half selected">All</a>
                                     	<a class="half">Open</a>-->
                                     </div>
@@ -135,7 +135,7 @@ $data['site_setting']=$site_setting;
                                     <div class="button-bar">
 										<div class="fl" style="margin-right:10px;"><input type="radio" name="task_type" value="All" checked> All</div>
   									<!--<input type="radio" name="task_type" value="task_loc" <? if($task_type=='task_loc') echo 'checked'; ?>> Tasks with Location-->
-										<div class="fl"><input type="radio" name="task_type" value="online_task" <? if($task_type=='online_task') echo 'checked'; ?>> Online Tasks</div>
+										<div class="fl"><input type="radio" name="task_type" value="online_task" <?php if(isset($task_type)=='online_task') echo 'checked'; ?>> Online Tasks</div>
                                     	<!--<a class="half selected">All</a>
                                     	<a class="half">Tasks with Location</a>
                                         <a class="half">Online Tasks</a>-->
@@ -159,17 +159,17 @@ $data['site_setting']=$site_setting;
                                     <div class="custom-select-ptd">
                                         <? 
                                            $task_category_list =get_category();
-                                           //echo "<pre>";print_r($task_category_list);
+                                           
                                         ?>
                                         <select name="cat_name" id="cat_name">
                                             <option value="" selected="">Select Category</option>
-                                           <? 
+                                           <?php 
                                            //$task_category_list =get_category();
                                            //echo "<pre>";print_r($task_category_list);
                                            foreach($task_category_list as $category_info){ ?>
-                                           <option value="<?=$category_info->task_category_id;?>" <? if($cat_name==$category_info->task_category_id) echo 'selected'; ?>><?=$category_info->category_name?></option>
+                                           <option value="<?=$category_info->task_category_id;?>" <?php if($cat_name==$category_info->task_category_id) echo 'selected'; ?>><?=$category_info->category_name?></option>
                                            
-                                           <? } ?>
+                                           <?php } ?>
                                         </select>
                                         <!--<input name="location_name" id="location_name" value="<? echo $location_name ?>" type="text" placeholder="Enter a location">-->
                                         <!--<div class="at-icon-remove-ptd"><img src="<?php echo base_url().getThemeName(); ?>/images/remove_icon_ptd.png" alt="" /></div>-->
@@ -181,10 +181,10 @@ $data['site_setting']=$site_setting;
                                     <div class="custom-select-ptd">
 										<select name="location_name" id="location_name">
                                         	<option value="" selected="">Select City</option>
-                                           <? foreach($task_city_list as $city_idd=>$city_namee){ ?>
-										   <option value="<?=$city_idd?>" <? if($location_name==$city_idd) echo 'selected'; ?>><?=$city_namee?></option>
+                                           <?php foreach($task_city_list as $city_idd=>$city_namee){ ?>
+										   <option value="<?=$city_idd?>" <?php if($location_name==$city_idd) echo 'selected'; ?>><?=$city_namee?></option>
 										   
-										   <? } ?>
+										   <?php } ?>
                                         </select>
                                     	<!--<input name="location_name" id="location_name" value="<? echo $location_name ?>" type="text" placeholder="Enter a location">-->
                                         <!--<div class="at-icon-remove-ptd"><img src="<?php echo base_url().getThemeName(); ?>/images/remove_icon_ptd.png" alt="" /></div>-->

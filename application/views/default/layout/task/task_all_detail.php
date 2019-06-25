@@ -191,18 +191,18 @@ $data['site_setting']=$site_setting;
                             foreach ($tasks_info as $key => $taskinfo) {
                              $city        =get_cityDetail($taskinfo->task_city_id);
                              $user_detail=$this->user_model->get_user_profile_by_id($taskinfo->user_id);
-                             $user_image= base_url().'upload/no_image.png';
+                             $user_image_new= base_url().'upload/no_image.png';
                              
                              if($user_detail->profile_image!='') {  
                         
                                 if(file_exists(base_path().'upload/user/'.$user_detail->profile_image)) {
                             
-                                    $user_image_new='/upload/user/'.$user_detail->profile_image;
+                                    $user_image_new=base_url().'/upload/user/'.$user_detail->profile_image;
     
                                 }
                                 else
                                 {
-                                    $user_image_new='upload/no_image.png';
+                                    $user_image_new=base_url().'/upload/no_image.png';
                                 }
                                 
                             }
@@ -211,7 +211,7 @@ $data['site_setting']=$site_setting;
                         	<li>
                             	<a href="<?php echo base_url().'tasks/'.$taskinfo->task_url_name?>">
                                     <div class="post-task1-ptd">
-                                        <div class="post-tasker-img-ptd"><img src="<?php echo base_url().$user_image_new ?>" width="72" height="72" alt="" style="border-radius:5px;"/></div>
+                                        <div class="post-tasker-img-ptd"><img src="<?php echo $user_image_new ?>" width="72" height="72" alt="" style="border-radius:5px;"/></div>
                                         <div class="post-task-info-ptd">
                                             <div class="post-task-info-left-ptd">
                                                 <h2><?php echo $taskinfo->task_name ?></h2>

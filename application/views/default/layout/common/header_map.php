@@ -246,14 +246,14 @@ if(isset($current_city_name)) {  $city_name=$current_city_name; }
                             	<!--<li><a href='<?php echo base_url(); ?>index.php' class="active">Home</a></li>-->
 				                <li>
 								<?php if(!check_user_authentication()) { ?>
-								<a href="<?php echo base_url(); ?>index.php/login">Post a task</a>
+								<a href="<?php echo base_url(); ?>index.php/login">Post a Job</a>
 								<?php } else { ?>
-								<a href="<?php echo base_url(); ?>index.php/task/newhome_task">Post a task</a>
+								<a href="<?php echo base_url(); ?>index.php/task/newhome_task">Post a Job</a>
 								<?php } ?>
 								</li>
-				                <li><a href="<?php echo base_url(); ?>index.php/tags">Find a task</a></li>
+				                <li><a href="<?php echo base_url(); ?>index.php/tags">Find a Job</a></li>
 				                <li><a href="<?php echo base_url(); ?>index.php/how_it_works">How it works</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/who-are-the-taskers">Become a tasker</a></li>
+                                <li><a href="<?php echo base_url(); ?>index.php/who-are-the-taskers">Hire a Dronepilot</a></li>
                             <script type="text/javascript">
                                 window.fbAsyncInit = function() {
                                     FB.init({appId: '240522045994585', status: true, cookie: true, xfbml: true});
