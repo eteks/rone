@@ -59,7 +59,6 @@ class Task extends ROCKERS_Controller {
 		$data['cat_name'] = $this->session->userdata('cat_name');
 		$data['location_name'] = $this->session->userdata('location_name');
 		$task_detail =  $this->task_model->get_ajax_task_data($data);
-
 		$html= '
 		<div class="list-loadmore-ptd">There are '.sizeof($task_detail).' new tasks available</div>
 <div class="task-list-left-ptd">
@@ -100,7 +99,6 @@ class Task extends ROCKERS_Controller {
 					</div>
 				</a>
 			</li>';
-
 		}	
 		$html.='</ul>
 	</div>
@@ -118,7 +116,6 @@ echo $html; exit;
 	              SEO friendly URL which is declare in config route.php file  http://hostname/tasks/$task_name
 	*/
 	
-
 	
 	function task_detail($task_name,$msg='',$task_comment_id='')
 	{
@@ -170,9 +167,6 @@ echo $html; exit;
 		
 		
 		$data['additional_information']  = $this->additional_information_model->get_all_information($task_id);
-
-
-
 		$category_id = $task_detail->task_category_id;
 		
 		$similar_tasks = $this->task_model->get_similar_tasks($category_id,$task_id);
@@ -181,7 +175,6 @@ echo $html; exit;
 		$theme = getThemeName();
 		$this->template->set_master_template($theme .'/template.php');
 		
-
 		
 		
 		$data['theme']=$theme;
@@ -199,7 +192,6 @@ echo $html; exit;
 		$this->template->render();
 	}
 	
-
 	function all_task()
 	{
 		
@@ -240,9 +232,6 @@ echo $html; exit;
 		
 		
 		//$data['additional_information']  = $this->additional_information_model->get_all_information($task_id);
-
-
-
 		//$category_id = $task_detail->task_category_id;
 		
 		//$similar_tasks = $this->task_model->get_similar_tasks($category_id,$task_id);
@@ -378,7 +367,6 @@ echo $html; exit;
 	
 	function detectContentEmail($task_comment) 
 	{
-
 		  $task_comment = trim($task_comment); // strip any white space
 		  $response = array(); // our response
 		  
@@ -417,7 +405,6 @@ echo $html; exit;
 	}
 	
 	
-
 	
 	/*
 	Function name :ask_question()
@@ -516,7 +503,6 @@ echo $html; exit;
 				
 				redirect('tasks/'.$task_name);
 		}
-
 		
 		
 		
@@ -524,7 +510,6 @@ echo $html; exit;
 	}
 	
 	
-
 	
 	/*
 	Function name :post_message()
@@ -603,7 +588,6 @@ echo $html; exit;
 				
 				redirect('tasks/'.$task_name);
 		}
-
 		
 		
 		
@@ -623,7 +607,6 @@ echo $html; exit;
 	
 	function offer_task($task_id=0)
 	{
-
 		if(!check_user_authentication()) {  redirect('sign_up'); }
 		
 		
@@ -649,8 +632,6 @@ echo $html; exit;
 		 
 		$user_detail = $this->user_model->get_user_info($task_detail->user_id);
 		$offer_user_detail = $this->user_model->get_user_info(get_authenticateUserID());
-
-
 		
 		$site_setting=site_setting();
 		
@@ -697,7 +678,6 @@ echo $html; exit;
 				
 				/////////////============offer time  to poster start===========	
 				if(isset($notification->on_comment_or_offer_task)) {  
-
 					if($notification->on_comment_or_offer_task==1) { 
 					
 						$email_template=$this->db->query("select * from ".$this->db->dbprefix('email_template')." where task='Offer Time (Poster)'");
@@ -732,7 +712,6 @@ echo $html; exit;
 				
 				/////////////============offer time  to worker start===========	
 				if(isset($worker_notification->on_comment_or_offer_task)) {  
-
 					if($worker_notification->on_comment_or_offer_task==1) {
 					
 						$email_template=$this->db->query("select * from ".$this->db->dbprefix('email_template')." where task='Offer Time (Worker)'");
@@ -767,7 +746,6 @@ echo $html; exit;
 				
 				redirect('tasks/'.$task_name);
 		}
-
 		
 		
 		
@@ -906,7 +884,6 @@ echo $html; exit;
 				
 				/////////////============offer time  to poster start===========	
 				if(isset($notification->on_comment_or_offer_task)) {  
-
 					if($notification->on_comment_or_offer_task==1) {
 					
 					
@@ -943,7 +920,6 @@ echo $html; exit;
 				
 				/////////////============offer time  to worker start===========	
 				if(isset($worker_notification->on_comment_or_offer_task)) {  
-
 					if($worker_notification->on_comment_or_offer_task==1) {
 					
 					
@@ -991,7 +967,6 @@ echo $html; exit;
 				redirect('tasks/'.$task_name.'/'.$msg);
 				
 		}
-
 		
 		
 		
@@ -1491,7 +1466,6 @@ echo $html; exit;
 		{
 			$data['task_assign_worker'] = $task_assign_worker;
 		}
-
 		
 		
 		$task_id= $this->task_model->save_step_zero();
@@ -1579,7 +1553,6 @@ echo $html; exit;
 	
 	function step_one($task_id)
 	{
-
 		if(!check_user_authentication()) {  redirect('sign_up'); }
 		if(($task_id == 0) && ($task_id = '')) {  redirect('dashboard'); }	
 		
@@ -1592,7 +1565,6 @@ echo $html; exit;
 		
 		$task_detail=$this->task_model->get_task_detail($task_id);
 		$data['task_detail']=$task_detail;
-
 		
 		
 		$this->form_validation->set_rules('task_name', 'Task Title', 'required|min_length[10]');
@@ -1679,7 +1651,6 @@ echo $html; exit;
 				$data['address1']=$this->input->post('address1');
 				$data['done_online']=$this->input->post('done_online');
 				$data['task_urgent'] = $this->input->post('task_urgent');
-
 				$rand=rand(0,100000);		  
 			
 				$_FILES['userfile']['name']     =   $_FILES['sheet_attachment']['name'];
@@ -1743,7 +1714,6 @@ echo $html; exit;
 		
 		
 			$apply=$this->task_model->save_step_one($data);
-
 			if($_FILES['sheet_attachment']['name']!="")
 			{
 			$rand=rand(0,100000);		  
@@ -1754,13 +1724,23 @@ echo $html; exit;
 			$_FILES['userfile']['error']    =   $_FILES['sheet_attachment']['error'];
 			$_FILES['userfile']['size']     =   $_FILES['sheet_attachment']['size'];	
 			$file_name=get_authenticateUserID().$rand.$_FILES['userfile']['name'];	
-
+if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 			$config =  array(
 			                  'upload_path'     => '/xampp/htdocs/snm/upload/task_doc',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE
 			 );
+		}
+		else
+		{
+			$config =  array(
+			                  'upload_path'     => '/home/smart-tech.melbourne/public_html/snm/upload/task_doc',
+							  'file_name'		=>$file_name,
+			                  'allowed_types'   => "*",
+			                  'overwrite'       => TRUE
+			 );
+		}
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config); //Make this line must be here.
 							
@@ -1772,13 +1752,15 @@ echo $html; exit;
 			{
 				echo $this->upload->display_errors();
 				echo "file upload failed".'&nbsp;&nbsp;&nbsp;';
+				if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 				echo "<a href='http://localhost/snm/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
-				
-
+				}
+				else
+				{
+					echo "<a href='http://snm.smart-tech.melbourne/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+				}
 				exit;
-
 			}
-
 				$data['work_doc'] =$file_name;
 			}
 			else
@@ -1796,17 +1778,32 @@ echo $html; exit;
 					$_FILES['taskfile']['error']    =   $_FILES['task_img']['error'];
 					$_FILES['taskfile']['size']     =   $_FILES['task_img']['size'];	
 					$file_name1=get_authenticateUserID().$rand.$_FILES['task_img']['name'];	
-
+					if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 					$config =  array(
 									  'upload_path'     => '/xampp/htdocs/snm/upload/task_image',
 									  'file_name'		=>$file_name1,
 									  'allowed_types'   => "*",
 									  'overwrite'       => TRUE
 					 );
+				}
+				else
+				{
+					$config =  array(
+									  'upload_path'     => '/home/smart-tech.melbourne/public_html/snm/upload/task_image',
+									  'file_name'		=>$file_name1,
+									  'allowed_types'   => "*",
+									  'overwrite'       => TRUE
+					 );
+				}
 					$this->load->library('upload', $config);
 					$this->upload->initialize($config); //Make this line must be here.
+					if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 					$uploads_dir='/xampp/htdocs/snm/upload/task_image';
-									
+							}
+							else
+							{
+								$uploads_dir='/home/smart-tech.melbourne/public_html/snm/upload/task_image';
+							}		
 					$allowed =  array('gif','png' ,'jpg');
 					$filename = $_FILES['taskfile']['name'];
 					$ext = pathinfo($filename, PATHINFO_EXTENSION);
@@ -1819,25 +1816,30 @@ echo $html; exit;
 						{
 							
 							echo "file upload failed".'&nbsp;&nbsp;&nbsp;';
+							if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 							echo "<a href='http://localhost/snm/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
-							
-
+							}
+							else {
+								echo "<a href='http://snm.smart-tech.melbourne/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+							}
 							exit;
-
 						}
 					}
 					else{
 						echo "Upload file type not allowed".'&nbsp;&nbsp;&nbsp;';
+						if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 						echo "<a href='http://localhost/snm/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+						}
+						else {
+							echo "<a href='http://snm.smart-tech.melbourne/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+						}
 					}
-
 					$data['task_imgname'] =$file_name1;
 			}
 			else
 			{
 				$data['task_imgname'] ='';
 			}
-
 			$apply=$this->task_model->save_step_one($data);
 			
 			$data["error"] = "updated";
@@ -1991,7 +1993,6 @@ echo $html; exit;
 		
 			
 			
-
 		if($this->form_validation->run() == FALSE){
 				
 			if(validation_errors())
@@ -2306,7 +2307,6 @@ echo $html; exit;
 				$notification = notification_setting(get_authenticateUserID());
 				
 				if(isset($notification->on_post_task)) {  
-
         			 if($notification->on_post_task==1) {   
 					 
 						$email_template=$this->db->query("select * from ".$this->db->dbprefix('email_template')." where task='Post New Task (Poster)'");
@@ -2339,7 +2339,6 @@ echo $html; exit;
 			/////////////============Post task end===========
 			
 			/////////////============Post task admin start===========	
-
 				$email_template=$this->db->query("select * from ".$this->db->dbprefix('email_template')." where task='Post New Task (Admin)'");
 				$email_temp=$email_template->row();
 				
@@ -2350,7 +2349,6 @@ echo $html; exit;
 				$email_subject=$email_temp->subject;				
 				$email_message=$email_temp->message;			
 				
-
 				$email_to=$email_temp->from_address;
 				$poster_link = '<a href="'.base_url().'user/'.$user_detail->profile_name.'">'.ucfirst($user_detail->full_name).'</a>';
 							
@@ -2381,7 +2379,6 @@ echo $html; exit;
 			$workers_notification = notification_setting($worker->user_id);
 			
 				if(isset($workers_notification->on_post_task)) {  
-
         			if($workers_notification->on_post_task==1) {   
 			
 						$email_template=$this->db->query("select * from ".$this->db->dbprefix('email_template')." where task='Post New Task by Category (Worker)'");
@@ -2466,7 +2463,6 @@ echo $html; exit;
 			
 			/////////////============Post task auto assign workers end===========
   
-
 			
 			
 			
@@ -2519,7 +2515,6 @@ echo $html; exit;
 		
 			
 		$data['task_id'] = $task_id;
-
 		$taskid=$this->uri->segment(3, 0);
 		
 		$task_detail=$this->task_model->get_task_detail($task_id);
@@ -2531,7 +2526,6 @@ echo $html; exit;
 		
 		$user_info=$this->user_model->get_user_info(get_authenticateUserID());
 		$data['user_info']=$user_info;	
-
 		
 		$send_invitetion=$this->task_model->traf_invitetion($taskid);	
 		
@@ -2577,8 +2571,6 @@ echo $html; exit;
 			
 			}
 		
-
-
 		$site_setting=site_setting();
 		
 		
@@ -2613,7 +2605,6 @@ echo $html; exit;
 	
 		if(!check_user_authentication()) {  redirect('sign_up'); }	
 			
-
 		
 		
 		$data['cat']=$this->input->post('cat');
@@ -2715,7 +2706,6 @@ echo $html; exit;
 	
 		if(!check_user_authentication()) {  redirect('sign_up'); }	
 			
-
 		
 		
 		$data['cat']=$this->input->post('cat');
@@ -2859,7 +2849,6 @@ echo $html; exit;
 		
 		
 		
-
 		
 		$theme = getThemeName();
 		$this->template->set_master_template($theme . '/template.php');
@@ -3022,7 +3011,6 @@ echo $html; exit;
 				$data['other_cost_description']=$this->input->post('other_cost_description');
 				$data['done_online']=$this->input->post('done_online');
 				$data['task_urgent'] = $this->input->post('task_urgent');
-
 				$rand=rand(0,100000);		  
 			
 				$_FILES['userfile']['name']     =   $_FILES['sheet_attachment']['name'];
@@ -3085,7 +3073,6 @@ echo $html; exit;
 			
 			
 		} else {
-
 			if($_FILES['sheet_attachment']['name']!="")
 			{
 			$rand=rand(0,100000);		  
@@ -3096,13 +3083,22 @@ echo $html; exit;
 			$_FILES['userfile']['error']    =   $_FILES['sheet_attachment']['error'];
 			$_FILES['userfile']['size']     =   $_FILES['sheet_attachment']['size'];	
 			$file_name=get_authenticateUserID().$rand.$_FILES['userfile']['name'];	
-
+			if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 			$config =  array(
 			                  'upload_path'     => '/xampp/htdocs/snm/upload/task_doc',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE
 			 );
+		}
+		else {
+			$config =  array(
+			                  'upload_path'     => '/home/smart-tech.melbourne/public_html/snm/upload/task_doc',
+							  'file_name'		=>$file_name,
+			                  'allowed_types'   => "*",
+			                  'overwrite'       => TRUE
+			 );
+		}
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config); //Make this line must be here.
 							
@@ -3115,7 +3111,6 @@ echo $html; exit;
 				echo $this->upload->display_errors();
 				echo "file upload failed";
 			}
-
 				$data['work_doc'] =$file_name;
 			}
 			else
@@ -3151,7 +3146,6 @@ echo $html; exit;
 			$data['work_doc'] =$file_name;
 			
 			$task_detail=$this->task_model->get_task_detail($task_id);
-
 			
 			
 					
@@ -3203,7 +3197,6 @@ echo $html; exit;
 		if(isset($task_id)) {
 		$data['task_location']=$this->task_model->get_task_location($task_id);
 	}
-
 		$data['user_location']=$this->user_model->get_user_location(get_authenticateUserID());
 		
 		
@@ -3216,7 +3209,6 @@ echo $html; exit;
 		$this->template->render();
 	
 	}
-
 	function task_city(){
         $output = '';
         $data['controller'] = "task";
@@ -3235,9 +3227,7 @@ echo $html; exit;
 		//$this->load->helper('download');
         $file = html_entity_decode(urldecode($filename));
         $filePath="/home/upload/task_doc/";
-
         $file_extension = end(explode(".", $file));
-
 	   
 	    switch( $fileExtension)
 	    {
@@ -3253,9 +3243,7 @@ echo $html; exit;
 	    case "jpg": $ctype="image/jpg"; break;
 	    default: $ctype="application/force-download";
 	    }
-
     	//nocache_headers();
-
 	     // Set headers
 	    header("Pragma: public"); 
 		header("Expires: 0"); 
@@ -3263,18 +3251,14 @@ echo $html; exit;
 		header("Cache-Control: private",false); 
 		header("Content-Type: $ctype"); 
 		header("Content-Disposition: attachment; filename=".$file.";" ); 
-
-
 		//header("Content-Transfer-Encoding: binary"); 
 		//header("Content-Length: ".filesize($file)); 
 		ob_clean();
     	flush(); 
     	$file = preg_replace("/\s+/", "_", $file);
 		readfile($filePath.$file);
-
      	
      	//readfile("/home/saivisiontech/public_html/newsite/upload/task_doc/".$file);
-
         
 		exit;
 		
@@ -3282,5 +3266,4 @@ echo $html; exit;
 	
 	
 }
-
 ?>
