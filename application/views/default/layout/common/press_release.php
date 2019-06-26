@@ -249,7 +249,8 @@ body {
 
 <div style="text-align:center;">
   <h2>Our Image Gallery</h2>
-  <p>Our pilots are hard at work. Click on an image to view more.</p>
+  <!-- <p>Our pilots are hard at work. Click on an image to view more.</p> -->
+  <br/>
 </div>
 
 <!-- The four columns -->

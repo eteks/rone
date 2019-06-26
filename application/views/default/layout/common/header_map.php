@@ -252,8 +252,8 @@ if(isset($current_city_name)) {  $city_name=$current_city_name; }
 								<?php } ?>
 								</li>
 				                <li><a href="<?php echo base_url(); ?>index.php/tags">Find a Job</a></li>
-				                <li><a href="<?php echo base_url(); ?>index.php/how_it_works">How it works</a></li>
-                                <li><a href="<?php echo base_url(); ?>index.php/who-are-the-taskers">Hire a Dronepilot</a></li>
+				                <li><a href="<?php echo base_url(); ?>index.php/who-are-the-taskers">Hire a Dronepilot</a></li>
+                                <li><a href="<?php echo base_url(); ?>index.php/how_it_works">How it works</a></li>
                             <script type="text/javascript">
                                 window.fbAsyncInit = function() {
                                     FB.init({appId: '240522045994585', status: true, cookie: true, xfbml: true});

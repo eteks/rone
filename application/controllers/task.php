@@ -1735,7 +1735,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == 
 		else
 		{
 			$config =  array(
-			                  'upload_path'     => '/home/smart-tech.melbourne/public_html/snm/upload/task_doc',
+			                  'upload_path'     => '/home/u556491443/domains/smart-tech.melbourne/public_html/snm/upload/task_doc',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE
@@ -1754,10 +1754,12 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == 
 				echo "file upload failed".'&nbsp;&nbsp;&nbsp;';
 				if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 				echo "<a href='http://localhost/snm/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+				//echo getcwd() . "\n";
 				}
 				else
 				{
 					echo "<a href='http://snm.smart-tech.melbourne/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+					//echo getcwd() . "\n";
 				}
 				exit;
 			}
@@ -1789,7 +1791,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == 
 				else
 				{
 					$config =  array(
-									  'upload_path'     => '/home/smart-tech.melbourne/public_html/snm/upload/task_image',
+									  'upload_path'     => '/home/u556491443/domains/smart-tech.melbourne/public_html/snm/upload/task_image',
 									  'file_name'		=>$file_name1,
 									  'allowed_types'   => "*",
 									  'overwrite'       => TRUE
@@ -1802,7 +1804,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == 
 							}
 							else
 							{
-								$uploads_dir='/home/smart-tech.melbourne/public_html/snm/upload/task_image';
+								$uploads_dir='/home/u556491443/domains/smart-tech.melbourne/public_html/snm/upload/task_image';
 							}		
 					$allowed =  array('gif','png' ,'jpg');
 					$filename = $_FILES['taskfile']['name'];
@@ -1818,9 +1820,11 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == 
 							echo "file upload failed".'&nbsp;&nbsp;&nbsp;';
 							if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 							echo "<a href='http://localhost/snm/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+							//echo getcwd() . "\n";
 							}
 							else {
 								echo "<a href='http://snm.smart-tech.melbourne/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+								//echo getcwd() . "\n";
 							}
 							exit;
 						}
@@ -1829,6 +1833,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == 
 						echo "Upload file type not allowed".'&nbsp;&nbsp;&nbsp;';
 						if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == '127.0.0.1') {
 						echo "<a href='http://localhost/snm/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
+
 						}
 						else {
 							echo "<a href='http://snm.smart-tech.melbourne/task/step_one/$task_id' class='btn btn-default'>Go back</a>";
@@ -3093,7 +3098,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == 
 		}
 		else {
 			$config =  array(
-			                  'upload_path'     => '/home/smart-tech.melbourne/public_html/snm/upload/task_doc',
+			                  'upload_path'     => '/home/u556491443/domains/smart-tech.melbourne/public_html/snm/upload/task_doc',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE

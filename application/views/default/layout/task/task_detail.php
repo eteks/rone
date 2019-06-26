@@ -167,7 +167,7 @@ $data['site_setting']=$site_setting;
                                            //$task_category_list =get_category();
                                            //echo "<pre>";print_r($task_category_list);
                                            foreach($task_category_list as $category_info){ ?>
-                                           <option value="<?=$category_info->task_category_id;?>" <?php if($cat_name==$category_info->task_category_id) echo 'selected'; ?>><?=$category_info->category_name?></option>
+                                           <option value="<?=$category_info->task_category_id;?>" <?php if(isset($cat_name)) { if($cat_name==$category_info->task_category_id) echo 'selected'; } ?>><?=$category_info->category_name?></option>
                                            
                                            <?php } ?>
                                         </select>

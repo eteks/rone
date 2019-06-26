@@ -166,10 +166,10 @@
             </ul> 
         </div>
         <div class="clear"></div>
-        <div class="See_more_Categories"><a href="<?php echo base_url(); ?>user_other/all_category_worker" class="btn btn-default btn-more-category">See more Categories</a></div>
+        <!-- <div class="See_more_Categories"><a href="<?php echo base_url(); ?>user_other/all_category_worker" class="btn btn-default btn-more-category">See more Categories</a></div>
         <div class="clear"></div>
     </div>
-    <div class="clear"></div>
+    <div class="clear"></div> -->
 </div>
 <!--What do you need done End-->
 <!--How it works-->

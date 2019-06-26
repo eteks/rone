@@ -38,7 +38,7 @@
                 <div class="footer-1">
                     <h1>General Links</h1>
                     <ul>
-                        <li><a href="<?php echo base_url(); ?>index.php/content/about_us">About Company Name</a></li>
+                        <li><a href="<?php echo base_url(); ?>index.php/content/about_us">About Hireadronepilot</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/how_it_works">Post a Job</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/who-are-the-taskers">Find Jobs</a></li>
                     </ul>

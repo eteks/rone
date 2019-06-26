@@ -416,7 +416,7 @@ $data['user_profile']=$user_profile;
                                     <div class="clear"></div>
                                     <div class="marTB10">
                                         <table width="100%" cellspacing="1" cellpadding="0" border="0">
-                                             <?php if($portfolio_photo) { ?>
+                                             <?php if(isset($portfolio_photo)) { ?>
                                             <tr>
                                                 <td valign="top" width="19%" align="left">
                                                    <?php
@@ -441,7 +441,7 @@ $data['user_profile']=$user_profile;
                                             </tr>
                                              <?php  } ?>
                                              <?php
-                            if($portfolio_video) { ?>
+                            if(isset($portfolio_video)) { ?>
                                              <tr>
                                                 <td valign="top" width="19%" align="left">
                                                    <?php

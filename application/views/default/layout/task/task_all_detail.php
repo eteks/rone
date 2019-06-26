@@ -102,9 +102,9 @@ $data['site_setting']=$site_setting;
                                 <div class="search-inn-option-ptd">
                                     <div class="search-field-ptd">Category</div>
                                     <div class="custom-select-ptd">
-                                        <? 
+                                        <?php 
                                            $task_category_list =get_category();
-                                           echo "helo";
+                                           //echo "helo";
 
                                         ?>
                                          <select name="cat_name" id="cat_name">
@@ -114,7 +114,7 @@ $data['site_setting']=$site_setting;
                                           // echo "<pre>"; print_r($task_category_list);
                                         
                                            foreach($task_category_list as $category_info){  ?>
-                                           <option value="<?php $category_info->task_category_id; ?>"<?php  if($cat_name==$category_info->task_category_id)  echo 'selected'; ?>><?php $category_info->task_category_id; ?></option>
+                                           <option value="<?php $category_info->task_category_id; ?>"<?php if(isset($cat_name)) { if($cat_name==$category_info->task_category_id) echo 'selected'; } ?>><?php $category_info->task_category_id; ?></option>
                                            
                                            <?php } ?>
                                         </select> 
