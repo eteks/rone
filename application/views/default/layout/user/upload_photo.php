@@ -83,7 +83,8 @@ $(document).ready(function() {
 </script>  
 
 
-<?php if($msg=='success') { 
+<?php 
+if($msg=='success') { 
 
 	if($ref_link!='') { $ref_link=site_url($ref_link); } else { $ref_link=site_url('customize_profile'); } 
 
@@ -113,7 +114,7 @@ parent.location.href='<?php echo $ref_link ; ?>';
      <?php
 					
 					if($user_profile->profile_image!='') {  
-					
+
 						if(file_exists(base_path().'upload/user/'.$user_profile->profile_image)) { ?>
                         
                         <img src="<?php echo base_url(); ?>upload/user/<?php echo $user_profile->profile_image;?>"  alt="" class="fl upload_img" border="0" width="100" height="100"  />

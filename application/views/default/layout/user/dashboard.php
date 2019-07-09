@@ -56,13 +56,20 @@
             }
             </style>
             
-            
+            <!-- <script type="text/javascript">
+jQuery(function($) {
+    
+        $("#pupload").fancybox();
+      
+
+});
+</script>   -->
     
     
             <script type="text/javascript">
             
                 jQuery(function() {
-                    jQuery("#pupload2").fancybox();	
+                  //  jQuery("#pupload2").fancybox();	
                      jQuery("#sprogress").fancybox();    
                 });
             
@@ -78,6 +85,7 @@
                                                 }
 
             </script>
+             
             <script type="text/javascript" src="<?php echo base_url().getThemeName(); ?>/responsive-verticalmenu_files/jquery-1.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url().getThemeName(); ?>/responsive-verticalmenu_files/flexy-menu.js"></script>
@@ -156,11 +164,23 @@ function send_wall_invitation(response) {
                     <div class="editphoto-button editphoto-taxt editphoto-taxt-1">
                     	<a href="javascript:void(0)" id="pupload3"><img src="<?php echo base_url().getThemeName(); ?>/images/edit_pen.png" alt=""  /></a>
                     </div>
-				    <!--<div class="editphoto-button editphoto-taxt">
+
+                   <!--  <div class="editphoto-button editphoto-taxt editphoto-taxt-1">
+
+                       <?php echo anchor('user/upload_photo','<img src="'.base_url().getThemeName().'/images/edit_pen.png" alt="" />&nbsp;',' id="pupload" class="fpass"');?>
+                    </div> -->
+
+                   <!--  <div class="editphoto-button editphoto-taxt editphoto-taxt-1">
+                        <a href="javascript:void(0)" id="pupload3" ><img src="<?php echo base_url().getThemeName(); ?>/images/edit_pen.png" alt=""  /></a>
+                    </div> -->
+
+
+			    <!-- <div class="editphoto-button editphoto-taxt">
                     <a href="user/upload_photo/dashboard" id="pupload2"><span style="color:red">Edit Photo</span></a>
-                    </div>-->
+                    </div> -->
 					<script type="text/javascript">
                     	$(document).ready(function(){
+
 							$("#pupload3").click(function(){
 								$("#open_edit_icon").fadeIn();
 								$("#fancybox-overlay").fadeIn();
@@ -940,22 +960,27 @@ function send_wall_invitation(response) {
   </script>  
 
 
-      <?php if($msg=='success') { 
-      
+      <?php 
+            /*if(isset($msg)) {*/
+                $msg = 'fail';
+                $ref_link = 'dashboard';
+        if($msg=='success') { 
+      echo $msg;
           if($ref_link!='') { $ref_link=site_url($ref_link); } else { $ref_link=site_url('customize_profile'); } 
       
       ?>
 
       <script type='text/javascript'>
-      location.href='<?php echo $ref_link ; ?>';
+      parent.location.href='<?php echo $ref_link; ?>'; //changed
       </script>
-      <?php } ?>
+      <?php }  ?>
 
       <?php		
                          
         $attributes = array('name'=>'uploadPhoto','id'=>'uploadPhoto','onsubmit'=>'return submit_image_valid()');
+        if(isset($ref_link)){
             echo form_open_multipart('user/upload_photo/'.$ref_link,$attributes); 
-            
+            }
             ?>
         
                <div  id="error" class="error" style="display:none;"> </div>         
@@ -989,7 +1014,7 @@ function send_wall_invitation(response) {
           <td  valign="top" class="other-pho"><input name="file_up" type="file" id="file_up" />
           <p class="marTB10">Photos should be no larger than 1MB. Need to resize? <?php echo anchor('http://www.picresize.com','picresize.com',' class="fpass fs12"');?></p>
           <input type="hidden" name="prev_image" id="prev_image" value="<?php echo $user_profile->profile_image; ?>" />
-          <input type="hidden" name="ref_link" id="ref_link" value="<?php echo $ref_link; ?>" />
+          <input type="hidden" name="ref_link" id="ref_link" value="<?php if(isset($ref_link)) { echo $ref_link; } ?>" />
           <input type="submit" name="sub_upphoto"  value="Upload Picture" class="btn btn-default" id="sub_upphoto"  />
           </td>
         </tr>

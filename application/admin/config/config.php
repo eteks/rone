@@ -19,10 +19,13 @@
 
 #$config['base_path']="/home17/appraise/public_html";
 
-$config['base_url']	= 'http://localhost/drone/admin/';
-$config['base_url_site']	= "http://localhost/drone/";
+$config['base_url']	= 'http://localhost/snm/admin/';
+$config['base_url_site']	= "http://localhost/snm/";
 
-$config['base_path']="/home17/appraise/public_html";
+/*$config['base_path']="/home17/appraise/public_html";
+*/
+$config['base_path']="";
+
 /*
 |--------------------------------------------------------------------------
 | Index File

@@ -12,8 +12,8 @@
                 <div class="how-to-use-left">
                     <h1>How it Works</h1>
                     <div class="clear">
-                        <div class="both_button"><a href="#Taskers" class="btn btn-default how_it_wk">Taskers</a></div>
                         <div class="both_button"><a href="#Employers" class="btn btn-default how_it_wk">Employers</a></div>
+                        <div class="both_button"><a href="#Taskers" class="btn btn-default how_it_wk">Taskers</a></div>
                     </div>
                 </div>
             </div>

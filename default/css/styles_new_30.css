@@ -652,7 +652,7 @@ label, input, button, select, textarea {
 }
 .signup-main-content {
     background: rgba(0, 0, 0, 0) url("../images/signup_back.jpg") no-repeat scroll center top !important;
-    padding: 130px 0 !important;
+    padding: 5px 0 !important;
 }
 .divider-2 {
     height: 365px !important;

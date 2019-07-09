@@ -119,12 +119,12 @@ fbq('track', 'CompleteRegistration');
 
                                               <tr id="want_detailsTR">
                                                <td>
-                                                <div>
+                                                <!-- <div>
                                                   <input type="checkbox" name="person" value=""> I want to Find Jobs<br/>
                                                   <br/>
                                                   <input type="checkbox" name="person" value="">I want to Post a Job
                                                   <br/>
-                                                </div>
+                                                </div> -->
                                                 </td>
                                                 </tr>
                                                 </div>
