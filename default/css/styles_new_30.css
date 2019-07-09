@@ -306,7 +306,7 @@ a:hover.topblue-button {background:#1A9EE6; color:#FFF; text-decoration:none}
 #acc-banners-ph, #acc-banners-ph-in {float:left; width:100%; height:auto; padding:0; background:url(../images/acc-bg.jpg) top no-repeat; background-size:cover; overflow:hidden; margin:86px 0 0 0}
 #acc-banners-ph-in {padding:0 0 0 0}
 #logo-placing { width:235px; float:left; position:relative; z-index:999999; height:85px; text-align:center;}
-#logo-placing img{ padding:23px 0 0 0;} 
+#logo-placing img{ padding:0px 0 0 0;} 
 #find-placing, #search-task {float:left; width:100%; height:auto; padding: 29px 0px 21px 0;}
 .email-box-home{ margin:-92px 0 0 0; position:relative; z-index:999; background:rgba(0, 0, 0, 0.5);}
 #search-task {margin:0; background:#ababab;}
