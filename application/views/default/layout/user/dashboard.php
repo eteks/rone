@@ -247,7 +247,7 @@ function send_wall_invitation(response) {
                                                                 	<div class="dashboard-slide1">
                                                                     	<a href="<?php echo base_url(); ?>index.php/task/newhome_task/c28">
                                                                             <img src="<?php echo base_url().getThemeName();?>/images/need_img1.png" alt="" />
-                                                                            <div class="dashboard-title-slider">Upload</div>
+                                                                            <div class="dashboard-title-slider">Agriculture</div>
                                                                             <div class="dashboard-title-slider-hover">Post Task</div>
                                                                         </a>
                                                                     </div>
@@ -256,7 +256,7 @@ function send_wall_invitation(response) {
                                                                 	<div class="dashboard-slide1">
                                                                     	<a href="<?php echo base_url(); ?>index.php/task/newhome_task/c1">
                                                                             <img src="<?php echo base_url().getThemeName();?>/images/need_img2.png" alt="" />
-                                                                            <div class="dashboard-title-slider">Find</div>
+                                                                            <div class="dashboard-title-slider">Advertising</div>
                                                                             <div class="dashboard-title-slider-hover">Post Task</div>
                                                                         </a>
                                                                     </div>
@@ -265,7 +265,7 @@ function send_wall_invitation(response) {
                                                                 	<div class="dashboard-slide1">
                                                                     	<a href="<?php echo base_url(); ?>index.php/task/newhome_task/c115">
                                                                             <img src="<?php echo base_url().getThemeName();?>/images/need_img3.png" alt="" />
-                                                                            <div class="dashboard-title-slider">Hire</div>
+                                                                            <div class="dashboard-title-slider">Photography</div>
                                                                             <div class="dashboard-title-slider-hover">Post Task</div>
                                                                         </a>
                                                                     </div>
@@ -274,7 +274,7 @@ function send_wall_invitation(response) {
                                                                 	<div class="dashboard-slide1">
                                                                     	<a href="<?php echo base_url(); ?>index.php/task/newhome_task/c133">
                                                                             <img src="<?php echo base_url().getThemeName();?>/images/need_img4.png" alt="" />
-                                                                            <div class="dashboard-title-slider">Furniture Assembly</div>
+                                                                            <div class="dashboard-title-slider">Asset Inspection</div>
                                                                             <div class="dashboard-title-slider-hover">Post Task</div>
                                                                         </a>
                                                                     </div>
@@ -283,7 +283,34 @@ function send_wall_invitation(response) {
                                                                 	<div class="dashboard-slide1">
                                                                     	<a href="<?php echo base_url(); ?>index.php/task/newhome_task/c82">
                                                                             <img src="<?php echo base_url().getThemeName();?>/images/need_img5.png" alt="" />
-                                                                            <div class="dashboard-title-slider">Work</div>
+                                                                            <div class="dashboard-title-slider">Surveying</div>
+                                                                            <div class="dashboard-title-slider-hover">Post Task</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="dashboard-slide1">
+                                                                        <a href="<?php echo base_url(); ?>index.php/task/newhome_task/c82">
+                                                                            <img src="<?php echo base_url().getThemeName();?>/images/need_img6.png" alt="" />
+                                                                            <div class="dashboard-title-slider">Assessment</div>
+                                                                            <div class="dashboard-title-slider-hover">Post Task</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="dashboard-slide1">
+                                                                        <a href="<?php echo base_url(); ?>index.php/task/newhome_task/c82">
+                                                                            <img src="<?php echo base_url().getThemeName();?>/images/need_img7.png" alt="" />
+                                                                            <div class="dashboard-title-slider">Equipment</div>
+                                                                            <div class="dashboard-title-slider-hover">Post Task</div>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="dashboard-slide1">
+                                                                        <a href="<?php echo base_url(); ?>index.php/task/newhome_task/c82">
+                                                                            <img src="<?php echo base_url().getThemeName();?>/images/need_img8_security.png" alt="" />
+                                                                            <div class="dashboard-title-slider">Security</div>
                                                                             <div class="dashboard-title-slider-hover">Post Task</div>
                                                                         </a>
                                                                     </div>
