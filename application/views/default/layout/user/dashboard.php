@@ -309,7 +309,7 @@ function send_wall_invitation(response) {
                                                                 <li>
                                                                     <div class="dashboard-slide1">
                                                                         <a href="<?php echo base_url(); ?>index.php/task/newhome_task/c82">
-                                                                            <img src="<?php echo base_url().getThemeName();?>/images/need_img8_security.png" alt="" />
+                                                                            <img src="<?php echo base_url().getThemeName();?>/images/need_img8.png" alt="" />
                                                                             <div class="dashboard-title-slider">Security</div>
                                                                             <div class="dashboard-title-slider-hover">Post Task</div>
                                                                         </a>

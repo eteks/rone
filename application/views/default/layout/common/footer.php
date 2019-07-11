@@ -60,7 +60,7 @@
                 <div class="footer-1">
                     <h1>Quick Links</h1>
                     <ul>
-                        <li><a href="<?php echo base_url(); ?>index.php/content/trustsafety">Trust &amp; Safety</a></li>
+                        <!-- <li><a href="<?php echo base_url(); ?>index.php/content/trustsafety">Trust &amp; Safety</a></li> -->
                         <!--<li><a href="<?php echo base_url(); ?>index.php/how_it_works">How does Sitename work</a></li>-->
                         <!-- <li><a href="<?php echo base_url(); ?>index.php/content/help">Help - FAQ</a></li> -->
                         <li><a href="#">Help - FAQ</a></li>
