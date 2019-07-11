@@ -62,7 +62,8 @@
                     <ul>
                         <li><a href="<?php echo base_url(); ?>index.php/content/trustsafety">Trust &amp; Safety</a></li>
                         <!--<li><a href="<?php echo base_url(); ?>index.php/how_it_works">How does Sitename work</a></li>-->
-                        <li><a href="<?php echo base_url(); ?>index.php/content/help">Help - FAQ</a></li>
+                        <!-- <li><a href="<?php echo base_url(); ?>index.php/content/help">Help - FAQ</a></li> -->
+                        <li><a href="#">Help - FAQ</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/content/privacy">Privacy Policy</a></li>
                         <!--<li><a href="<?php echo base_url(); ?>index.php/business">Camellar for Business</a></li>-->
                         <!--<li><a href="<?php echo base_url(); ?>index.php/content/payments">Payments</a></li>-->

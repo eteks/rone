@@ -16,7 +16,8 @@
                     <div class="contact-left-block pull-left">
                         <div class="elevio-box-warning">
                             <p>Before you submit your query, please check to see if your question has already been answered in our knowledge base FAQ.</p>
-                            <div><a class="btn btn-default" href="http://demoplace.co.in/newsite/index.php/content/help">Visit FAQ</a></div>
+                            <!-- <div><a class="btn btn-default" href="http://demoplace.co.in/newsite/index.php/content/help">Visit FAQ</a></div> -->
+                            <div><a class="btn btn-default" href="#">Visit FAQ</a></div>
                         </div>
                         <div class="clear"></div>
                     </div>
