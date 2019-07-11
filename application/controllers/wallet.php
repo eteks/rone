@@ -326,7 +326,7 @@ class Wallet extends ROCKERS_Controller
 			$data['site_setting']=(array)site_setting();
 			$user_detail=(array)$user_info;
 			$site_setting=$data['site_setting'];
-			$comment='Wallet on TASKIT.com';
+			$comment='Wallet on hireadronepilot.com.au';
 			$this->bcspay_lib->add_field('p5',$site_setting['currency_code']);
 			$this->bcspay_lib->add_field('p3', $comment);
 			$this->bcspay_lib->add_field('p1', $p1["value"]);
@@ -541,7 +541,7 @@ class Wallet extends ROCKERS_Controller
 			$data['site_setting']=(array)site_setting();
 			$user_detail=(array)$user_info;
 			$site_setting=$data['site_setting'];
-			$comment='Wallet on TASKIT.com';
+			$comment='Wallet on hireadronepilot.com.au';
 			
 			
 			

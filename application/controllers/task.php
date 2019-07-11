@@ -2830,8 +2830,8 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || substr($_SERVER['HTTP_HOST'],0,8) == 
 		$emailaddress=$wordkeremailaddress->row();
 		
 			
-		$email_address_from='noreply@taskit.com';
-		$email_address_reply='noreply@taskit.com';
+		$email_address_from='noreply@hireadronepilot.com.au';
+		$email_address_reply='noreply@hireadronepilot.com.au';
 						
 		$email_subject='You are invited to Bid on Task';	
 		$email_to=$emailaddress->email;
