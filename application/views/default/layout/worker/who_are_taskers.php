@@ -32,7 +32,8 @@ function conf() {
                     <li><a href="<?php echo base_url(); ?>index.php/login">Start Application</a></li>
                     <?php }  else { ?>
                     <li>
-                        <?php $check_is_worker=check_is_worker(get_authenticateUserID()); 
+                        <?php $check_is_worker=check_is_worker(get_authenticateUserID());
+                        echo $check_is_worker;
                         if($check_is_worker==2) {?>
                         <a  href="worker/apply">Start Application</a>
                         <?php } elseif($check_is_worker->worker_status==1 || $check_is_worker->worker_status==0) {?>
