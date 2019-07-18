@@ -247,13 +247,12 @@ body {
 </style>
 
 
-<div style="text-align:center;">
+<!-- <div style="text-align:center;">
   <h2>Our Image Gallery</h2>
-  <!-- <p>Our pilots are hard at work. Click on an image to view more.</p> -->
   <br/>
 </div>
 
-<!-- The four columns -->
+
 <div class="row" style="padding-left: 45px;">
   <div class="column">
     <img src="default/images/drones/1.png" alt="" style="height: 114.81px; width: 114.81px;" onclick="myFunction(this);">
@@ -307,7 +306,7 @@ function myFunction(imgs) {
   imgText.innerHTML = imgs.alt;
   expandImg.parentElement.style.display = "block";
 }
-</script>
+</script> -->
 
 
 

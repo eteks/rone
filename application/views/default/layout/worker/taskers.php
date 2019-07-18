@@ -16,7 +16,7 @@ $data['site_setting']=$site_setting;
                         <div id="main" role="main">
                          	<?php 
 //echo "<pre>";print_r($toptaskers);
-if($toptaskers){ ?>
+if(isset($toptaskers) && !empty($toptaskers)){ ?>
                             <div class="slider">
                             
                                 <div class="flexslider">
@@ -246,7 +246,7 @@ if($toptaskers){ ?>
                     <?php 
                     
                     //echo "<pre>";print_r($tasklist);
-                    if(isset($tasklist))
+                    if(isset($tasklist) && !empty($tasklist))
                     {
                        foreach ($tasklist as $ftasklist) {
 

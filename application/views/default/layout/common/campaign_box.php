@@ -8,11 +8,11 @@
             <p align="center">Dronework is as easy as 4 steps.</p></div>
             </div>
         <div class="need-detail">
-        	<ul style="padding-left: 40px;">
+        	<ul>
             	<li style="height:279px;">
                 	<div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman">
-                            <div id="pilotr" class="need-img"style="height:248px; width: 178px;"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-03_upload.svg" /></div>
+                            <div id="pilotr" class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-03_upload.svg" /></div>
                             <div class="need-img-detail">
                                 <h3>Upload</h3>
                                 <h4>Pilots upload and create a comprehensive portfolio to showcase their strengths.</h4>
@@ -23,7 +23,7 @@
                 <li style="height:279px;">
                 	<div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/house-chores">
-                            <div class="need-img"style="height:248px; width: 178px;"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-01_find.svg" /></div>
+                            <div class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-01_find.svg" /></div>
                             <div class="need-img-detail">
                                 <h3>Find</h3>
                                 <h4>Clients tell us about the job requirements, so that only qualified pilots may apply.</h4>
@@ -34,7 +34,7 @@
                 <li style="height:279px;">
                 	<div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/delivery">
-                            <div class="need-img"style="height:248px; width: 178px;" ><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-02_hire.svg" /></div>
+                            <div class="need-img" ><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-02_hire.svg" /></div>
                             <div class="need-img-detail">
                                 <h3>Hire</h3>
                                 <h4>Clients review the drone pilots and hire the best pilot for the job.</h4>
@@ -45,7 +45,7 @@
                 <li style="height:289px;">
                 	<div style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/furniture-assembly">
-                            <div class="need-img"style="height:248px; width: 178px;"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-05_work.svg" /></div>
+                            <div class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-05_work.svg" /></div>
                             <div class="need-img-detail">
                                 <h3>Work</h3>
                                 <h4>Pilots complete the job and it automatically gets added to their portfolio.Impress new clients with a job well done!</h4>
@@ -66,13 +66,13 @@
            </div>
            <div class="flex-container">
 
-            <ul style="padding-left: 40px;">
+            <ul>
 
-                <li style="height:200px; width: 30%; text-align: center;">
+                <li>
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
-                            <div style="height: 180px;"><img style="height:110px; width: 40%; padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/2145541_1.png" /></div>
+                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/2145541_1.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Agriculture</h3>
                                 <h4>Spraying, NDVI Mapping, Others</h4>
@@ -84,7 +84,7 @@
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#cinema">
-                            <div style="height: 180px;"><img style="height:110px; width: 45%;padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/adv_1.png" /></div>
+                            <div><img style="height:110px; width: 45%;padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/adv_1.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Advertising</h3>
                                 <h4>Events, Others</h4>
@@ -92,11 +92,11 @@
                         </a>
                     </div>
                 </li> -->
-                <li style="height:200px; width: 30%; text-align: center;">
+                <li>
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#weddingsevents">
-                            <div style="height: 180px;"><img style="height:110px; width: 40%; padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/camte_1.png" /></div>
+                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/camte_1.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Photography & Videography</h3>
                                 <h4>Filming, Still Photography, Others</h4>
@@ -105,11 +105,11 @@
                     </div>
                 </li>
 
-                <li style="height:200px; width: 30%; text-align: center;">
+                <li>
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#construction">
-                            <div style="height: 180px;"><img style="height:110px; width: 40%; padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/assinpec_1.png" /></div>
+                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/assinpec_1.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Asset Inspection</h3>
                                 <h4>Building, Powerline, Gutter & Roof, Others</h4>
@@ -117,11 +117,11 @@
                         </a>
                     </div>
                 </li>
-                <li style="height:200px; width: 30%; text-align: center;">
+                <li>
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#surveyingmapping">
-                            <div style="height: 180px;"><img style="height:110px; width: 40%; padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/surv_1.png" /></div>
+                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/surv_1.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Surveying</h3>
                                 <h4>LiDar, Others</h4>
@@ -133,7 +133,7 @@
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
-                            <div style="height: 180px;"><img style="height:110px; width: 45%;padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/assesment_1.png" /></div>
+                            <div><img style="height:110px; width: 45%;padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/assesment_1.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Assessment</h3>
                                 <h4>Environmental, Property, Others</h4>
@@ -141,11 +141,11 @@
                         </a>
                     </div>
                 </li> -->
-                <li style="height:200px; width: 30%; text-align: center;">
+                <li>
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#watersports">
-                            <div style="height: 180px;"><img style="height:110px; width: 40%; padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/equipment_1.png" /></div>
+                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/equipment_1.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Equipment</h3>
                                 <h4>Drone Maintenance, Drone Rental, Others</h4>
@@ -153,11 +153,11 @@
                         </a>
                     </div>
                 </li>
-                <li style="height:200px; width: 30%; text-align: center;>
+                <li>
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
-                            <div style="height: 180px;"><img style="height:110px; width: 40%; padding-left: 20px; padding-top: 10px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/security_1.png" /></div>
+                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/security_1.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Security</h3>
                                 <h4>Surveillance, Others</h4>

@@ -1803,18 +1803,20 @@ transition: all 0.3s linear;}
 
 #need-content{ margin-bottom:35px; background:#fcfcfc; }
 .border-over{ border:1px solid #000; border-radius:5px; padding:10px;}
-.need-detail{ }
-.need-detail ul{}
-.need-detail ul li{ float:left; height:248px; overflow:hidden;  border-radius:5px; margin-right:20px; margin-bottom:20px; width:248px; border:1px solid #e7e7e7; webkit-transition: all 0.3s linear;
+.need-detail{ text-align: center; }
+.need-detail ul{  }
+.need-detail ul li{ overflow:hidden;  border-radius:5px; width:248px; border:1px solid #e7e7e7; webkit-transition: all 0.3s linear;
 -moz-transition: all 0.3s linear;
 -o-transition: all 0.3s linear;
 -ms-transition: all 0.3s linear;
-transition: all 0.3s linear;}
+transition: all 0.3s linear; display: inline-block; vertical-align: bottom; margin: 10px; height: 300px;}
 .need-detail ul li a{ color:#FFF; outline:none;  }
-.need-detail ul li:last-child{  margin-right:0px;}
-.need-img{}
-.need-img img{ display:flex; width:100%;}
-.need-img-detail{ height:60px; background:rgba(255,255,255,0.85); margin-top:-60px; position:relative; 
+.need-detail ul li:last-child{ }
+.need-img{  }
+.need-img img{ max-width: 178px; }
+
+
+.need-img-detail{ height:60px; background:rgba(255,255,255,0.85);  position:relative; 
 webkit-transition: all 0.3s linear;
 -moz-transition: all 0.3s linear;
 -o-transition: all 0.3s linear;
