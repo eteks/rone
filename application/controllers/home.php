@@ -110,16 +110,16 @@ class Home extends ROCKERS_Controller {
 			$headers  = 'MIME-Version: 1.0' . "\r\n";
 			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-			$headers .= "Reply-To: The Sender <noreplay@camellar.com>\r\n"; 
-			$headers .= "Return-Path: The Sender <noreplay@camellar.com>\r\n"; 
-			$headers .= "From: The Sender <noreplay@camellar.com>\r\n";
+			$headers .= "Reply-To: The Sender <noreplay@hireadronepilot.com.au>\r\n"; 
+			$headers .= "Return-Path: The Sender <noreplay@hireadronepilot.com.au>\r\n"; 
+			$headers .= "From: The Sender <noreplay@hireadronepilot.com.au>\r\n";
 
 
 
 			// Mail it
 			if(mail($to, $subject, $message, $headers))
 			{
-				$output ="Thank you for submitting your details.A member of the camellar team will be in contact with you soon.";
+				$output ="Thank you for submitting your details.A member of the Hireadronepilot team will be in contact with you soon.";
 			}
         }
         

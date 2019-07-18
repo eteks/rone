@@ -23,31 +23,31 @@
             	<div class="db-rightinfo db-rightinfo-inner" style="width:100%; margin:0px 0 0 0 !important; padding-bottom:50px;">
                     <div class="only-question container">
                         <ul>
-                            <li><a href="#q1">What is Camellar?</a></li>
-                            <li><a href="#q2">How do I get my jobs completed on Camellar?</a></li>
-                            <li><a href="#q3">What jobs can I get done on Camellar?</a></li>
+                            <li><a href="#q1">What is Hireadronepilot?</a></li>
+                            <li><a href="#q2">How do I get my jobs completed on Hireadronepilot?</a></li>
+                            <li><a href="#q3">What jobs can I get done on Hireadronepilot?</a></li>
                             <li><a href="#q4">How much does it cost to post a job?</a></li>
-                            <li><a href="#q7">What Trust & Safety features does Camellar provide?</a></li>
-                            <li><a href="#q6">Once I post a job, is there a commitment to hire an Camellar?</a></li>
-                            <li><a href="#q12">Who can complete work and earn money on Camellar?</a></li>
+                            <li><a href="#q7">What Trust & Safety features does Hireadronepilot provide?</a></li>
+                            <li><a href="#q6">Once I post a job, is there a commitment to hire an Hireadronepilot?</a></li>
+                            <li><a href="#q12">Who can complete work and earn money on Hireadronepilot?</a></li>
                             <li><a href="#q14">How do I receive payment for completing a job?</a></li>
                             <li><a href="#q8">How do I choose the best person to complete my job?</a></li>
                             <li><a href="#q9">How do I know how much to pay for a job?</a></li>
                             <li><a href="#q10">What are the payment options for each job?</a></li>
-                            <li><a href="#q11">How do I discuss the job before assigning an Camellar to my job?</a></li>
+                            <li><a href="#q11">How do I discuss the job before assigning an Hireadronepilot to my job?</a></li>
                         </ul>
                     </div>
                     <div class="container">
                         <div class="inner-deti">Need information, have questions or want to leave feedback? Contact our <a href="<?php echo base_url(); ?>index.php/contact_us">Support Centre</a></div>
                         
                         <div class="all-detail" id="q1">
-                            <h1>What is Camellar?</h1>
-                            <p>Camellar is a online marketplace for people to outsource jobs, find local services or complete flexible jobs to earn money – online or via mobile.</p>
+                            <h1>What is Hireadronepilot?</h1>
+                            <p>Hireadronepilot is a online marketplace for people to drone pilot jobs, find local services or complete flexible jobs to earn money – online or via mobile.</p>
                             <a href="#only-question">Back to top</a>
                         </div>
                         <div class="all-detail" id="q2">
-                            <h1>How do I get my jobs completed on Camellar?</h1>
-                            <p>Start by <a href="<?php echo base_url(); ?>index.php/task/newhome_task">Posting a Job</a> - it's FREE to post and takes just a few minutes. Camellar workers will then bid to complete your job. Check out their profile and once you've found the Helper that's perfect for your job, you can assign them to the job. Then you deposite the funds to cover the agreed cost of the Job. Once the job is completed to your satisfaction, mark the job as complete and the agreed amount will be released to the Helper as payment. Its that simple!</p>
+                            <h1>How do I get my jobs completed on Hireadronepilot?</h1>
+                            <p>Start by <a href="<?php echo base_url(); ?>index.php/task/newhome_task">Posting a Job</a> - it's FREE to post and takes just a few minutes. Hireadronepilot workers will then bid to complete your job. Check out their profile and once you've found the Helper that's perfect for your job, you can assign them to the job. Then you deposite the funds to cover the agreed cost of the Job. Once the job is completed to your satisfaction, mark the job as complete and the agreed amount will be released to the Helper as payment. Its that simple!</p>
                             <p>Read more about <a href="<?php echo base_url(); ?>index.php/how_it_works">How it Works</a>.</p>
                             <a href="#only-question">Back to top</a>
                         </div>

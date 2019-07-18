@@ -13,7 +13,7 @@
 <p class="LH18">
 <?php  
 		
-		$content= $content->description;		
+		$content= $content->description;	
 		$content=str_replace('KSYDOU','"',$content);
 		$content=str_replace('KSYSING',"'",$content);
 		

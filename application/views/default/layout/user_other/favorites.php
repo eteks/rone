@@ -34,7 +34,7 @@ if($msg!='')
 <?php } ?>
 
            
-           <?php //echo anchor('taskers','<b style="font-size:18px">Click Here to browse Taskers to add as favorite</b>','class="fpass fs14"'); ?>
+           <?php echo anchor('taskers','<b style="font-size:18px">Click Here to add favorite taskers</b>','class="fpass fs14"'); ?>
            
        
        

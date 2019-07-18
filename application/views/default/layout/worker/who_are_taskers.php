@@ -25,7 +25,7 @@ function conf() {
 <div class="banner-contain" id="acc-banners-ph">
     <div class="container">
         <div class="banner-hw safety safety-2 safety-3">
-            <p>Camellar gives an opportunity to those of you who are in between jobs,studying, retrenched or who have some spare time on hand to earn some extra money in a dignified and secure way through our easy to use online marketplace. We help you as the Tasker to boost your business by connecting you to new opportunities and enquiries everyday. </p>
+            <p>Hireadronepilot gives an opportunity to those of you who are in between jobs,studying, retrenched or who have some spare time on hand to earn some extra money in a dignified and secure way through our easy to use online marketplace. We help you as the Tasker to boost your business by connecting you to new opportunities and enquiries everyday. </p>
             <div class="safety-buttons">
                 <ul>
                     <?php if(get_authenticateUserID()=='') { ?>
@@ -48,20 +48,20 @@ function conf() {
         </div>
     </div>
     <div class="banner-area-for-work">
-        <a href="#"><img src="<?php echo base_url().getThemeName(); ?>/images/takser_banner.jpg" alt="" /></a>
+        <a href="#"><img src="<?php echo base_url().getThemeName(); ?>/images/takser_banner_1.jpg" alt="" /></a>
     </div>
 </div>
 <!--banner ends-->
 
 <!--become a tasker-->
 
-<!--<div class="red-subtitle">Become a Tasker on Camellar and Earn some Moola!</div>
+<!--<div class="red-subtitle">Become a Tasker on Hireadronepilot and Earn some Moola!</div>
 <div class="become-tasker">
 <div class="container">
 	<div style="visibility: visible;animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="span3 wow fadeIn animated">
-        <p class="only-text">Camellar is a new service connecting trusted local neighbours,workers and friends to families and businesses that need some extra help.
+        <p class="only-text">Hireadronepilot is a new service connecting trusted local neighbours,workers and friends to families and businesses that need some extra help.
         
-        Camellar gives an opportunity to those of you who are in between jobs,studying, retrenched or who have some spare time on hand to earn some extra money in a dignified and secure way through our easy to use online marketplace.
+        Hireadronepilot gives an opportunity to those of you who are in between jobs,studying, retrenched or who have some spare time on hand to earn some extra money in a dignified and secure way through our easy to use online marketplace.
         
         We help you as the Tasker to boost your business by connecting you to new opportunities and enquiries everyday.
         </p>
@@ -72,7 +72,7 @@ function conf() {
 <!--two columnar section-->
 <div id="two-columnar-section" style="padding-top:0px; padding-bottom:0px;">
     <div class="profile_back who-are-back">
-        <div class="red-subtitle top-red-subtitle entowork-title">How Camellar can help build your business</div>
+        <div class="red-subtitle top-red-subtitle entowork-title">How Hireadronepilot can help build your business</div>
         <div class="container" style="margin-top:15px; padding-bottom:15px;">
             <div class="">
                 <div class="container how-hwlp-inner-wrt">

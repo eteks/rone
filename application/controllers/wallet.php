@@ -2770,7 +2770,7 @@ class Wallet extends ROCKERS_Controller
 			$data['site_setting']=(array)site_setting();
 			$user_detail=(array)$user_info;
 			$site_setting=$data['site_setting'];
-			$comment='Wallet on camellar.com';
+			$comment='Wallet on hireadronepilot.com.au';
 			
 			if($task_id!=0 && $task_id>0 && $task_comment_id!=0 && $task_comment_id>0)
 				{

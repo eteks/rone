@@ -372,9 +372,9 @@ $data['user_profile']=$user_profile;
             
             
 			<div id="tabs-1">
-            	<div class="abtsty">
+            	<div class="abtsty" style="padding-top: 20px; padding-bottom: 20px;">
                     
-                    <p>
+                    <p style="margin: 5px; padding-bottom: 20px;">
                          <?php    $content=$user_profile->about_user;
 						$content=str_replace('KSYDOU','"',$content);
 						$content=str_replace('KSYSING',"'",$content); 
