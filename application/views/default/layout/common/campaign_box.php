@@ -1,4 +1,4 @@
-<!--What do you need done start-->
+<!--What do you need done start howitworks-01_find.svg -->
 <div id="forhowitworks"></div>
 <div id="need-content">
     <div class="container">
@@ -12,7 +12,7 @@
             	<li style="height:279px;">
                 	<div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman">
-                            <div id="pilotr" class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-03_upload.svg" /></div>
+                            <div id="pilotr" class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/for_upload.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Upload</h3>
                                 <h4>Pilots upload and create a comprehensive portfolio to showcase their strengths.</h4>
@@ -23,7 +23,7 @@
                 <li style="height:279px;">
                 	<div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/house-chores">
-                            <div class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-01_find.svg" /></div>
+                            <div class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/Find.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Find</h3>
                                 <h4>Clients tell us about the job requirements, so that only qualified pilots may apply.</h4>
@@ -34,7 +34,7 @@
                 <li style="height:279px;">
                 	<div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/delivery">
-                            <div class="need-img" ><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-02_hire.svg" /></div>
+                            <div class="need-img" ><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/Hiring.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Hire</h3>
                                 <h4>Clients review the drone pilots and hire the best pilot for the job.</h4>
@@ -42,10 +42,10 @@
                         </a>
                     </div>
                 </li>
-                <li style="height:289px;">
+                <li style="height:279px;">
                 	<div style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/furniture-assembly">
-                            <div class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/howitworks-05_work.svg" /></div>
+                            <div class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/work.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Work</h3>
                                 <h4>Pilots complete the job and it automatically gets added to their portfolio.Impress new clients with a job well done!</h4>
@@ -72,7 +72,7 @@
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
-                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/2145541_1.png" /></div>
+                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/agriculture.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Agriculture</h3>
                                 <h4>Spraying, NDVI Mapping, Others</h4>
@@ -96,7 +96,7 @@
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#weddingsevents">
-                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/camte_1.png" /></div>
+                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/photo.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Photography & Videography</h3>
                                 <h4>Filming, Still Photography, Others</h4>
@@ -109,7 +109,7 @@
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#construction">
-                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/assinpec_1.png" /></div>
+                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/assinpec.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Asset Inspection</h3>
                                 <h4>Building, Powerline, Gutter & Roof, Others</h4>
@@ -121,7 +121,7 @@
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#surveyingmapping">
-                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/surv_1.png" /></div>
+                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Surveying.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Surveying</h3>
                                 <h4>LiDar, Others</h4>
@@ -145,7 +145,7 @@
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#watersports">
-                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/equipment_1.png" /></div>
+                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Equipt.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Equipment</h3>
                                 <h4>Drone Maintenance, Drone Rental, Others</h4>
@@ -157,7 +157,7 @@
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
-                            <div><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/security_1.png" /></div>
+                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/security.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Security</h3>
                                 <h4>Surveillance, Others</h4>
@@ -187,7 +187,7 @@
         	<div style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:150px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/whydronework01-verifiedpilots.svg">                        	
+                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Verified.png">                        	
                         <h2>Verified & Licensed Pilots </h2>
                         <p>Our Pilots are fully licensed to operate and go through checks to make sure they're the best</p>
                     
@@ -196,7 +196,7 @@
             <div style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;" data-wow-delay="0.5s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:150px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/whydronework04-licensed.svg">
+                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/licensed_and_insured.png">
                         <h2>Licensed & Insured</h2>
                         <p>Safeguard yourself with our  <br />license and insurance, and get <br />coverage on damage incurred</p>
                     
@@ -205,7 +205,7 @@
             <div style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;" data-wow-delay="0.6s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:150px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/whydronework03-numerousquotes.svg">
+                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Quotes_White.png">
                         <h2>Receive Numerous Quotes </h2>
                         <p>Receive numerous quotes for your <br /> job, and pick the quote that works <br />for you</p>
                     
@@ -214,7 +214,7 @@
             <div class="clear" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:150px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/whydronework05-serviceguarantee.svg">                            
+                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/SERVICE_GUARANTEE 1.png">                            
                         <h2>Service Guarantee </h2>
                         <p>All jobs come with a service<br/>Guarantee; if they don't deliver,<br/>you don't get charged</p>
                     
@@ -223,7 +223,7 @@
             <div style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:150px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/whydronework02-userrated.svg">                            
+                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/User_Rating.png">                            
                         <h2>User Rated Profiles </h2>
                         <p>Assess client reviews and user<br/>ratings to find the bear fit.</p>
                     
