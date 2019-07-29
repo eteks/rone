@@ -1,5 +1,3 @@
-<!--What do you need done start howitworks-01_find.svg -->
-<div id="forhowitworks"></div>
 <div id="need-content">
     <div class="container">
     	<div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
@@ -64,7 +62,7 @@
 </li>
 
            </div>
-           <div class="flex-container">
+           <div class="flex-container12">
 
             <ul>
 
@@ -177,6 +175,7 @@
 </div>
 <!--What do you need done End-->
 <!--How it works-->
+<div class="clear"></div>
 <div id="what-content">
     <div class="container">
     	<div style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
@@ -187,7 +186,7 @@
         	<div style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Verified.png">                        	
+                        <img style="height:150px; width: 45%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Verified.png">                        	
                         <h2>Verified & Licensed Pilots </h2>
                         <p>Our Pilots are fully licensed to operate and go through checks to make sure they're the best</p>
                     
@@ -196,7 +195,7 @@
             <div style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;" data-wow-delay="0.5s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/licensed_and_insured.png">
+                        <img style="height:150px; width: 45%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/licensed_and_insured.png">
                         <h2>Licensed & Insured</h2>
                         <p>Safeguard yourself with our  <br />license and insurance, and get <br />coverage on damage incurred</p>
                     
@@ -205,7 +204,7 @@
             <div style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;" data-wow-delay="0.6s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Quotes_White.png">
+                        <img style="height:150px; width: 45%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Quotes_White.png">
                         <h2>Receive Numerous Quotes </h2>
                         <p>Receive numerous quotes for your <br /> job, and pick the quote that works <br />for you</p>
                     
@@ -214,7 +213,7 @@
             <div class="clear" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/SERVICE_GUARANTEE 1.png">                            
+                        <img style="height:150px; width: 45%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/SERVICE_GUARANTEE 1.png">                            
                         <h2>Service Guarantee </h2>
                         <p>All jobs come with a service<br/>Guarantee; if they don't deliver,<br/>you don't get charged</p>
                     
@@ -223,7 +222,7 @@
             <div style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                 <div class="span3 nonafy_Works">
                     
-                        <img style="height:200px; width: 50%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/User_Rating.png">                            
+                        <img style="height:150px; width: 45%;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/User_Rating.png">                            
                         <h2>User Rated Profiles </h2>
                         <p>Assess client reviews and user<br/>ratings to find the bear fit.</p>
                     

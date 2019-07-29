@@ -1805,7 +1805,7 @@ transition: all 0.3s linear;}
 .border-over{ border:1px solid #000; border-radius:5px; padding:10px;}
 .need-detail{ text-align: center; }
 .need-detail ul{  }
-.need-detail ul li{ overflow:hidden;  border-radius:5px; width:248px; border:1px solid #e7e7e7; webkit-transition: all 0.3s linear;
+.need-detail ul li{ overflow:hidden;  border-radius:5px; width:248px; webkit-transition: all 0.3s linear;
 -moz-transition: all 0.3s linear;
 -o-transition: all 0.3s linear;
 -ms-transition: all 0.3s linear;
