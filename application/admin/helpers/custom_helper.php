@@ -31,7 +31,7 @@
 	function front_base_url()
 	{		
 		$CI =& get_instance();
-		$th = explode ("/", base_url()); $ot = array_slice($th, 0, 4); $sr = implode('/', $ot); $anglr = $sr."/"; 
+		$th = explode ("/", base_url()); $ot = array_slice($th, 0, 3); $sr = implode('/', $ot); $anglr = $sr."/";
 		return $base_path = $anglr;
 	}
 	
