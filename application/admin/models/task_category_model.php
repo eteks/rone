@@ -288,7 +288,9 @@ class Task_category_model extends CI_Model {
              $_FILES['userfile']['size']     =   $_FILES['file_up']['size'];
   
              $config['file_name']     = $rand.'category_'.$_FILES['userfile']['name'];
-             $config['upload_path'] = base_path().'upload/category'; /*echo "upload_path::".$config['upload_path'];*/
+             $config['upload_path'] = base_path().'upload/category'; 
+             //echo "upload_path::".$config['upload_path'];
+            // $config['upload_path'] = front_base_url().'upload/category';
              $config['allowed_types'] = '*';
  
              $this->upload->initialize($config);

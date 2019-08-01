@@ -84,8 +84,7 @@
 								  ?>
 					<tr onclick="<?php echo $cl; ?>(this);" class="<?php echo $cl; ?>">
                     
-                   
-                   		<td  class="thumb-td tc"><a class="lightbox" href="<?php echo front_base_url();?>upload/category_orig/<?php echo $row->category_image;?>" title="<?php echo $row->category_image;?>"><img src="<?php echo front_base_url();?>upload/category/<?php echo $row->category_image;?>" alt="image-gallery"/></a></td>
+                   		<td  class="thumb-td tc"><a class="lightbox" href="<?php echo front_base_url();?>upload/category_orig/<?php echo $row->category_image;?>" title="<?php echo $row->category_image;?>"><img src="<?php echo front_base_url();?>admin/upload/category/<?php echo $row->category_image;?>" alt="image-gallery"/></a></td>
                         <td><?php echo $row->category_name; ?></td>
                       
                         <td><?php
