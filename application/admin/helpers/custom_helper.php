@@ -31,7 +31,8 @@
 	function front_base_url()
 	{		
 		$CI =& get_instance();
-		return $base_path = $CI->config->slash_item('base_url_site');		
+		$th = explode ("/", base_url()); $ot = array_slice($th, 0, 4); $sr = implode('/', $ot); $anglr = $sr."/"; 
+		return $base_path = $anglr;
 	}
 	
 	// --------------------------------------------------------------------

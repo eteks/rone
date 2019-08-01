@@ -22,7 +22,7 @@ error_reporting(E_ALL);
 //$config['base_path']="/home/rockers/public_html/GROUPFUND.ME/taskrobo/";
 
 
-$config['base_url']	= 'http://localhost/snm';
+$config['base_url']	= APP_URL;
 
 #$config['base_path']="/home/saivisiontech";
 /*$config['base_path']="/home17/appraise/public_html";*/

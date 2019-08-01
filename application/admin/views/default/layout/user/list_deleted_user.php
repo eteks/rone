@@ -10,6 +10,13 @@
 		}
 	}
 	
+	function setchecked(elemName,status){
+		elem = document.getElementsByName(elemName);
+		for(i=0;i<elem.length;i++){
+			elem[i].checked=status;
+		}
+	}
+	
 	function getlimit(limit)
 	{
 		if(limit=='0')

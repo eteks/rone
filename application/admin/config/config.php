@@ -14,17 +14,17 @@
 | path to your installation.
 |
 */
-#$config['base_url']	= 'http://appraiserr.com/admin/';
-#$config['base_url_site']	= "http://appraiserr.com/";
+$config['base_url']	= APP_URL;
+$config['base_url_site']	= APP_URL;
 
 #$config['base_path']="/home17/appraise/public_html";
 
-$config['base_url']	= 'http://localhost/snm/admin/';
-$config['base_url_site']	= "http://localhost/snm/";
+/*$config['base_url']	= 'http://localhost/snm/admin/';
+$config['base_url_site']	= "http://localhost/snm/";*/
 
 /*$config['base_path']="/home17/appraise/public_html";
 */
-$config['base_path']="";
+$config['base_path']= "";
 
 /*
 |--------------------------------------------------------------------------

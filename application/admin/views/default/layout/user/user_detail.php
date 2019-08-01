@@ -1,12 +1,10 @@
 <div id="content" align="center">
 
 	<div align="left" class="column half">
-		<div class="box">	
+		<div class="box">
             <h2 class="box-header"><?php echo anchor(front_base_url().'user/'.$row->profile_name,ucfirst($row->first_name).' '.ucfirst(substr($row->last_name,0,1)),' style="color:#004C7A;" target="_blank"'); ?></h2> 
 			<div class="box-content">
-			
-			 
-            
+        
 			  <table class="tablebox">
                   <tbody class="openable-tbody">
                   

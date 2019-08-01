@@ -40,5 +40,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 /** cache days ***/
 define('CACHE_VALID_SEC',864000);
 
+define('APP_URL',($_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http') . "://{$_SERVER['SERVER_NAME']}".str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']));
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
