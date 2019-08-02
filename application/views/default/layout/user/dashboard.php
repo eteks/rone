@@ -55,21 +55,10 @@
             .flexy-menu > li > ul > li > ul > li > ul > li > a {padding-left: 80px !important;}
             }
             </style>
-            
-            <!-- <script type="text/javascript">
-jQuery(function($) {
-    
-        $("#pupload").fancybox();
-      
-
-});
-</script>   -->
-    
     
             <script type="text/javascript">
             
                 jQuery(function() {
-                  //  jQuery("#pupload2").fancybox();	
                      jQuery("#sprogress").fancybox();    
                 });
             
@@ -238,7 +227,7 @@ function send_wall_invitation(response) {
                                             <div class="welcome-top">
                                             	<div class="">
                                                 	<div class="welcome-title-dash">How it works <?php echo $this->session->userdata('full_name'); ?>?
-                                                        <h3>Dronework is as easy as 4 steps.</h3></div>
+                                                        <h3>Hireadronepilot is as easy as 4 steps.</h3></div>
 
                                                     <div class="main-top-dash">
                                                         <div id="flexslider2" class="flexslider">
@@ -348,7 +337,7 @@ function send_wall_invitation(response) {
                                                                 <img src="<?php echo base_url().getThemeName(); ?>/images/invitation_img.png" alt="" /> 
                                                                 <br />
                                                                 <span>Jobs with my skills</span>
-                                                         </li>   
+                                                         </li>
                                                          <?php } ?> 
                                                     </ul>
                                                     <div class="resp-tabs-container">
@@ -881,14 +870,163 @@ function send_wall_invitation(response) {
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                     <div class="clear"></div>
                                                 </div>
+
                                                 <div class="clear"></div>
-                                            </div>
-                                            <div class="clear"></div>
+                                            </div> <!--  added below --> 
+<div style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;" class="span3 wow fadeInRight center animated">
+            <div class="bottom-tabs bottom-tabs-1">
+            <div style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;" class="span3 wow fadeInRight center animated">
+                                            <div class="bottom-tabs bottom-tabs-1">
+            <div id="horizontalTab1" class="detail-tab">
+                                                    <ul class="resp-tabs-list" >
+                                                         <li>
+                                                                <img src="<?php echo base_url().getThemeName(); ?>/images/test1.png" alt="" /> 
+                                                                <br />
+                                                                <span>Weather Forecast</span>
+                                                         </li>
+                                                         <li>
+                                                                <img src="<?php echo base_url().getThemeName(); ?>/images/log_book.png" alt="" /> 
+                                                                <br />
+                                                                <span>Logbook</span>
+                                                         </li>
+                                                         <li>
+                                                                <img src="<?php echo base_url().getThemeName(); ?>/images/drone_maintanence.png" alt="" /> 
+                                                                <br />
+                                                                <span>Drone Maintanence</span>
+                                                         </li>
+                                                         <li style="background: #2a3441;">
+                                                                <img src="<?php echo base_url().getThemeName(); ?>/images/dots_more.png" alt="" /> 
+                                                                <br />
+                                                                <span>More Options</span>
+                                                                 
+                                                         </li>
+                                                     </ul>
+                                                 <!--  added --> 
+<script type="text/javascript">
+                                                    $(document).ready(function () {
+                                                        $('#horizontalTab1').easyResponsiveTabs({
+                                                            type: 'default', //Types: default, vertical, accordion           
+                                                            width: 'auto', //auto or any width like 600px
+                                                            fit: true,   // 100% fit in a container
+                                                            closed: 'accordion', // Start closed if in accordion view
+                                                            activate: function(event) { // Callback function if tab is switched
+                                                                var $tab = $(this);
+                                                                var $info = $('#tabInfo');
+                                                                var $name = $('span', $info);
+                                                
+                                                                $name.text($tab.text());
+                                                
+                                                                $info.show();
+                                                            }
+                                                        });
+                                                
+                                                        $('#verticalTab').easyResponsiveTabs({
+                                                            type: 'vertical',
+                                                            width: 'auto',
+                                                            fit: true
+                                                        });
+                                                    });
+                                                </script>
+                                            <div class="resp-tabs-container">
+                                                        <div class="abtsty abttb2-2">
+                                                            <div class="invite-friends-box box-border-dash" >
+                                                                <div id="">
+                                                                    <div class="content">
+                                                                        <ul class="mess">
+                                                                            <li>
+                                                                     <table><tr><td>
+                                                                     <p><img src="<?php echo base_url().getThemeName(); ?>/images/loading_coming_soon.gif" alt="" /> 
+                                                                      </p></td>
+                                                                      <td><p class="bigf33 dont_member" style="font-size: 24px;">Weather Forecast Coming soon ...</p></td>
+                                                             </tr>
+                                                              </table>
+                                                             
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Next tab -->
+                                                    <div class="resp-tabs-container">
+                                                        <div class="abtsty abttb2-2">
+                                                            <div class="invite-friends-box box-border-dash" >
+                                                                <div id="">
+                                                                    <div class="content">
+                                                                        <ul class="mess1">
+                                                                            <li>
+                                                                    <table><tr><td>
+                                                                     <p><img src="<?php echo base_url().getThemeName(); ?>/images/loading_coming_soon.gif" alt="" /> 
+                                                                      </p></td>
+                                                                      <td><p class="bigf33 dont_member" style="font-size: 24px;">Logbook for Dronepilots Coming soon ...</p></td>
+                                                             </tr>
+                                                              </table>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Next tab -->
+                                                    <div class="resp-tabs-container">
+                                                        <div class="abtsty abttb2-2">
+                                                            <div class="invite-friends-box box-border-dash" >
+                                                                <div id="">
+                                                                    <div class="content">
+                                                                        <ul class="mess2">
+                                                                            <li>
+                                                                     
+                                                                         <table><tr><td>
+                                                                     <p><img src="<?php echo base_url().getThemeName(); ?>/images/loading_coming_soon.gif" alt="" /> 
+                                                                      </p></td>
+                                                                      <td><p class="bigf33 dont_member" style="font-size: 24px;">Drone Maintenance Coming soon ...</p></td>
+                                                             </tr>
+                                                              </table>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Next Tab -->
+                                                    <div class="resp-tabs-container">
+                                                        <div class="abtsty abttb2-2">
+                                                            <div class="invite-friends-box box-border-dash" >
+                                                                <div id="">
+                                                                    <div class="content">
+                                                                        <ul class="mess3">
+                                                                            <li>
+                                                                                
+                                                                     <table><tr><td>
+                                                                     <p><img src="<?php echo base_url().getThemeName(); ?>/images/loading_coming_soon.gif" alt="" /> 
+                                                                      </p></td>
+                                                                      <td><p class="bigf33 dont_member" style="font-size: 24px;">More options Coming soon ...</p></td>
+                                                             </tr>
+                                                              </table>
+                                                              
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                         </div>
+                                                </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
                                     </div>
+                                    <div class="clear"></div>
                                 </div>
+
                                 <div class="clear"></div>
                                 
                                 <div class="clear"></div>
@@ -897,7 +1035,9 @@ function send_wall_invitation(response) {
                     </div>
                 </div>
             </div>
+
             <div class="clear"></div>
+
         </div>
 </div>
 <div id="fancybox-overlay" style="background-color: rgb(119, 119, 119); opacity: 0.7; cursor: pointer; height: 100%; z-index:999999; display: none; position:fixed;"></div>                   

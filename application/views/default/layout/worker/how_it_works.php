@@ -11,9 +11,9 @@
         	<div style="visibility: visible;animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="span3 wow fadeIn animated ">
                 <div class="how-to-use-left">
                     <h1>How it Works</h1>
-                    <div class="clear">
-                        <div class="both_button"><a href="#Employers" class="btn btn-default how_it_wk">Employers</a></div>
-                        <div class="both_button"><a href="#Taskers" class="btn btn-default how_it_wk">Taskers</a></div>
+                    <div class="clear" style="width: 365px !important;">
+                        <div class="both_button"><a href="#Employers" class="btn btn-default how_it_wk">Droner</a></div>
+                        <div class="both_button"><a href="#Taskers" class="btn btn-default how_it_wk">Task Provider</a></div>
                     </div>
                 </div>
             </div>
@@ -24,14 +24,14 @@
     	<div class="content-pages ">
         	<div class="intro-text">
             	<div class="">
-                	<p>For Task Posters</p>
+                	<p>For Task Provider</p>
                 </div>
             </div>
             <div class="content-line">
             	<div class="content-line-left-hiw pull-left">
                     <div class="rb-badge">1</div>
-                    <h5>You tell us about the work you need completed.</h5>
-                    <p>The more we know about the size and scope of your job, the more accurately we can find the right taskers for the work.</p>
+                    <h5>Tell us about your task</h5>
+                    <p>The more we know about your task the more accurately we can find the droner for you.</p>
                 </div>
                 <div class="content-line-right-hiw pull-right">
                     <div class="hiw-image-1">
@@ -43,8 +43,8 @@
             <div class="content-line">
             	<div class="content-line-left-hiw pull-right">
                     <div class="rb-badge">2</div>
-                    <h5>We match you with the right taskers for the job.</h5>
-                    <p>Once you posted your task We send Invitation to  with background-checked taskers whose expertise is best fit for your request</p>
+                    <h5>We connect you with the right droner</h5>
+                    <p>Once your requirement is posted we will send an invitation for background-verified droner whose expertise is the best fit for your request.</p>
                 </div>
                 <div class="content-line-right-hiw pull-left">
                     <div class="hiw-image-1">
@@ -56,9 +56,9 @@
             <div class="content-line">
             	<div class="content-line-left-hiw content-line-left-hiw2 pull-left">
                     <div class="rb-badge">3</div>
-                    <h5>Sit back and Relax</h5>
+                    <h5>Relax! </h5>
                     <div class="clear"></div>
-                    <p>Yes you read it right , just sit back and relax because our Taskers will place bid on your task with appropriate cost and timing</p>
+                    <p>Our droners will place bid on your task with reasonable charge and timing.</p>
                 </div>
                 <div class="content-line-right-hiw pull-right">
                     <div class="hiw-image-1">
@@ -70,8 +70,8 @@
             <div class="content-line">
             	<div class="content-line-left-hiw pull-right">
                     <div class="rb-badge">4</div>
-                    <h5>You select the pro that works best for you.</h5>
-                    <p>Read their reviews. Ask them questions. Decide if the price is within your budget. You own the selection of the right taskers for your home's needs.</p>
+                    <h5>You select the pro that works best for you</h5>
+                    <p>Pick the best droner, read their blog and review. Chat with them, decide if the price is within your budget. You own the selection of right tasker for your event needs.</p>
                 </div>
                 <div class="content-line-right-hiw pull-left">
                     <div class="hiw-image-1">
@@ -83,8 +83,8 @@
             <div class="content-line">
             	<div class="content-line-left-hiw pull-left">
                     <div class="rb-badge">5</div>
-                    <h5>Your pro completes the work.</h5>
-                    <p>You're free to work out a schedule, pay, and review your taskers. You always have final say on the quality of your taskers work.</p>
+                    <h5>Your Pro completes the task</h5>
+                    <p>You’re free to work out a schedule, pay and review your droner. You always have final say on the quality of your droner work.</p>
                 </div>
                 <div class="content-line-right-hiw pull-right">
                     <div class="hiw-image-1">
@@ -164,35 +164,35 @@
     </div>-->
     <div class="clear"></div>
     <div class="for_employers for_entowork" id="Taskers">
-    	<div class="taskers-main-title-hiw">For Taskers</div>
+    	<div class="taskers-main-title-hiw">For Droners</div>
     	<div class="container">
         	<div style="visibility: visible;animation-delay: 0.4s; animation-name: fadeIn;" data-wow-delay="0.4s" class="span3 wow fadeIn animated ">
                 <div class="for_employers-block">
-                    <div class="employers-block-img">
+                    <!-- <div class="employers-block-img">
                         <a href="#"><img src="<?php echo base_url().getThemeName(); ?>/images/hiw-work-1.png" alt="" /></a>
-                    </div>
+                    </div> -->
                     <div class="employers-block-title">Browse through available tasks</div>
-                    <div class="employers-block-detail">Have fun browsing through available work. Find a task that's right for you by selecting your location and keywords that match your skills
+                    <div class="employers-block-detail" style="text-align: justify;">Have fun browsing through available drone tasks. Find a task that’s right for you by selecting your location and keywords that match your skills.
 
 </div>
                 </div>
             </div>
             <div style="visibility: visible;animation-delay: 0.6s; animation-name: fadeIn;" data-wow-delay="0.6s" class="span3 wow fadeIn animated ">
                 <div class="for_employers-block">
-                    <div class="employers-block-img">
+                    <!-- <div class="employers-block-img">
                         <a href="#"><img src="<?php echo base_url().getThemeName(); ?>/images/hiw-work-2.png" alt="" /></a>
-                    </div>
+                    </div> -->
                     <div class="employers-block-title">Select a task that suits you</div>
-                    <div class="employers-block-detail">Found a task you want to complete? now place you bid by hitting Make An Offer button and enter a price you think is fair. Don't forget to introduce yourself and tell the Job Poster what your skills are in the comments.</div>
+                    <div class="employers-block-detail" style="text-align: justify;">Found a task you want to complete? Now place your bid by hitting ‘Make An Offer’ button and enter a price you think is fair. Don't forget to introduce yourself and tell the Task provider what your skills are in the comments.</div>
                 </div>
             </div>
             <div style="visibility: visible;animation-delay: 1s; animation-name: fadeIn;" data-wow-delay="1s" class="span3 wow fadeIn animated ">
                 <div class="for_employers-block">
-                    <div class="employers-block-img">
+                    <!-- <div class="employers-block-img">
                         <a href="#"><img src="<?php echo base_url().getThemeName(); ?>/images/hiw-work-3.png" alt="" /></a>
-                    </div>
+                    </div> -->
                     <div class="employers-block-title">Start completing your task</div>
-                    <div class="employers-block-detail">Once your offer has been accepted and you've been assigned to the task, you will be notified via email. You're now able to send a Private Message to discuss further task details and get started on completing your task.</div>
+                    <div class="employers-block-detail" style="text-align: justify;">Once your offer has been accepted and you've been assigned to the task, you will be notified via email. You're now able to send a Private Message to discuss further drone task details and get started on completing your task.</div>
                 </div>
             </div>
     	</div>

@@ -1567,7 +1567,12 @@ class User_model extends CI_Model
 				}
 
 			}
+			if(isset($rsn)){
 			return $rsn;
+			}
+			else{
+				return "";
+			}
 		}
 	}
 	function getNameTable($table,$col,$field,$value)
