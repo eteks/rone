@@ -33,7 +33,7 @@ if(isset($toptaskers) && !empty($toptaskers)){ ?>
                                         if(file_exists(base_path().'upload/user/'.$toptasker->profile_image)) {
                                       
                                           $user_image=base_url().'upload/user/'.$toptasker->profile_image;
-                                          -
+                                          
                                         }
                                         
                                       }

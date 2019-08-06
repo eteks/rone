@@ -107,6 +107,7 @@ if ( ! function_exists('form_open_multipart'))
 
 		return form_open($action, $attributes, $hidden);
 	}
+
 }
 
 // ------------------------------------------------------------------------

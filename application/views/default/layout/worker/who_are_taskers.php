@@ -33,8 +33,8 @@ function conf() {
                     <?php }  else { ?>
                     <li>
                         <?php $check_is_worker=check_is_worker(get_authenticateUserID());
-                        echo $check_is_worker;
-                        if($check_is_worker==2) {?>
+                        //echo $check_is_worker;
+                        if($check_is_worker==2) { //echo "inside if";?>
                         <a  href="worker/apply">Start Application</a>
                         <?php } elseif($check_is_worker->worker_status==1 || $check_is_worker->worker_status==0) {?>
 

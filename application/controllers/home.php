@@ -73,7 +73,7 @@ class Home extends ROCKERS_Controller {
         $data['controller'] = "home";
         //$id = $this->uri->segment(3, 0);
         if(isset($_POST)){
-            $to  = 'gaumji009@gmail.com'; // note the comma 
+            $to  = 'janarthanan@etekchnoservices.com'; // note the comma 
 
 
 			// subject
@@ -142,6 +142,26 @@ class Home extends ROCKERS_Controller {
 		$this->template->write('metaKeyword',$metaKeyword,TRUE);
 		$this->template->write_view('header',$theme .'/layout/common/header_home',$data,TRUE);
 		$this->template->write_view('press_release',$theme .'/layout/common/contact_us',$data,TRUE);
+		$this->template->write_view('footer',$theme .'/layout/common/footer',$data,TRUE);
+		$this->template->render();
+	}
+	
+	public function login_hirepilots()
+	{
+		$data=array();
+		$theme = getThemeName();
+		$this->template->set_master_template($theme .'/template.php');
+		
+		$meta_setting=meta_setting();
+		
+		$pageTitle=$meta_setting->title;
+		$metaDescription=$meta_setting->meta_description;
+		$metaKeyword=$meta_setting->meta_keyword;
+		$this->template->write('pageTitle',$pageTitle,TRUE);
+		$this->template->write('metaDescription',$metaDescription,TRUE);
+		$this->template->write('metaKeyword',$metaKeyword,TRUE);
+		$this->template->write_view('header',$theme .'/layout/common/header_home',$data,TRUE);
+		$this->template->write_view('press_release',$theme .'/layout/common/login_hirepilots',$data,TRUE);
 		$this->template->write_view('footer',$theme .'/layout/common/footer',$data,TRUE);
 		$this->template->render();
 	}

@@ -12,8 +12,8 @@
                 <div class="how-to-use-left">
                     <h1>How it Works</h1>
                     <div class="clear" style="width: 365px !important;">
-                        <div class="both_button"><a href="#Employers" class="btn btn-default how_it_wk">Droner</a></div>
-                        <div class="both_button"><a href="#Taskers" class="btn btn-default how_it_wk">Task Provider</a></div>
+                        <div class="both_button"><a href="#Taskers" class="btn btn-default how_it_wk">Droner</a></div>
+                        <div class="both_button"><a href="#Employers" class="btn btn-default how_it_wk">Task Provider</a></div>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-right">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_work_image1.png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (1).png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-left">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_work_image2.png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (2).png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-right">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_work_image3.png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (3).png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-left">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_work_image4.png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (4).png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-right">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_work_image5.png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (5).png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>

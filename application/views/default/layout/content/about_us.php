@@ -4,7 +4,7 @@
         <div>
             <div id="acc-banners-ph" class="banner-contain">
                 <div class="banner-area-for-work">
-                    <a href="#"><img src="<?php echo base_url().getThemeName(); ?>/images/banner-about-us.jpg" alt="" /></a>
+                    <a href="#"><img src="<?php echo base_url().getThemeName(); ?>/images/banner_babout_changes.jpg" alt="" /></a>
                 </div>
                 <h3 class="banner-hw banner-hw-about">
                     <div class="container" style="padding-top:17px;">

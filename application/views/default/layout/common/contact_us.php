@@ -25,7 +25,8 @@
                         <div class="contact-form-main">
                         	<?php
                         $attributes = array('name'=>'frm_contact','id'=>'frm_contact');
-                        echo form_open_multipart('business_con',$attributes);
+                        //print_r($attributes);
+                        echo form_open_multipart('business',$attributes);
                     
                     ?>
                             	<div class="contact-form-r1">

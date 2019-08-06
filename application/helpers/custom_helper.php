@@ -147,6 +147,7 @@
 	{		
 		$CI =& get_instance();
 		//var_dump($CI->session);
+		//var_dump($CI->session->userdata('user_id'));
 			if($CI->session->userdata('user_id')!='')
 			{
 				return true;
@@ -169,7 +170,9 @@
 	function get_authenticateUserID()
 	{		
 		$CI =& get_instance();
+		//echo "inside get authenciate";
 		return $CI->session->userdata('user_id');
+		
 	}
 
 	function user_profilestatus($id)
@@ -1950,13 +1953,14 @@
 		function check_is_worker($user_id)
 		{
 			
-			
+			//echo "inside check worker";
 			$CI =& get_instance();
 		
 			$query = $CI->db->get_where('worker',array('user_id'=>$user_id));
 			
 			if($query->num_rows()>0)
 			{
+				echo $row = $query->row();
 				return $row = $query->row();
 			}		
 			else

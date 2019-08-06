@@ -3,7 +3,7 @@
 				
                 <div id="acc-banners-ph" class="banner-contain">
                 	<div class="banner-area-for-work">
-                    	<a href="#"><img src="<?php echo base_url().getThemeName(); ?>/images/banner-business.jpg" alt="" /></a>
+                    	<a href="#"><img src="<?php echo base_url().getThemeName(); ?>/images/banner_babout_changes.jpg" alt="" /></a>
                     </div>
                 </div>
                 
@@ -175,7 +175,8 @@
         
                 jQuery.ajax({
                             type:'POST',
-                            url:'http://Entowork.co.za/home/business_con/',
+                            //url:'http://Entowork.co.za/home/business_con/',
+                            url:'http://localhost/snm/home/business_con/',
                             data:{
                                 company_name: $('#company_name').val(),
                                 contact_name : $('#contact_name').val(),

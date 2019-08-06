@@ -277,6 +277,7 @@ a:hover.topblue-button {background:#1A9EE6; color:#FFF; text-decoration:none}
 .db-rightinfo {width:540px; height:auto; float:right; margin:0px 0; background:rgba(255, 255, 255, 0.5) !important;  border-radius:20px; }
 
 .login-main-content{ background:url(../images/login_back.jpg) no-repeat center top !important; background-size:cover !important; padding:150px 0 150px !important;}
+.login-main-content-hire{ background:url(../images/for_hire_login.jpg) no-repeat center top !important; background-size:cover !important; padding:150px 0 150px !important;}
 .login-box-main{ float:none; margin:auto; width:760px; overflow:hidden; border:0px !important; }
 
 .login-form-main {
@@ -3722,7 +3723,7 @@ h2.how-business{ padding-bottom:15px; color:#ffffff;}
 /*----- EHO_ARE_THE_TASKERS_PAGE_END -----*/
 .btn-new-dash{ font-size: 17px; margin-top: 15px !important; padding: 8px 34px !important;}
 .round-back{ background:rgba(255, 255, 255, 0.83) none repeat scroll 0 0; border-radius:20px; border:0px;}
-.db-rightinfo-dash-back{ background: url("../images/post_task_back.jpg") no-repeat scroll top center; background-size:cover; }
+.db-rightinfo-dash-back{ background: url("../images/new_home_task.jpeg") no-repeat scroll top center; background-size:cover; }
 .need_help{ font-size:14px !important;}
 .more_option_need{ padding-left:5px;}
 
