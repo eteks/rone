@@ -79,7 +79,8 @@ class Home extends ROCKERS_Controller {
 
 			// subject
 			$subject = 'New message For You';
-
+//var_dump($subject);
+/*setcookie("checkkkkkkkk",$subject);*/
 			// message
 			$message = '
 			<html>

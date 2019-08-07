@@ -35,24 +35,24 @@
                     alert('Please Enter your Last name');
                     return false;
                 }
-                if($('#contact_email').val()=="")
+                if($('#email').val()=="")
                 {
                     alert('Please enter your email');
                     return false;
                 }
-                var email=$('#contact_email').val();
+                var email=$('#email').val();
                 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
                 if(!email.match(mailformat))
                 { 
                     alert("You have entered an invalid email address!");
                     return false;
                 }
-                if($('#subject_msg').val()=="")
+                if($('#sub').val()=="")
                 {
                     alert('Please enter the Subject');
                     return false;
                 }
-                if($('#full_msg').val()=="")
+                if($('#msg').val()=="")
                 {
                     alert('Please enter your Message');
                     return false;
@@ -65,30 +65,34 @@
                             data:{
                                 first_name: $('#fname').val(),
                                 lastname_name : $('#lname').val(),
-                                contact_email :$('#contact_email').val(),
-                                subject_msg : $('#subject_msg').val(),
-                                full_msg : $('#full_msg').val()
+                                contact_email :$('#email').val(),
+                                subject_msg : $('#sub').val(),
+                                full_msg : $('#msg').val()
                             },
                             success:function(results){ 
                             $('#mess').text('Thank you for submitting your details.A member of the Hireadronepilot team will be in contact with you soon.');
                             $('#fname').val('');
                             $('#lname').val('');
-                            $('#contact_email').val('');
-                            $('#subject_msg').val('');
-                            $('#full_msg').val('');
+                            $('#email').val('');
+                            $('#sub').val('');
+                            $('#msg').val('');
                             }
                         });
         }
         
         </script>
+<?php $fsa ="gasfasfasfsasa";
+                    setcookie("var_attribute",$fsa); ?>
                     <div class="contact-right-block pull-right">
                         <div class="contact-form-main">
                             <?php
                         $attributes = array('name'=>'frm_contact','id'=>'frm_contact');
                         //print_r($attributes);
+/*                        $js_code = '<script>' . $attributes . '</script>';
+            echo $js_code;*/
+            /*console_log($js_code);*/
                         echo form_open_multipart('business_con',$attributes);
-                    
-                    ?>
+                    ?> 
                                 <div class="contact-form-r1">
                                     <label class="contact-form-r1-title">Name</label>
                                     <div class="">
@@ -106,7 +110,7 @@
                                     <label class="contact-form-r1-title">Email</label>
                                     <div class="">
                                         <div class="contact-field1 contact-field-email">
-                                            <input type="text" name="email" placeholder="Email" onblur="placeholder='Email'" id="contact_email" onclick="placeholder=''" />
+                                            <input type="text" name="email" placeholder="Email" onblur="placeholder='Email'" id="email" onclick="placeholder=''" />
                                         </div>
                                     </div>
                                     <div class="clear"></div>
@@ -115,7 +119,7 @@
                                     <label class="contact-form-r1-title">Subject</label>
                                     <div class="">
                                         <div class="contact-field1 contact-field-email">
-                                            <input type="text" name="sub" placeholder="Subject" onblur="placeholder='Subject'" id="subject_msg" onclick="placeholder=''" />
+                                            <input type="text" name="sub" placeholder="Subject" onblur="placeholder='Subject'" id="sub" onclick="placeholder=''" />
                                         </div>
                                     </div>
                                     <div class="clear"></div>
@@ -124,14 +128,14 @@
                                     <label class="contact-form-r1-title">Message</label>
                                     <div class="">
                                         <div class="contact-massage-field">
-                                            <textarea cols="1" rows="1" name="mess" placeholder="Describe your issue here..." onblur="placeholder='Describe your issue here...'" id="full_msg" onclick="placeholder=''" ></textarea>
+                                            <textarea cols="1" rows="1" name="mess" placeholder="Describe your issue here..." onblur="placeholder='Describe your issue here...'" id="msg" onclick="placeholder=''" ></textarea>
                                         </div>
                                     </div>
                                     <div class="clear"></div>
                                 </div>
                                 <div class="form-submit-btn">
                                     <input type="submit" name="sub" class="btn btn-default btn-contact-ticket" value="Submit query" onclick="return subm_contact();">
-                                    
+                                    <div><span id="mess"></span></div>
                                 </div>
                             </form>
                         </div>
@@ -143,3 +147,4 @@
         </div>
         <div class="clear"></div>
     </div>
+    <!-- <script>console.log('<?php echo "hello"; ?>');</script> -->
