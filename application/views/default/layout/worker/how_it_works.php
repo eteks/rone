@@ -35,7 +35,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-right">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (1).png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works1.png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-left">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (2).png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works2.png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-right">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (3).png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works3.png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-left">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (4).png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works4.png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="content-line-right-hiw pull-right">
                     <div class="hiw-image-1">
-                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works (5).png"  alt="" />
+                    	<img src="<?php echo base_url().getThemeName(); ?>/images/how_it_works5.png"  alt="" />
                     </div>
                 </div>
                 <div class="clear"></div>

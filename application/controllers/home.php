@@ -116,7 +116,6 @@ class Home extends ROCKERS_Controller {
 			$headers .= "From: The Sender <noreplay@hireadronepilot.com.au>\r\n";
 
 
-
 			// Mail it
 			if(mail($to, $subject, $message, $headers))
 			{

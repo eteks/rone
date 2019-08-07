@@ -61,7 +61,7 @@
                 jQuery.ajax({
                             type:'POST',
                             //url:'http://Entowork.co.za/home/business_con/',
-                            url:'/home/business_con/',
+                            url:'http://localhost/snm/home/contact_us/',
                             data:{
                                 first_name: $('#fname').val(),
                                 lastname_name : $('#lname').val(),
@@ -87,8 +87,8 @@
                         	<?php
                         $attributes = array('name'=>'frm_contact','id'=>'frm_contact');
                         //print_r($attributes);
-                        echo form_open_multipart('business_con',$attributes);
-                    
+                        //echo form_open_multipart('business_con',$attributes);
+                        echo form_open_multipart('contact_us',$attributes);
                     ?>
                             	<div class="contact-form-r1">
                                 	<label class="contact-form-r1-title">Name</label>
