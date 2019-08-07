@@ -83,9 +83,6 @@ $route['default_controller'] = "home";
 $route['404_override'] = 'home';
 
 
-
-
-
 $route['sign_up']='home/sign_up';
 
 $route['login']='home/login';

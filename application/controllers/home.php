@@ -70,7 +70,7 @@ class Home extends ROCKERS_Controller {
 	}
 	function business_con(){
         $output = '';
-        /*echo "inside con";*/
+        //echo "inside con";
         $data['controller'] = "home";
         //$id = $this->uri->segment(3, 0);
         if(isset($_POST)){
@@ -78,7 +78,7 @@ class Home extends ROCKERS_Controller {
 
 
 			// subject
-			$subject = 'New message';
+			$subject = 'New message For You';
 
 			// message
 			$message = '
