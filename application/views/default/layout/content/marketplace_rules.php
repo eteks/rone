@@ -60,7 +60,7 @@
                                 <li>Escort or adult related services.</li>
                             </ul>
                         </div>
-                        <div class="inner-deti" style="padding:30px 0 30px 0;">job Guidelines</div>
+                        <div class="inner-deti" style="padding:30px 0 30px 0;">Job Guidelines</div>
                         <div class="all-detail" style="padding-top:0px; padding-bottom:15px;">
                             <p>Do not post your own or any other individual's private contact details (such as full name, email, home address or phone number) in any public area of the platform. For your safety and to maintain the integrity of the Hire a Drone Pilot marketplace, we suggest that you only communicate through Hire a Drone Pilot private messaging or calling service.</p>
                             <p>Users have complete control over the final amount they wish to quote to complete a job (i.e. they may quote higher or lower than the listed price). Any comments that are considered trolling, aimed at influencing/defaming other user's bids or derogatory towards the job poster's budget will not be supported.</p>
