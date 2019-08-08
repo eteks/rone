@@ -21,7 +21,9 @@
                         </div>
                         <div class="clear"></div>
                     </div>
+
                     <script type="text/javascript">
+
                     function subm_contact()
         {
         
@@ -57,7 +59,7 @@
                     alert('Please enter your Message');
                     return false;
                 }
-        
+/*        console.log($('#fname').val()+$('#lname').val()+$('#email').val()+$('#sub').val()+$('#msg').val());*/
                 jQuery.ajax({
                             type:'POST',
                             //url:'http://Entowork.co.za/home/business_con/',
@@ -69,7 +71,8 @@
                                 subject_msg : $('#sub').val(),
                                 full_msg : $('#msg').val()
                             },
-                            success:function(results){ 
+                            success:function(response){
+                            alert("Success");
                             $('#mess').text('Thank you for submitting your details.A member of the Hireadronepilot team will be in contact with you soon.');
                             $('#fname').val('');
                             $('#lname').val('');
@@ -92,7 +95,8 @@
             echo $js_code;*/
             /*console_log($js_code);*/
                         echo form_open_multipart('business_con',$attributes);
-                    ?> 
+
+                    ?>
                                 <div class="contact-form-r1">
                                     <label class="contact-form-r1-title">Name</label>
                                     <div class="">
@@ -147,4 +151,18 @@
         </div>
         <div class="clear"></div>
     </div>
+
+<!--     <div><h2>Let AJAX change this text</h2></div>
+
+<button>Change Content</button>
+                    <script>
+$(document).ready(function(){
+  $(document).ajaxSuccess(function(){
+    alert("AJAX request successfully completed");
+  });
+  $("button").click(function(){
+    $("div").text("hai");
+  });
+});
+</script> -->
     <!-- <script>console.log('<?php echo "hello"; ?>');</script> -->

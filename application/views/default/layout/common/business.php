@@ -184,7 +184,7 @@
                                 contact_email :$('#contact_email').val()
                             },
                             success:function(results){ 
-                            $('#mess').text('Thank you for submitting your details.A member of the Entowork team will be in contact with you soon.');
+                            $('#mess').text('Thank you for submitting your details.A member of the Hire a Drone Pilot team will be in contact with you soon.');
                             $('#company_name').val('');
                             $('#contact_name').val('');
                             $('#contact_number').val('');

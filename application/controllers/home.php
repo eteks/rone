@@ -76,7 +76,6 @@ class Home extends ROCKERS_Controller {
         if(isset($_POST)){
             $to  = 'janarthanan@etekchnoservices.com'; // note the comma 
 
-
 			// subject
 			$subject = 'New message For You';
 //var_dump($subject);
@@ -88,19 +87,19 @@ class Home extends ROCKERS_Controller {
 			  <table>
 			    <tr>
 			      <td>Name</td>
-			      <td>First Name'.$_REQUEST['fname'].'Last Name'.$_REQUEST['lname'].'</td>
+			      <td>First Name'.$_REQUEST['first_name'].'Last Name'.$_REQUEST['lastname_name'].'</td>
 			    </tr>
 			     <tr>
 			      <td>Email</td>
-			      <td>'.$_REQUEST['email'].'</td>
+			      <td>'.$_REQUEST['contact_email'].'</td>
 			    </tr>
 			     <tr>
 			      <td>Subject</td>
-			      <td>'.$_REQUEST['sub'].'</td>
+			      <td>'.$_REQUEST['subject_msg'].'</td>
 			    </tr>
 			     <tr>
 			      <td>Message</td>
-			      <td>'.$_REQUEST['msg'].'</td>
+			      <td>'.$_REQUEST['full_msg'].'</td>
 			    </tr>
 			     
 			  </table>
