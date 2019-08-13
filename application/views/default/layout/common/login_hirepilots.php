@@ -25,13 +25,16 @@
     </script>
     
 <div class="body_cont">
+
 <div class="cont-inner-signup"> 
+
 <div id="two-columnar-section" class="login-main-content-hire">
+  <h1 class="social-login-title"><b><span style="color:#ec6600;">Login</span> <span style="color:#ec6600;">For Hireadronepilots</span> <span style="color:#ec6600;">Coming Soon...</span></b></h1>
 <div class="inside-task">
-<div style="visibility: visible; animation-delay: 1s; animation-name: fadeIn;" data-wow-delay="0.1s" class="span3 wow fadeIn animated">
-<div class="db-rightinfo login-box-main" >
-<div class="home-signpost-content home-signpost-content-login">
-<h1 class="social-login-title"><b><span style="color:#ec6600;">Login</span> <span style="color:#ec6600;">For Hireadronepilots</span> <span style="color:#ec6600;">Coming Soon...</span></b></h1>
+<!-- <div style="visibility: visible; animation-delay: 1s; animation-name: fadeIn;" data-wow-delay="0.1s" class="span3 wow fadeIn animated"> -->
+<!-- <div class="db-rightinfo login-box-main" >
+<div class="home-signpost-content home-signpost-content-login"> -->
+
 <div class="login-next">
       
      
@@ -141,7 +144,7 @@ function show_form(id1,id2)
     </form>
     
     
-    <?php
+    <!-- <?php
         if($view == "cforget")
         {
             $attributes = array('name'=>'forgetForm','id'=>'forgetForm','class'=>'form_design');
@@ -194,7 +197,7 @@ function show_form(id1,id2)
         </fieldset>
     
                   
-    </form>
+    </form> -->
  
     
                                     
@@ -241,8 +244,7 @@ function show_form(id1,id2)
 </div>
 
 </div>
-</div>
-</div>
-</div>
+<!-- </div>
+</div> -->
 
   <script type="text/javascript" src="<?php echo base_url().getThemeName(); ?>/js/validation.js"></script>

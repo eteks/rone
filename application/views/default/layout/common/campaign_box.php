@@ -3,7 +3,7 @@
     	<div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
     		<div class="entowork-title entowork-title-2">How it works </div>
             <div class="entowork-title-2 entowork-title-3">
-            <p align="center">Dronework is as easy as 4 steps.</p></div>
+            <p align="center">HIRE A DRONE PILOT in 4 simple steps</p></div>
             </div>
         <div class="need-detail">
         	<ul>
@@ -12,8 +12,8 @@
                         <a href="<?php echo base_url();?>taskers/category/handyman">
                             <div id="pilotr" class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/for_upload.png" /></div>
                             <div class="need-img-detail">
-                                <h3>Upload</h3>
-                                <h4>Pilots upload and create a comprehensive portfolio to showcase their strengths.</h4>
+                                <h3>Publish</h3>
+                                <h4>Droners publish their work here!</h4>
                             </div>
                         </a>
                     </div>
@@ -23,8 +23,8 @@
                         <a href="<?php echo base_url();?>taskers/category/house-chores">
                             <div class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/Find.png" /></div>
                             <div class="need-img-detail">
-                                <h3>Find</h3>
-                                <h4>Clients tell us about the job requirements, so that only qualified pilots may apply.</h4>
+                                <h3>Apply</h3>
+                                <h4>Task provider will tell us about their task for which the eligible droners can apply.</h4>
                             </div>
                         </a>
                     </div>
@@ -34,8 +34,8 @@
                         <a href="<?php echo base_url();?>taskers/category/delivery">
                             <div class="need-img" ><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/Hiring.png" /></div>
                             <div class="need-img-detail">
-                                <h3>Hire</h3>
-                                <h4>Clients review the drone pilots and hire the best pilot for the job.</h4>
+                                <h3>Choose</h3>
+                                <h4>Task provider review the droners and choose the best pilot for their task.</h4>
                             </div>
                         </a>
                     </div>
@@ -45,8 +45,8 @@
                         <a href="<?php echo base_url();?>taskers/category/furniture-assembly">
                             <div class="need-img"><img alt="" src="<?php echo base_url().getThemeName(); ?>/images/work.png" /></div>
                             <div class="need-img-detail">
-                                <h3>Work</h3>
-                                <h4>Pilots complete the job and it automatically gets added to their portfolio.Impress new clients with a job well done!</h4>
+                                <h3>Execute</h3>
+                                <h4>Complete the task and add it to your blog. Let the new task provider get inspired by it.</h4>
                             </div>
                         </a>
                     </div>
@@ -58,7 +58,7 @@
             
 <li>
 
-<div class="entowork-title entowork-title-2" style="margin-top: 20px; padding-top: 100px;">          Some of our job categories </div>
+<div class="entowork-title entowork-title-2" style="margin-top: 20px; padding-top: 100px;">          SOME OF OUR TASK CATEGORIES </div>
 </li>
 
            </div>
