@@ -171,9 +171,7 @@ class Home extends ROCKERS_Controller {
 		$data=array();
 		$theme = getThemeName();
 		$this->template->set_master_template($theme .'/template.php');
-		
 		$meta_setting=meta_setting();
-		
 		$pageTitle=$meta_setting->title;
 		$metaDescription=$meta_setting->meta_description;
 		$metaKeyword=$meta_setting->meta_keyword;
@@ -406,7 +404,7 @@ class Home extends ROCKERS_Controller {
 				$email_message=$email_temp->message;			
 				
 								
-				$email_to=$this->input->post('email');		
+				$email_to=$this->input->post('email');
 				
 			
 				
