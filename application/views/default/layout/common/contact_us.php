@@ -62,7 +62,7 @@
 /*        console.log($('#fname').val()+$('#lname').val()+$('#email').val()+$('#sub').val()+$('#msg').val());*/
                 jQuery.ajax({
                             type:'POST',
-                            //url:'http://Entowork.co.za/home/business_con/',
+                            //url:'http://example.com/home/business_con/',
                             url:'/home/business_con/',
                             data:{
                                 first_name: $('#fname').val(),
@@ -84,8 +84,8 @@
         }
         
         </script>
-<?php $fsa ="gasfasfasfsasa";
-                    setcookie("var_attribute",$fsa); ?>
+<!-- <?php $fsa ="gasfasfasfsasa";
+                    setcookie("var_attribute",$fsa); ?> -->
                     <div class="contact-right-block pull-right">
                         <div class="contact-form-main">
                             <?php

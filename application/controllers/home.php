@@ -87,7 +87,7 @@ class Home extends ROCKERS_Controller {
 			  <table>
 			    <tr>
 			      <td>Name</td>
-			      <td>First Name'.$_REQUEST['first_name'].'Last Name'.$_REQUEST['lastname_name'].'</td>
+			      <td>First Name: '.$_REQUEST['first_name'].'Last Name: '.$_REQUEST['lastname_name'].'</td>
 			    </tr>
 			     <tr>
 			      <td>Email</td>
@@ -126,6 +126,26 @@ class Home extends ROCKERS_Controller {
         echo $output;die();
     }
 	
+	public function dronerlogbook()
+	{
+		$data=array();
+		$theme = getThemeName();
+		$this->template->set_master_template($theme .'/template.php');
+		
+		$meta_setting=meta_setting();
+		
+		$pageTitle=$meta_setting->title;
+		$metaDescription=$meta_setting->meta_description;
+		$metaKeyword=$meta_setting->meta_keyword;
+		$this->template->write('pageTitle',$pageTitle,TRUE);
+		$this->template->write('metaDescription',$metaDescription,TRUE);
+		$this->template->write('metaKeyword',$metaKeyword,TRUE);
+		$this->template->write_view('header',$theme .'/layout/common/header_home',$data,TRUE);
+		$this->template->write_view('press_release',$theme .'/layout/common/dronerlogbook',$data,TRUE);
+		$this->template->write_view('footer',$theme .'/layout/common/footer',$data,TRUE);
+		$this->template->render();
+	}
+
 	public function contact_us()
 	{
 		$data=array();

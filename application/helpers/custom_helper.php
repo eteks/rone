@@ -1960,7 +1960,7 @@
 			
 			if($query->num_rows()>0)
 			{
-				echo $row = $query->row();
+				//echo $row = $query->row();
 				return $row = $query->row();
 			}		
 			else

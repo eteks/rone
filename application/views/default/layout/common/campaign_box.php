@@ -176,7 +176,7 @@
 <!--What do you need done End-->
 <!--How it works-->
 <div class="clear"></div>
-<div id="what-content">
+<!-- <div id="what-content">
     <div class="container">
     	<div style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
     		<div class="entowork-title" style="padding-bottom: 10px; margin-bottom: 5px;">Why Dronework?</div>
@@ -231,7 +231,7 @@
         </div>
     </div>
     <div class="clear"></div>
-</div>
+</div> -->
 <!--How it works ends-->
 
 

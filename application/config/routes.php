@@ -97,7 +97,7 @@ $route['reset_password/(.*)/(.*)']='home/reset_password/$1/$2';
 
 $route['business']='home/business';
 
-
+$route['dronerlogbook']='home/dronerlogbook';
 
 
 $route['search/newest/(.*)/(.*)/(.*)']='search/newest/$1/$2/$3';
