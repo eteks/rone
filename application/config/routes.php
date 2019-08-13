@@ -89,6 +89,8 @@ $route['login']='home/login';
 
 $route['login_hirepilots']='home/login_hirepilots';
 
+//Checking
+
 $route['contact_us']='home/contact_us';
 
 $route['verify/(.*)/(.*)']='home/verify/$1/$2';
