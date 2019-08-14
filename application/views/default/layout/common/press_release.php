@@ -174,7 +174,7 @@ $(window).load(function() {
 <div id="stastic-content">
     <div class="container">
                     
-        <h2 align="center" style="color: #585858;">" The best place for drone pilots to reach out. "</h2>
+        <h2 align="center" style="color: #585858;">" Capture the entire scene. Simply! "</h2>
     </div>
     <br/>
     <br/>      

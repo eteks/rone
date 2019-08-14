@@ -1,9 +1,9 @@
 <div id="need-content">
     <div class="container">
     	<div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
-    		<div class="entowork-title entowork-title-2">How it works </div>
+    		<div class="entowork-title entowork-title-2">Hire A Drone Pilot in 4 Simple Steps</div>
             <div class="entowork-title-2 entowork-title-3">
-            <p align="center">HIRE A DRONE PILOT in 4 simple steps</p></div>
+            <!-- <p align="center">HIRE A DRONE PILOT in 4 simple steps</p> --></div>
             </div>
         <div class="need-detail">
         	<ul>
@@ -58,7 +58,7 @@
             
 <li>
 
-<div class="entowork-title entowork-title-2" style="margin-top: 20px; padding-top: 100px;">          SOME OF OUR TASK CATEGORIES </div>
+<div class="entowork-title entowork-title-2" style="margin-top: 20px; padding-top: 100px;">          Some Of Our Task Categories </div>
 </li>
 
            </div>
@@ -66,18 +66,7 @@
 
             <ul>
 
-                <li>
-
-                    <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
-                        <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
-                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/agriculture.png" /></div>
-                            <div class="need-img-detail">
-                                <h3>Agriculture</h3>
-                                <h4>Spraying, NDVI Mapping, Others</h4>
-                            </div>
-                        </a>
-                    </div>
-                </li>
+                
                 <!-- <li style="height:279px;">
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
@@ -96,8 +85,32 @@
                         <a href="<?php echo base_url();?>taskers/category/handyman/#weddingsevents">
                             <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/photo.png" /></div>
                             <div class="need-img-detail">
-                                <h3>Photography & Videography</h3>
-                                <h4>Filming, Still Photography, Others</h4>
+                                <h3>Photos & Video</h3>
+                                <h4>Photo Shoot, Cinematography & Others</h4>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+
+                    <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
+                        <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
+                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/security.png" /></div>
+                            <div class="need-img-detail">
+                                <h3>Surveillance</h3>
+                                <h4>Security System, Others</h4>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+
+                    <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
+                        <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
+                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/agriculture.png" /></div>
+                            <div class="need-img-detail">
+                                <h3>Cultivation</h3>
+                                <h4>NDVI Mapping, Crop Observation & Others</h4>
                             </div>
                         </a>
                     </div>
@@ -109,8 +122,8 @@
                         <a href="<?php echo base_url();?>taskers/category/handyman/#construction">
                             <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/assinpec.png" /></div>
                             <div class="need-img-detail">
-                                <h3>Asset Inspection</h3>
-                                <h4>Building, Powerline, Gutter & Roof, Others</h4>
+                                <h3>Construction</h3>
+                                <h4>Building Plan, Site Logistics, Others</h4>
                             </div>
                         </a>
                     </div>
@@ -121,8 +134,8 @@
                         <a href="<?php echo base_url();?>taskers/category/handyman/#surveyingmapping">
                             <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Surveying.png" /></div>
                             <div class="need-img-detail">
-                                <h3>Surveying</h3>
-                                <h4>LiDar, Others</h4>
+                                <h3>Survey</h3>
+                                <h4>Road Construction, LiDar & Others</h4>
                             </div>
                         </a>
                     </div>
@@ -145,24 +158,13 @@
                         <a href="<?php echo base_url();?>taskers/category/handyman/#watersports">
                             <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Equipt.png" /></div>
                             <div class="need-img-detail">
-                                <h3>Equipment</h3>
-                                <h4>Drone Maintenance, Drone Rental, Others</h4>
+                                <h3>Maintenance</h3>
+                                <h4>Rental, Drone Maintenance & Others</h4>
                             </div>
                         </a>
                     </div>
                 </li>
-                <li>
-
-                    <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;" data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
-                        <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
-                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/security.png" /></div>
-                            <div class="need-img-detail">
-                                <h3>Security</h3>
-                                <h4>Surveillance, Others</h4>
-                            </div>
-                        </a>
-                    </div>
-                </li>
+                
             </ul> 
         </div>
     </div>
