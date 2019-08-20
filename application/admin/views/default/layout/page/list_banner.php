@@ -79,7 +79,7 @@
 					<tr onclick="<?php echo $cl; ?>(this);" class="<?php echo $cl; ?>">
                     
                    
-                   		<td  class="thumb-td tc"><a class="lightbox" href="<?php echo front_base_url();?>upload/banner/<?php echo $row->image_name	;?>" title="<?php echo $row->image_name	;?>"><img src="<?php echo front_base_url();?>upload/banner/<?php echo $row->image_name	;?>" alt="image-gallery"/></a></td>
+                   		<td  class="thumb-td tc"><a class="lightbox" href="<?php echo base_url();?>upload/banner/<?php echo $row->image_name	;?>" title="<?php echo $row->image_name	;?>"><img src="<?php echo base_url();?>upload/banner/<?php echo $row->image_name	;?>" alt="image-gallery"/></a></td>
                         
                                     
                                     

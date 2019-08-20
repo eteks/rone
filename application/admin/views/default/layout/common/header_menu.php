@@ -498,19 +498,19 @@
          <li><?php echo anchor('report/list_search_report','<span class="icon_text content"></span>Report',' title="Report"');?></li>
          <?php } ?>
          
-         <?php //if($this->strdd[0] == 'pages') { ?>
-            <!-- <li class="active"><?php echo anchor('pages/list_pages','<span class="icon_text content"></span>Pages',' title="Pages"');?></li>
+         <?php if($this->strdd[0] == 'pages') { ?>
+           <li class="active"><?php echo anchor('pages/list_pages','<span class="icon_text content"></span>Pages',' title="Pages"');?></li>
              <ul>
              	<li <?php if($this->strdd[1] == 'list_pages' || $this->strdd[1] == 'search_list_pages' || $this->strdd[1] == 'add_pages' || $this->strdd[1] == 'edit_pages') { echo 'class="active"'; }?>><?php echo anchor('pages/list_pages','Pages',' title="Pages List" class="subbutton white"');?></li>
                 
                 
-             </ul>-->
-         <?php //} else { ?>
-        <!-- <li><?php //echo anchor('pages/list_banner','<span class="icon_text content"></span>Manage Banner',' title="Manage Banner"');?></li>
-         <li><?php //echo anchor('pages/list_pages','<span class="icon_text content"></span>Pages',' title="Pages"');?></li>
-         <li><?php //echo anchor('pages/list_members','<span class="icon_text content"></span>Credit Plans',' title="Credit Plans"');?></li>-->
-         <?php //} ?>
-        <li><?php echo anchor('pages/list_members','<span class="icon_text content"></span>Credit Plans',' title="Credit Plans"');?></li>
+             </ul>
+         <?php } else { ?>
+        <li><?php echo anchor('pages/list_banner','<span class="icon_text content"></span>Manage Banner',' title="Manage Banner"');?></li>
+         <li><?php echo anchor('pages/list_pages','<span class="icon_text content"></span>Pages',' title="Pages"');?></li>
+         <li><?php //echo anchor('pages/list_members','<span class="icon_text content"></span>Credit Plans',' title="Credit Plans"');?></li>
+         <?php } ?>
+        <!-- <li><?php echo anchor('pages/list_members','<span class="icon_text content"></span>Credit Plans',' title="Credit Plans"');?></li> -->
          <?php if($this->strdd[0] == 'country' || $this->strdd[0] == 'state' || $this->strdd[0] == 'city') { ?>
              <li class="active"><?php echo anchor('country/list_country','<span class="icon_text content"></span>Globalisation ',' title="Globalisation"');?></li>
              <ul>

@@ -65,7 +65,7 @@ function validation()
                     foreach ($bannerfile as $banner) {   
                     ?>
                     <li class="home-slide" >
-                        <a href="<?php echo $banner->link; ?>"><img src="<?php echo base_url()?>/upload/banner/<?php echo $banner->image_name; ?>" alt="" /></a>
+                        <a href="<?php echo $banner->link; ?>"><img src="<?php echo base_url()?>/admin/upload/banner/<?php echo $banner->image_name; ?>" alt="" /></a>
                         <div class="container">
                             <div class="banner_detail">
                                 <h1><?php echo $banner->title; ?></h1>

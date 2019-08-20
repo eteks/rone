@@ -198,7 +198,7 @@ class Pages_model extends CI_Model {
              $file_name=get_authenticateUserID().$rand.$_FILES['userfile']['name'];	
 
 			 $config =  array(
-			                  'upload_path'     => '/home/saivisiontech/public_html/newsite/upload/banner',
+			                  'upload_path'     => base_path().'upload/banner',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE
@@ -258,7 +258,7 @@ class Pages_model extends CI_Model {
              $file_name=get_authenticateUserID().$rand.$_FILES['userfile']['name'];	
 
 			 $config =  array(
-			                  'upload_path'     => '/home/saivisiontech/public_html/newsite/upload/banner',
+			                  'upload_path'     => base_path().'upload/banner',
 							  'file_name'		=>$file_name,
 			                  'allowed_types'   => "*",
 			                  'overwrite'       => TRUE

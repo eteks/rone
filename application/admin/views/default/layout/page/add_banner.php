@@ -64,9 +64,7 @@
 		</script>
         
         
-        <textarea id="description" name="description" cols="50" rows="4">
-				<?php echo $description; ?>
-			</textarea> 
+        <textarea id="description" name="description" cols="50" rows="4" value="<?php echo $description; ?>"></textarea> 
 			  	 
 			<label class="form-label">Link </label>
 			<input type="text" name="link" id="link" class="form-field width40" value="<?php echo $link;?>" />
@@ -87,7 +85,7 @@
 				  
                    <input type="submit" class="button themed" name="submit" id="submit" value="Update" />
 				  <?php } else  {?>
-				   <input type="submit" class="button themed" name="submit" id="submit" value="Submits" />
+				   <input type="submit" class="button themed" name="submit" id="submit" value="Submit" />
 				          
 				  <?php }?>
 			  </form>
