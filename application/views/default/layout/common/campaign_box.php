@@ -106,7 +106,7 @@
 
                     <div style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn; data-wow-delay="0.4s" class="wow fadeIn animated  animated animated">
                         <a href="<?php echo base_url();?>taskers/category/handyman/#agriculture">
-                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/agriculture.png" /></div>
+                            <div><img style="height:200px; weight:200px;" alt="" src="<?php echo base_url().getThemeName(); ?>/images/Agriculture.png" /></div>
                             <div class="need-img-detail">
                                 <h3>Cultivation</h3>
                                 <h4>NDVI Mapping, Crop Observation & Others</h4>
