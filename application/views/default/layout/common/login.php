@@ -105,7 +105,7 @@ function show_form(id1,id2)
               <tr>
                     <td>
                         <div id="mbs" class="agree-signup agree-login">
-                            <input type="checkbox" name="remember" value="1" id="remember">
+                            <input type="checkbox" name="remember" value="1" id="remember" checked>
                             <span class="gen-txt">Remember me</span>
                         </div>   
                     </td>

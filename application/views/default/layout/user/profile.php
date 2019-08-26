@@ -192,8 +192,8 @@ $data['user_profile']=$user_profile;
                     <?php } ?>  
 </div>
 <div class="details-title">
-<div class="areanm" style="width:294px;">
-                <div><a href="#" class="abtmove"><?php echo $user_profile->first_name.' '.substr($user_profile->last_name,0,1); ?></a></div>
+<div class="areanm" style="width:294px;"> <!-- substr($user_profile->last_name);--> 
+                <div><a href="<?php echo base_url()."dashboard"?>" class="abtmove"><?php echo $user_profile->first_name.' '.$user_profile->last_name; ?></a></div>
                    
                   <?php if($check_worker_detail) { 
 				  

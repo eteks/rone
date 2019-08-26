@@ -8,7 +8,7 @@
                 </div>
                 <h3 class="banner-hw banner-hw-about">
                     <div class="container" style="padding-top:17px;">
-                         Hireadronepilot <span style="font-weight:lighter">is a proud Australian Company that is focused on one very simple mission, "to be the world's Largest Local markeplace for drones"</span>
+                         Hireadronepilot <span style="font-weight:lighter">is a proud Australian Company that is focused on one very simple mission, "To be the world's Largest Local markeplace for drones"</span>
                     </div>
                 </h3>
             </div>

@@ -8,7 +8,7 @@
               
               <?php if($user_profile->user_id==get_authenticateUserID()) { ?>
               
-                <div class="fleft100 mtop15" style="text-align:center; padding-left:30px;">
+                <div class="fleft100 mtop15" style="text-align:center; padding-left:5px;">
               <?php echo anchor('customize_profile','Customize Profile','class="login_new1"'); ?>
                         </div>   
                            
